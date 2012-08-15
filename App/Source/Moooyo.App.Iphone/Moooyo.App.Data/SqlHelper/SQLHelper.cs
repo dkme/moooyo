@@ -37,7 +37,7 @@ using System.Xml;
 using System.Data.SqlClient;
 using System.Collections;
 
-namespace NESCBB.DataLayer.Core
+namespace Moooyo.App.Data
 {
     /// <summary>
     /// The SqlHelper class is intended to encapsulate high performance, scalable best practices for 

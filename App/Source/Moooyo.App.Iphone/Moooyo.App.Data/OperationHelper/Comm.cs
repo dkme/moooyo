@@ -5,7 +5,7 @@ using System.Text;
 using System.IO;
 using System.Data;
 
-namespace Moooyo.AppDomain.Data
+namespace Moooyo.App.Data
 {
     public static class Comm
     {
@@ -23,7 +23,7 @@ namespace Moooyo.AppDomain.Data
                     //数据库连接字符串
                     string strConn = string.Empty;
                     //连接Sql Server数据库路径
-                    strConn = NESCBB.ConfigurationHelper.AppSettingHelper.GetConfig("ConnectionString");
+                    strConn = CBB.ConfigurationHelper.AppSettingHelper.GetConfig("ConnectionString");
 
                     //判断是连接字符串是否存在
                     if (strConn.Trim() == "")
@@ -33,7 +33,7 @@ namespace Moooyo.AppDomain.Data
                     else
                     {
                         _connectionStr = strConn;
-                        IDbConnection dcon = NESCBB.DataLayer.IDBOperationHelper.GetIDbConnection(_connectionStr);
+                        IDbConnection dcon = IDBOperationHelper.GetIDbConnection(_connectionStr);
                         _database = dcon.Database;
                     }
                 }
@@ -41,7 +41,7 @@ namespace Moooyo.AppDomain.Data
             }
             set { 
                 _connectionStr = value;
-                IDbConnection dcon = NESCBB.DataLayer.IDBOperationHelper.GetIDbConnection(_connectionStr);
+                IDbConnection dcon = IDBOperationHelper.GetIDbConnection(_connectionStr);
                 _database = dcon.Database;
             }
         }
@@ -52,7 +52,7 @@ namespace Moooyo.AppDomain.Data
             {
                 if (_database == "")
                 {
-                    IDbConnection dcon = NESCBB.DataLayer.IDBOperationHelper.GetIDbConnection(ConnectionStr);
+                    IDbConnection dcon = IDBOperationHelper.GetIDbConnection(ConnectionStr);
                     _database = dcon.Database;
                 }
                 return _database;

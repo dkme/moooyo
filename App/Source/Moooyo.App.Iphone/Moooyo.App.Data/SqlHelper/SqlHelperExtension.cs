@@ -9,7 +9,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace NESCBB.DataLayer.Core
+namespace Moooyo.App.Data
 {
 	/// <summary>
 	/// Sql Helper classµÄÀ©Õ¹Àà

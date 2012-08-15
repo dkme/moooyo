@@ -37,7 +37,10 @@
     <Reference Include="System.Data" />
     <Reference Include="Mono.Data.Sqlite" />
     <Reference Include="CBB.Exception">
-      <HintPath>..\..\Moooyo.Service\CBB公用类库\CBB.Exception\bin\Debug\CBB.Exception.dll</HintPath>
+      <HintPath>..\..\..\..\Components\CBB.Exception.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.ConfigurationHelper">
+      <HintPath>..\..\..\..\Components\CBB.ConfigurationHelper.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -46,8 +49,8 @@
     <Compile Include="OperationHelper\Comm.cs" />
     <Compile Include="OperationHelper\IDBOperationHelper.cs" />
     <Compile Include="SqlHelper\ConnectionProvider.cs" />
-    <Compile Include="SqlHelper\OLEHelper.cs" />
     <Compile Include="SqlHelper\SQLHelper.cs" />
     <Compile Include="SqlHelper\SqlHelperExtension.cs" />
+    <Compile Include="SqlHelper\SqliteHelper.cs" />
   </ItemGroup>
 </Project>

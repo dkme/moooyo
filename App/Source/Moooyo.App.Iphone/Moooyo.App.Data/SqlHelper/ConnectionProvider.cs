@@ -9,7 +9,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Collections;
 
-namespace NESCBB.DataLayer.Core
+namespace Moooyo.App.Data
 {
 	/// <summary>
 	/// 目的：提供一个在数据访问层对象共享的数据库连接对象。
