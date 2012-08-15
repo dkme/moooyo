@@ -70,6 +70,11 @@
     <Compile Include="EmailHelper.cs" />
     <Compile Include="Ping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HttpHelper\AsyncHttp.cs" />
+    <Compile Include="HttpHelper\SyncHttp.cs" />
+    <Compile Include="HttpHelper\HttpUtil.cs" />
+    <Compile Include="HttpHelper\APIparameter.cs" />
+    <Compile Include="HttpHelper\APIReturnData.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CBB.ConfigurationHelper\CBB.ConfigurationHelper.csproj">
@@ -85,4 +90,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Folder Include="HttpHelper\" />
+  </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 using System;
+using System.Net;
 
 namespace Moooyo.App.Core.Runtime
 {
@@ -12,6 +13,10 @@ namespace Moooyo.App.Core.Runtime
 		/// The runner version.
 		/// </summary>
 		public static Moooyo.App.Core.Defs.App.Version RunnerVersion;
+		/// <summary>
+		/// The cookies.
+		/// </summary>
+		public static CookieCollection Cookies;
 	}
 }
 

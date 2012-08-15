@@ -34,6 +34,24 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+    <Reference Include="CBB.Exception">
+      <HintPath>..\..\..\Components\CBB.Exception.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\Components\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.Logger">
+      <HintPath>..\..\..\Components\CBB.Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.NetworkingHelper">
+      <HintPath>..\..\..\Components\CBB.NetworkingHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.ConfigurationHelper">
+      <HintPath>..\..\..\Components\CBB.ConfigurationHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net20">
+      <HintPath>..\..\..\Components\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -50,5 +68,7 @@
     <Compile Include="Defs\App\Version.cs" />
     <Compile Include="Defs\App\History.cs" />
     <Compile Include="Defs\Account\Account.cs" />
+    <Compile Include="Api\Account.cs" />
+    <Compile Include="Api\ApiDefs.cs" />
   </ItemGroup>
 </Project>
