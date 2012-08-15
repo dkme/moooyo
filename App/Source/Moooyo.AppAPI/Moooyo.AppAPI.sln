@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moooyo.AppAPI", "Moooyo.AppAPI.csproj", "{2D726AEF-BEA2-4BAE-9265-66D8D946480A}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.1.101:8080/tfs/moooyo
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Moooyo.AppAPI.csproj
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D726AEF-BEA2-4BAE-9265-66D8D946480A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D726AEF-BEA2-4BAE-9265-66D8D946480A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D726AEF-BEA2-4BAE-9265-66D8D946480A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D726AEF-BEA2-4BAE-9265-66D8D946480A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
