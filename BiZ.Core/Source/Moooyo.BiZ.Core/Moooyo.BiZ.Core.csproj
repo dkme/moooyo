@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{084B5FFF-354F-429F-A145-A04B86EF20C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Moooyo.BiZ.Core</RootNamespace>
+    <AssemblyName>Moooyo.BiZ.Core</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Member\" />
+    <Folder Include="Comm\" />
+    <Folder Include="Comm\Device\" />
+    <Folder Include="Member\Relation\" />
+    <Folder Include="Member\Activity\" />
+    <Folder Include="Fans\" />
+    <Folder Include="Member\Link\" />
+    <Folder Include="Creater\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Member\Member.cs" />
+    <Compile Include="Member\MemberType.cs" />
+    <Compile Include="Member\MemberInfomation.cs" />
+    <Compile Include="Member\MemberStatus.cs" />
+    <Compile Include="Member\MemberRelation.cs" />
+    <Compile Include="Comm\Device\DeviceType.cs" />
+    <Compile Include="Member\MemberBadge.cs" />
+    <Compile Include="Member\Relation\Favorer.cs" />
+    <Compile Include="Member\Relation\RelationMember.cs" />
+    <Compile Include="Member\Relation\Vistior.cs" />
+    <Compile Include="Member\Relation\Silentor.cs" />
+    <Compile Include="Member\Relation\Giftor.cs" />
+    <Compile Include="Member\Relation\Disabler.cs" />
+    <Compile Include="Member\Relation\RelationDirection.cs" />
+    <Compile Include="Member\Relation\RelationOperationType.cs" />
+    <Compile Include="Member\Relation\LastMsger.cs" />
+    <Compile Include="Member\Activity\ActivityType.cs" />
+    <Compile Include="Member\Activity\Activity.cs" />
+    <Compile Include="Member\Activity\ActivityHolderBase.cs" />
+    <Compile Include="Member\Activity\ActivityHolder.cs" />
+    <Compile Include="Member\Activity\ActivityHolderRelatedToMe.cs" />
+    <Compile Include="Member\MemberSetting.cs" />
+    <Compile Include="Fans\FansGroupName.cs" />
+    <Compile Include="Member\Link\Msg.cs" />
+    <Compile Include="Member\Link\LinkMsg.cs" />
+    <Compile Include="Member\MemberPhoto.cs" />
+    <Compile Include="Creater\Creater.cs" />
+  </ItemGroup>
+</Project>
