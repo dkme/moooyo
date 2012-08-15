@@ -1,0 +1,199 @@
+﻿/* 清理浮动 */
+.cf {
+  *zoom: 1;
+}
+.cf:before,
+.cf:after {
+  display: table;
+  content: "";
+}
+.cf:after {
+  clear: both;
+}
+.hide-text 
+{
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.newcomer 
+{
+    position: fixed;
+    right: 0;
+    top: 75px;
+    width: 68px;
+    background-color: #FFFBEE;
+    z-index: 999;
+}
+.newcomer .nickname 
+{
+    color: #0099CC;
+}
+.newcomer .hd 
+{
+    background-color: #B40001;
+    color: #FFF;
+    font-size: 16px;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+}
+.newcomer-item 
+{
+    position: relative;
+}
+.newcomer-item .popover 
+{
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    background: transparent none no-repeat scroll 0 0;
+    display: none;
+}
+.newcomer-item .popover.nickname 
+{
+    background-image: url(/pics/newcomer/popover-small.png);
+    width: 72px;
+    height: 31px;
+    line-height: 28px;
+    text-align: center;
+    left: -68px;
+    /* text overflow */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 5px;
+    *width: 60px;
+}
+.newcomer-item .detail 
+{
+    background-image: url(/pics/newcomer/popover-large.png);
+    width: 318px;
+    height: 210px;
+    left: -308px;
+}
+.newcomer-item .avatar 
+{
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 5px auto;
+}
+.newcomer-item .detail .avatar 
+{
+    width: 182px;
+    height: 182px;
+    margin: 13px;
+    float: left;
+}
+.newcomer-item .detail .cnt 
+{
+    float: left;
+    width: 110px;
+}
+.newcomer-item .detail .nickname 
+{
+    display: block;
+    width: 85px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    border-bottom: 1px solid #777;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+.newcomer-item .sex 
+{
+    margin-top: 10px;
+}
+.newcomer-item .city 
+{
+    margin-top: 5px;
+}
+.newcomer-item .count 
+{
+    color: #D5836F;
+    margin-left: 8px;
+    float: left;
+}
+.mo
+{
+    width: 41px;
+    height: 21px;
+    font: normal 16px/21px arial;
+    color: #FFF;
+    text-align: center;
+    background: transparent url(/pics/moguo_sprites.png) no-repeat scroll -7px -3px;
+    float: left;
+}
+.mo:hover 
+{
+    background-position: -56px -3px;
+    width: 65px;
+}
+.newcomer-item .comment
+{
+    width: 24px;
+    height: 21px;
+    background: transparent url(/pics/moguo_sprites.png) no-repeat scroll -7px -28px;
+    float: left;
+}
+.newcomer-item .comment:hover 
+{
+    background-position: -41px -28px;
+}
+.newcomer-item .action 
+{
+    position: absolute;
+    bottom: 13px;
+}
+.newcomer-item .action-1 
+{
+    margin: 10px 0;
+}
+
+/* collapse */
+.newcomer-collapse 
+{
+    width: 30px;
+}
+.newcomer-collapse .hd 
+{
+    height: auto;
+    line-height: 1.5;
+    cursor: default;
+}
+.newcomer-collapse .newcomer-list 
+{
+    display: none;
+}
+
+/* FIX for IE6 */
+.newcomer 
+{
+    _position:absolute;
+    _right: -83px;
+    _bottom:auto;
+    _top:expression(eval(document.documentElement.scrollTop));
+    _margin-top: 60px;
+}
+*html 
+{
+    background-image:url(about:blank);
+	background-attachment:fixed;
+}
+.newcomer-item a 
+{
+    _display: block;
+}
+.newcomer-item .detail .nickname 
+{
+    _width: 70px;
+    _background-image: none;
+    _text-align: left;
+    _line-height: 1.5;
+}

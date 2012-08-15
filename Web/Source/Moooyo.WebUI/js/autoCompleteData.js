@@ -1,0 +1,1 @@
+﻿var emailAutoCompleteDatas = ["@163.com", "@126.com", "@qq.com", "@yeah.net", "@139.com", "@gmail.com", "@yahoo.com.cn ", "@yahoo.cn", "@foxmail.com", "@sohu.com", "@sina.com", "@eyou.com", "@msn.com", "@wo.com.cn", "@tom.com", "@hotmail.com", "@21cn.com", "@263.net", "@189.cn", "@sogou.com", "@188.com", "@vip.sina.com", "@vip.qq.com", "@vip.163.com", "@moooyo.com"];

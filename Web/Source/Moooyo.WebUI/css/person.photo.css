@@ -1,0 +1,206 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#wrap {
+  margin-top: 30px;
+}
+a {
+  color: #0099CC;
+}
+a:hover {
+  color: #b40001;
+}
+.btn {
+  cursor: pointer;
+}
+.datetime {
+  color: #cccccc;
+  font-size: 10px;
+}
+.main {
+  width: 751px;
+  background: #FFF;
+  font-family: inherit;
+}
+.main .header {
+  line-height: 50px;
+  padding: 30px 40px;
+  border-bottom: 1px solid #cccccc;
+}
+.main .header .title {
+  float: left;
+  height: 50px;
+  font: bold 18px/1.5 "Microsoft Yahei";
+  line-height: 50px;
+  padding: 0 30px 0 68px;
+  background: transparent url(/pics/icon-camera.png) no-repeat scroll 0 0;
+}
+.main .header .datetime {
+  float: left;
+}
+.main .header .back {
+  float: right;
+}
+.main .main-content {
+  padding: 40px;
+}
+.main .main-content .like 
+{
+  margin-left:15px;
+  padding: 10px;
+}
+.main .main-content .like .plus {
+  color: #FFF;
+  padding: 3px 8px;
+  margin-right:5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.main .main-content .like a {
+  color: #b40001;
+}
+.main .main-content .like a .plus {
+  background: #b40001;
+}
+.main .main-content .like a:hover {
+  color: #CC0000;
+}
+.main .main-content .like a:hover .plus {
+  background: #CC0000;
+}
+.main .main-content .like .avatars {
+  margin: 20px 0;
+}
+.main .main-content .like .avatars img {
+  width: 30px;
+  height: 30px;
+}
+.main .main-content .actions {
+  padding: 5px 10px;
+  line-height: 25px;
+  background: #EEE;
+}
+.main .main-content .actions a {
+  float: left;
+  margin-right: 15px;
+}
+.main .main-content .actions .tweet {
+  float: right;
+}
+.main .main-content .actions .tweet a {
+  float: none;
+  display: inline-block;
+  color: transparent;
+  width: 30px;
+  height: 25px;
+  margin: 0 3px;
+  background: transparent url(/pics/icon-weibo.png) no-repeat scroll 0 0;
+}
+.main .main-content .actions .tweet .sina-weibo {
+  margin-left: 10px;
+  background-position: 0 0;
+}
+.main .main-content .actions .tweet .sina-weibo:hover {
+  background-position: 0 -29px;
+}
+.main .main-content .actions .tweet .tc-weibo {
+  background-position: -35px 0;
+}
+.main .main-content .actions .tweet .tc-weibo:hover {
+  background-position: -35px -29px;
+}
+.main .photo-list {
+  margin-top: 20px;
+  line-height:30px; 
+  font-size:14px;
+  margin-bottom:20px;
+}
+.main .photo-list img {
+  margin: 10px 0;
+}
+.main .comment {
+  padding: 0 40px;
+}
+.main .comment dt,
+.main .comment dd {
+  float: left;
+}
+.main .comment-form dd {
+  width: 510px;
+  padding-left: 25px;
+}
+.main .comment-form textarea {
+  width: 500px;
+  height: 100px;
+  padding: 10px 0 10px 30px;
+  border: 0;
+  background: transparent url(/pics/say-bg.png) no-repeat scroll 0 0;
+  resize: none;
+}
+.main .comment-form .btn {
+  width: 88px;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
+  background: transparent url(/pics/btn.png) no-repeat scroll 0 0;
+}
+.main .comment-content .header {
+  line-height: 25px;
+  padding: 10px 0;
+}
+.main .comment-content .summary {
+  background: transparent url(/pics/icon-comment.png) no-repeat scroll 0 0;
+  padding-left: 40px;
+  color: #b40001;
+  font-weight: bold;
+}
+.main .comment-list {
+  margin: 20px 0 100px 0;
+}
+.main .comment-list .current-hover {
+  background: #EEE;
+}
+.main .comment-list dl {
+  padding: 5px 10px;
+  margin: 10px 0;
+}
+.main .comment-list dd {
+  width: 560px;
+  margin-left: 20px;
+}
+.main .comment-list .avatar {
+  width: 60px;
+  height: 60px;
+}
+.main .comment-list .content {
+  margin-top: 5px;
+}
+.main .comment-list .datetime {
+  float: right;
+}

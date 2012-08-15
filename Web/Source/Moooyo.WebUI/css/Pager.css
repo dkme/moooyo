@@ -1,0 +1,35 @@
+﻿#pager{text-align:center; width:auto; display:block; clear:both;}
+#pager ul.pages {
+display:block; clear:both; min-width:120px; width:auto; width:auto!important;
+border:none; float:none; text-align:center;
+text-transform:uppercase;
+font-size:12px;
+margin:25px 0px;
+padding:0px;
+}
+
+#pager ul.pages li {
+list-style:none; display: inline; line-height:22px;
+
+border:1px solid #bbbbbb;
+text-decoration:none;
+margin:0px 5px 0px 0px;
+padding:4px 7px;
+color:#000000;
+}
+
+#pager ul.pages li:hover {
+border:1px solid #999999; display: inline;
+}
+
+#pager ul.pages li.pgEmpty {
+border:1px solid #eee; display: inline;
+color:#ccc;
+}
+
+#pager ul.pages li.pgCurrent {
+border:1px solid #000000; display: inline;
+color:#ffffff;
+font-weight:bold;
+background-color:#555555;
+}

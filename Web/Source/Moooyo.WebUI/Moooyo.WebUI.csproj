@@ -1,0 +1,970 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8DFEF8E0-BD47-48DC-81AE-17AAB7C8103A}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Moooyo.WebUI</RootNamespace>
+    <AssemblyName>Moooyo.WebUI</AssemblyName>
+    <MvcBuildViews>false</MvcBuildViews>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PackageAsSingleFile>true</PackageAsSingleFile>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabases>false</PublishDatabases>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="CBB.CheckHelper">
+      <HintPath>..\Moooyo.Service\Moooyo.BiZ\bin\Debug\CBB.CheckHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.ConfigurationHelper">
+      <HintPath>..\Moooyo.Service\Moooyo.BiZ\bin\Debug\CBB.ConfigurationHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.Exception">
+      <HintPath>..\Moooyo.Service\Moooyo.BiZ\bin\Debug\CBB.Exception.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.ImageHelper">
+      <HintPath>..\Moooyo.Service\Moooyo.BiZ\bin\Debug\CBB.ImageHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.LocationFunctionHelper">
+      <HintPath>..\Moooyo.Service\CBB公用类库\CBB.LocationFunctionHelper\bin\Debug\CBB.LocationFunctionHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.Logger">
+      <HintPath>..\Moooyo.Service\Moooyo.BiZ\bin\Debug\CBB.Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.MongoDB">
+      <HintPath>..\Moooyo.Service\Moooyo.BiZ\bin\Debug\CBB.MongoDB.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.NetworkingHelper">
+      <HintPath>..\Moooyo.Service\CBB公用类库\CBB.NetworkingHelper\bin\Debug\CBB.NetworkingHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.OAuth">
+      <HintPath>..\Moooyo.Service\Moooyo.BiZ\bin\Debug\CBB.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.RankingHelper">
+      <HintPath>..\Moooyo.Service\Moooyo.BiZ\bin\Debug\CBB.RankingHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.RecommendationHelper">
+      <HintPath>..\Moooyo.Service\Moooyo.BiZ\bin\Debug\CBB.RecommendationHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.Security">
+      <HintPath>..\Moooyo.Service\Moooyo.BiZ\bin\Debug\CBB.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Components\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\Components\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\Components\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="Moooyo.Active">
+      <HintPath>..\Moooyo.Service\Moooyo.BiZ\bin\Debug\Moooyo.Active.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTSDK.Tencent">
+      <HintPath>..\Components\OpenTSDK.Tencent.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ContentHolderOrder.cs" />
+    <Compile Include="Common\Content\ContentNamesDefs.cs" />
+    <Compile Include="Common\FileManager.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ActivesController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ContentController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InterestCenterController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Controllers\MicroConnController.cs" />
+    <Compile Include="Controllers\MsgController.cs" />
+    <Compile Include="Controllers\photoController.cs" />
+    <Compile Include="Controllers\PushController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\ActivityController.cs" />
+    <Compile Include="Controllers\RelationController.cs" />
+    <Compile Include="Controllers\SettingController.cs" />
+    <Compile Include="Controllers\SharedController.cs" />
+    <Compile Include="Controllers\SystemFuncController.cs" />
+    <Compile Include="Controllers\UpController.cs" />
+    <Compile Include="Controllers\WenWenController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Comm.cs" />
+    <Compile Include="Models\PageModels\Comment\CommentModel.cs" />
+    <Compile Include="Models\PageModels\Content\AddContentModel.cs" />
+    <Compile Include="Models\PageModels\Content\AddInterestFansModel.cs" />
+    <Compile Include="Models\PageModels\Content\AddInterViewContentModel.cs" />
+    <Compile Include="Models\PageModels\Content\ContentDetailModel.cs" />
+    <Compile Include="Models\PageModels\Content\ContentModel.cs" />
+    <Compile Include="Models\PageModels\Content\IContentModel.cs" />
+    <Compile Include="Models\PageModels\Content\IFavorerContentModel.cs" />
+    <Compile Include="Models\PageModels\Content\ImageLayOutTypeModel.cs" />
+    <Compile Include="Models\PageModels\Content\IndexContentModel.cs" />
+    <Compile Include="Models\PageModels\Content\TaContentModel.cs" />
+    <Compile Include="Models\PageModels\Comment\InterViewCommentModel.cs" />
+    <Compile Include="Models\PageModels\Member\GlamourCountsModel.cs" />
+    <Compile Include="Models\PageModels\Push\InterestListControlModel.cs" />
+    <Compile Include="Models\PageModels\Push\InterestOverMeMemberModel.cs" />
+    <Compile Include="Models\PageModels\Msg\MyActivityListPanelModel.cs" />
+    <Compile Include="Models\PageModels\Push\TheyFavorsMemberModel.cs" />
+    <Compile Include="Models\PageModels\Push\WeeklyInterestRankingModel.cs" />
+    <Compile Include="Models\Common\DisplayObjProvider.cs" />
+    <Compile Include="Models\Common\ImageResult.cs" />
+    <Compile Include="Models\Common\MemberDisplayObj.cs" />
+    <Compile Include="Models\Common\MemberFullDisplayObj.cs" />
+    <Compile Include="Models\Common\MsgerDisplayObj.cs" />
+    <Compile Include="Models\PageModels\Push\ApplicationModel.cs" />
+    <Compile Include="Models\PageModels\Interest\InterestFansModel.cs" />
+    <Compile Include="Models\PageModels\Actives\ActivesModel.cs" />
+    <Compile Include="Models\PageModels\Register\InterestForRegModel.cs" />
+    <Compile Include="Models\PageModels\Setting\MemberSkinModel.cs" />
+    <Compile Include="Models\PageModels\Topic\InterestWenWenModel.cs" />
+    <Compile Include="Models\PageModels\Setting\MemberBindingPlatformModel.cs" />
+    <Compile Include="Models\PageModels\Topic\MemberFeaturedInterestTopicModel.cs" />
+    <Compile Include="Models\PageModels\Member\MemberProfileModel.cs" />
+    <Compile Include="Models\PageModels\Relation\MemberRelationsModel.cs" />
+    <Compile Include="Models\PageModels\Interest\MemberInterestModel.cs" />
+    <Compile Include="Models\PageModels\InterView\MemberInterViewModel.cs" />
+    <Compile Include="Models\PageModels\Member\MemberPageModel.cs" />
+    <Compile Include="Models\PageModels\Msg\MsgsModel.cs" />
+    <Compile Include="Models\PageModels\Msg\MyActivitysModel.cs" />
+    <Compile Include="Models\PageModels\Member\MyInterestModel.cs" />
+    <Compile Include="Models\PageModels\Member\MyInterestToWenWenModel.cs" />
+    <Compile Include="Models\PageModels\PageModelBase.cs" />
+    <Compile Include="Models\Common\PaggerObj.cs" />
+    <Compile Include="Models\PageModels\Actives\SuperManModel.cs" />
+    <Compile Include="Models\PageModels\Admin\SystemInfoModels.cs" />
+    <Compile Include="Models\PageModels\Msg\SystemMsgsModel.cs" />
+    <Compile Include="Models\PageModels\Msg\VistorModel.cs" />
+    <Compile Include="Models\Common\RelationDisplayObj.cs" />
+    <Compile Include="Models\Common\UserDisplayObj.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\base_0101.css" />
+    <Content Include="css\fabu.css" />
+    <Content Include="css\guide.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\Login1.css" />
+    <Content Include="css\Login2.css" />
+    <Content Include="css\msg.css" />
+    <Content Include="css\person.photo.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\jbox.css" />
+    <Content Include="css\jquery.Jcrop.css" />
+    <Content Include="css\Pager.css" />
+    <Content Include="css\admin.css" />
+    <Content Include="Content\StyleSheet1.css" />
+    <Content Include="css\jquery.autocomplete.css" />
+    <Content Include="css\newcomer.css" />
+    <Content Include="css\upload-photo_0101.css" />
+    <Content Include="Global.asax" />
+    <Content Include="js\admin.js" />
+    <Content Include="js\base_0101.js" />
+    <Content Include="js\autoCompleteData.js" />
+    <Content Include="js\DD_belatedPNG_0.0.8a-min.js" />
+    <Content Include="js\dialog.js" />
+    <Content Include="js\guide.index.js" />
+    <Content Include="js\guide.js" />
+    <Content Include="js\guide.meet.js" />
+    <Content Include="js\iepng\PIE.htc" />
+    <Content Include="js\ImageLayoutFrameGroup.js" />
+    <Content Include="js\iepng\blank.gif" />
+    <Content Include="js\iepng\iepngfix.htc" />
+    <Content Include="js\iepng\iepngfix_tilebg.js" />
+    <Content Include="js\jquery.validate.js" />
+    <Content Include="js\jquery.validate.min.js" />
+    <Content Include="js\mainBobyimg.js" />
+    <Content Include="js\main_0101.js" />
+    <Content Include="js\msg.js" />
+    <Content Include="js\mustache.min.js" />
+    <Content Include="js\newcomer.js" />
+    <Content Include="js\PIE.js" />
+    <Content Include="js\TimeControl.js" />
+    <Content Include="js\jquery.datepick-zh-CN.js" />
+    <Content Include="js\jquery.datepick.js" />
+    <Content Include="js\up\photo_upload_regupface_0101.js" />
+    <Content Include="LogData\ApplicationLog.txt" />
+    <Content Include="pics\123.png" />
+    <Content Include="pics\404logo.gif" />
+    <Content Include="pics\about_title.png" />
+    <Content Include="pics\Active_img\a2bac.gif" />
+    <Content Include="pics\Active_img\a2btn_now1.gif" />
+    <Content Include="pics\Active_img\a2line_bac.gif" />
+    <Content Include="pics\Active_img\a2mo.gif" />
+    <Content Include="pics\Active_img\a2paper.gif" />
+    <Content Include="pics\Active_img\a2paper_bac.gif" />
+    <Content Include="pics\Active_img\a2paper_bottom.gif" />
+    <Content Include="pics\Active_img\a2title.gif" />
+    <Content Include="pics\Active_img\a2_btn1don.gif" />
+    <Content Include="pics\Active_img\a2_btn1up.gif" />
+    <Content Include="pics\Active_img\a2_btn2don.gif" />
+    <Content Include="pics\Active_img\a2_btn2up.gif" />
+    <Content Include="pics\Active_img\a2_btnbakdon.gif" />
+    <Content Include="pics\Active_img\a2_btnbakup.gif" />
+    <Content Include="pics\Active_img\Active1_bac.png" />
+    <Content Include="pics\Active_img\a2btn_now2.gif" />
+    <Content Include="pics\Active_img\empty.jpg" />
+    <Content Include="pics\Active_img\img1.jpg" />
+    <Content Include="pics\Active_img\next.gif" />
+    <Content Include="pics\Active_img\sina_weibo.gif" />
+    <Content Include="pics\Active_img\up.gif" />
+    <Content Include="pics\Active_img\xq.gif" />
+    <Content Include="pics\Active_img\zs.gif" />
+    <Content Include="pics\Addinter.jpg" />
+    <Content Include="pics\Addinterhover.jpg" />
+    <Content Include="pics\addLoad.png" />
+    <Content Include="pics\addLoad_pz.png" />
+    <Content Include="pics\add_xiqu.gif" />
+    <Content Include="pics\add_xiqu.png" />
+    <Content Include="pics\Ajax_loading.gif" />
+    <Content Include="pics\Angle_b.jpg" />
+    <Content Include="pics\Angle_b.png" />
+    <Content Include="pics\Angle_bg.png" />
+    <Content Include="pics\angle_bg01.png" />
+    <Content Include="pics\Angle_t.png" />
+    <Content Include="pics\arrow_leftbig.gif" />
+    <Content Include="pics\back.gif" />
+    <Content Include="pics\badge_superman.gif" />
+    <Content Include="pics\bg_border.png" />
+    <Content Include="pics\big-bg01.png" />
+    <Content Include="pics\big-bg02.png" />
+    <Content Include="pics\bind01.gif" />
+    <Content Include="pics\bind02.gif" />
+    <Content Include="pics\border_bg.png" />
+    <Content Include="pics\border_bg01.png" />
+    <Content Include="pics\btn-upload.png" />
+    <Content Include="pics\btn.png" />
+    <Content Include="pics\Care_arrow.png" />
+    <Content Include="pics\Care_arrowhover.png" />
+    <Content Include="pics\cengter_xian.png" />
+    <Content Include="pics\chose_bg.gif" />
+    <Content Include="pics\chose_pic01.gif" />
+    <Content Include="pics\Code.gif" />
+    <Content Include="pics\code_msg_bottom.png" />
+    <Content Include="pics\code_msg_top.png" />
+    <Content Include="pics\csg-bg.png" />
+    <Content Include="pics\csg-fabu.png" />
+    <Content Include="pics\csg-indexbg.png" />
+    <Content Include="pics\csg-left-list.png" />
+    <Content Include="pics\csg-self.png" />
+    <Content Include="pics\csg-set-bg.png" />
+    <Content Include="pics\csg-set-bg1.png" />
+    <Content Include="pics\csg-set-bg2.png" />
+    <Content Include="pics\csg-set.png" />
+    <Content Include="pics\default_bg.gif" />
+    <Content Include="pics\defultpic.png" />
+    <Content Include="pics\delete-icon.gif" />
+    <Content Include="pics\demo14.png" />
+    <Content Include="pics\demo15.png" />
+    <Content Include="pics\demopic.png" />
+    <Content Include="pics\Dlogin-btn.png" />
+    <Content Include="pics\Dlogin-btnhover.png" />
+    <Content Include="pics\Dlogin-txt.png" />
+    <Content Include="pics\DLOGO-L.png" />
+    <Content Include="pics\down-icon.gif" />
+    <Content Include="pics\edit_group.gif" />
+    <Content Include="pics\error.png" />
+    <Content Include="pics\Expression\anj.gif" />
+    <Content Include="pics\Expression\aom.gif" />
+    <Content Include="pics\Expression\baiy.gif" />
+    <Content Include="pics\Expression\bis.gif" />
+    <Content Include="pics\Expression\biz.gif" />
+    <Content Include="pics\Expression\chah.gif" />
+    <Content Include="pics\Expression\ciy.gif" />
+    <Content Include="pics\Expression\dak.gif" />
+    <Content Include="pics\Expression\dang.gif" />
+    <Content Include="pics\Expression\dao.gif" />
+    <Content Include="pics\Expression\dey.gif" />
+    <Content Include="pics\Expression\fad.gif" />
+    <Content Include="pics\Expression\fank.gif" />
+    <Content Include="pics\Expression\fend.gif" />
+    <Content Include="pics\Expression\fendou.gif" />
+    <Content Include="pics\Expression\fenn.gif" />
+    <Content Include="pics\Expression\gang.gif" />
+    <Content Include="pics\Expression\gouy.gif" />
+    <Content Include="pics\Expression\guz.gif" />
+    <Content Include="pics\Expression\haix.gif" />
+    <Content Include="pics\Expression\hanx.gif" />
+    <Content Include="pics\Expression\haq.gif" />
+    <Content Include="pics\Expression\huaix.gif" />
+    <Content Include="pics\Expression\jie.gif" />
+    <Content Include="pics\Expression\jingk.gif" />
+    <Content Include="pics\Expression\jingy.gif" />
+    <Content Include="pics\Expression\kea.gif" />
+    <Content Include="pics\Expression\kel.gif" />
+    <Content Include="pics\Expression\koubs.gif" />
+    <Content Include="pics\Expression\ku.gif" />
+    <Content Include="pics\Expression\kuaikl.gif" />
+    <Content Include="pics\Expression\laoh.gif" />
+    <Content Include="pics\Expression\lengh.gif" />
+    <Content Include="pics\Expression\liul.gif" />
+    <Content Include="pics\Expression\nang.gif" />
+    <Content Include="pics\Expression\no.gif" />
+    <Content Include="pics\Expression\out.gif" />
+    <Content Include="pics\Expression\peif.gif" />
+    <Content Include="pics\Expression\piez.gif" />
+    <Content Include="pics\Expression\qinqin.gif" />
+    <Content Include="pics\Expression\qoudl.gif" />
+    <Content Include="pics\Expression\se.gif" />
+    <Content Include="pics\Expression\shuai.gif" />
+    <Content Include="pics\Expression\shui.gif" />
+    <Content Include="pics\Expression\tiaop.gif" />
+    <Content Include="pics\Expression\toux.gif" />
+    <Content Include="pics\Expression\weiq.gif" />
+    <Content Include="pics\Expression\weix.gif" />
+    <Content Include="pics\Expression\wos.gif" />
+    <Content Include="pics\Expression\xia.gif" />
+    <Content Include="pics\Expression\xianh.gif" />
+    <Content Include="pics\Expression\xianhdx.gif" />
+    <Content Include="pics\Expression\xin.gif" />
+    <Content Include="pics\Expression\xins.gif" />
+    <Content Include="pics\Expression\yinx.gif" />
+    <Content Include="pics\Expression\yiw.gif" />
+    <Content Include="pics\Expression\youhh.gif" />
+    <Content Include="pics\Expression\yun.gif" />
+    <Content Include="pics\Expression\zan.gif" />
+    <Content Include="pics\Expression\zaij.gif" />
+    <Content Include="pics\Expression\zhem.gif" />
+    <Content Include="pics\Expression\zhoum.gif" />
+    <Content Include="pics\Expression\zhuak.gif" />
+    <Content Include="pics\Expression\zoun.gif" />
+    <Content Include="pics\Expression\zuohh.gif" />
+    <Content Include="pics\Active_img\groove.gif" />
+    <Content Include="pics\Fans-btn.png" />
+    <Content Include="pics\Fans-btnhover.png" />
+    <Content Include="pics\Fans-list.png" />
+    <Content Include="pics\Fans-listhover.png" />
+    <Content Include="pics\Fans_f.gif" />
+    <Content Include="pics\Fans_news.gif" />
+    <Content Include="pics\Fans_other01.png" />
+    <Content Include="pics\Fans_pic.png" />
+    <Content Include="pics\favicon.ico" />
+    <Content Include="pics\go_top01.png" />
+    <Content Include="pics\go_top02.png" />
+    <Content Include="pics\group_back.gif" />
+    <Content Include="pics\group_edit.gif" />
+    <Content Include="pics\guide\arrow-up-right.png" />
+    <Content Include="pics\guide\close-hover.png" />
+    <Content Include="pics\guide\close.png" />
+    <Content Include="pics\guide\mouse.png" />
+    <Content Include="pics\guide\say.png" />
+    <Content Include="pics\guide\tree.png" />
+    <Content Include="pics\guide\arrow-down-left.png" />
+    <Content Include="pics\guide\arrow-left.png" />
+    <Content Include="pics\guide\arrow-right.png" />
+    <Content Include="pics\guide\mask-step-2.png" />
+    <Content Include="pics\guide\mask-step-3.png" />
+    <Content Include="pics\guide\mask-step-4.png" />
+    <Content Include="pics\guide\meet-mask-step-2.png" />
+    <Content Include="pics\guide\meet-mask-step-3.png" />
+    <Content Include="pics\guide\meet-mask-step-4.png" />
+    <Content Include="pics\guide\reply.png" />
+    <Content Include="pics\harched.png" />
+    <Content Include="pics\hatch.gif" />
+    <Content Include="pics\hatch_small.png" />
+    <Content Include="pics\hobby_check.png" />
+    <Content Include="pics\hobby_pic01.gif" />
+    <Content Include="pics\huiying.gif" />
+    <Content Include="pics\icon-camera.png" />
+    <Content Include="pics\icon-comment.png" />
+    <Content Include="pics\icon-say.png" />
+    <Content Include="pics\icon-weibo.png" />
+    <Content Include="pics\icon1.gif" />
+    <Content Include="pics\ImageUp_Close.png" />
+    <Content Include="pics\index_reg.gif" />
+    <Content Include="pics\input_login_bg.png" />
+    <Content Include="pics\input_long_bg.png" />
+    <Content Include="pics\input_long_bg02.png" />
+    <Content Include="pics\input_long_bg03.png" />
+    <Content Include="pics\msghover.png" />
+    <Content Include="pics\noicon_p.jpg" />
+    <Content Include="pics\PhotoIsNotPassAuditReplacePic .png" />
+    <Content Include="pics\ppt.jpg" />
+    <Content Include="pics\Register_UserIcon\interest_border.png" />
+    <Content Include="pics\interviewbg.png" />
+    <Content Include="pics\jbox\jbox-button1.png" />
+    <Content Include="pics\jbox\jbox-button2.png" />
+    <Content Include="pics\jbox\jbox-close1.gif" />
+    <Content Include="pics\jbox\jbox-close2.gif" />
+    <Content Include="pics\jbox\jbox-content-loading.gif" />
+    <Content Include="pics\jbox\jbox-icons-ie6.gif" />
+    <Content Include="pics\jbox\jbox-icons.png" />
+    <Content Include="pics\jbox\jbox-loading1.gif" />
+    <Content Include="pics\jbox\jbox-loading2.gif" />
+    <Content Include="pics\jbox\jbox-loading3.gif" />
+    <Content Include="pics\jbox\jbox-title-icon.gif" />
+    <Content Include="pics\Active_img\superman.gif" />
+    <Content Include="pics\jindu_01.gif" />
+    <Content Include="pics\jindu_bg.png" />
+    <Content Include="pics\joinpic.png" />
+    <Content Include="pics\joinpic02.png" />
+    <Content Include="pics\jump_listpic.png" />
+    <Content Include="pics\left_Arrow.gif" />
+    <Content Include="pics\left_letterbg.png" />
+    <Content Include="pics\left_marks.gif" />
+    <Content Include="pics\Lertter05_.gif" />
+    <Content Include="pics\Lertter05_.png" />
+    <Content Include="pics\Lertter_01.gif" />
+    <Content Include="pics\Lertter_01.png" />
+    <Content Include="pics\Lertter_02.gif" />
+    <Content Include="pics\Lertter_03.gif" />
+    <Content Include="pics\Lertter_04.gif" />
+    <Content Include="pics\Lertter_close.png" />
+    <Content Include="pics\Lertter_hit.png" />
+    <Content Include="pics\Lertter_sendtxt.gif" />
+    <Content Include="pics\Letter_close.png" />
+    <Content Include="pics\Letter_hit.png" />
+    <Content Include="pics\letter_msg.png" />
+    <Content Include="pics\letter_msg1.png" />
+    <Content Include="pics\Letter_msg_big.png" />
+    <Content Include="pics\Letter_pic.gif" />
+    <Content Include="pics\linkbtn01.gif" />
+    <Content Include="pics\linkbtn02.gif" />
+    <Content Include="pics\linkbtn03.gif" />
+    <Content Include="pics\linkbtn04.gif" />
+    <Content Include="pics\linkbtn05.gif" />
+    <Content Include="pics\linkbtn06.gif" />
+    <Content Include="pics\load_pic.png" />
+    <Content Include="pics\load_pic_pz.png" />
+    <Content Include="pics\login-btn.png" />
+    <Content Include="pics\login-btnhover.png" />
+    <Content Include="pics\login-txt.png" />
+    <Content Include="pics\login_btn.png" />
+    <Content Include="pics\login_close.gif" />
+    <Content Include="pics\login_pic.gif" />
+    <Content Include="pics\login_z.gif" />
+    <Content Include="pics\LOGO-L.png" />
+    <Content Include="pics\logo.png" />
+    <Content Include="pics\logopic.gif" />
+    <Content Include="pics\look_pass.png" />
+    <Content Include="pics\main_bg.gif" />
+    <Content Include="pics\mappic.gif" />
+    <Content Include="pics\miguoaccount.png" />
+    <Content Include="pics\MM01.gif" />
+    <Content Include="pics\MM02.gif" />
+    <Content Include="pics\MM03.gif" />
+    <Content Include="pics\MM04.gif" />
+    <Content Include="pics\moguo_sprites.png" />
+    <Content Include="pics\mo_pic.gif" />
+    <Content Include="pics\msg_close.gif" />
+    <Content Include="pics\msg_close.png" />
+    <Content Include="pics\msg_loop.gif" />
+    <Content Include="pics\my-btn.png" />
+    <Content Include="pics\mylogo.gif" />
+    <Content Include="pics\navset.png" />
+    <Content Include="pics\newcomer\popover-large.png" />
+    <Content Include="pics\newcomer\popover-small.png" />
+    <Content Include="pics\noicon.jpg" />
+    <Content Include="pics\Notenough.gif" />
+    <Content Include="pics\Not_enough.gif" />
+    <Content Include="pics\online-btn01.png" />
+    <Content Include="pics\online-btn02.png" />
+    <Content Include="pics\people_logo.gif" />
+    <Content Include="pics\pic_btn01.png" />
+    <Content Include="pics\pic_btn02.png" />
+    <Content Include="pics\pic_btn03.png" />
+    <Content Include="pics\pic_btn04.png" />
+    <Content Include="pics\pic_video.gif" />
+    <Content Include="pics\pic_video01.png" />
+    <Content Include="pics\plus-icon.gif" />
+    <Content Include="pics\plus-icon1.gif" />
+    <Content Include="pics\ppt_pic01.gif" />
+    <Content Include="pics\ppt_pic02.gif" />
+    <Content Include="pics\ppt_pic03.gif" />
+    <Content Include="pics\ppt_pic04.gif" />
+    <Content Include="pics\question-icon.gif" />
+    <Content Include="pics\quit-out.png" />
+    <Content Include="pics\randomPics.png" />
+    <Content Include="pics\right.png" />
+    <Content Include="pics\right_arrow.gif" />
+    <Content Include="pics\right_arrow.jpg" />
+    <Content Include="pics\right_arrowbg.gif" />
+    <Content Include="pics\right_marks.gif" />
+    <Content Include="pics\say-bg.png" />
+    <Content Include="pics\selectSex.png" />
+    <Content Include="pics\select_pic.gif" />
+    <Content Include="pics\selfpic.png" />
+    <Content Include="pics\selfpic02.png" />
+    <Content Include="pics\selft_ppt.gif" />
+    <Content Include="pics\selft_ppt.png" />
+    <Content Include="pics\self_add.png" />
+    <Content Include="pics\self_bg.png" />
+    <Content Include="pics\self_bghover.png" />
+    <Content Include="pics\self_del.png" />
+    <Content Include="pics\self_Integral.gif" />
+    <Content Include="pics\self_lert.png" />
+    <Content Include="pics\send_btn.png" />
+    <Content Include="pics\setbgif.gif" />
+    <Content Include="pics\setppt.gif" />
+    <Content Include="pics\set_pic01.rar.gif" />
+    <Content Include="pics\sexchange.png" />
+    <Content Include="pics\share-bg.png" />
+    <Content Include="pics\share-bghover.png" />
+    <Content Include="pics\share01.gif" />
+    <Content Include="pics\share02.gif" />
+    <Content Include="pics\share03.gif" />
+    <Content Include="pics\share04.gif" />
+    <Content Include="pics\share05.gif" />
+    <Content Include="pics\share06.gif" />
+    <Content Include="pics\share06.png" />
+    <Content Include="pics\share_arrow.png" />
+    <Content Include="pics\share_arrowhover.png" />
+    <Content Include="pics\share_demo01.jpg" />
+    <Content Include="pics\share_demo02.jpg" />
+    <Content Include="pics\share_demo03.jpg" />
+    <Content Include="pics\share_demo04.jpg" />
+    <Content Include="pics\share_demo05.jpg" />
+    <Content Include="pics\share_demo06.jpg" />
+    <Content Include="pics\sine_logo.gif" />
+    <Content Include="pics\site_map.gif" />
+    <Content Include="pics\smallpic.gif" />
+    <Content Include="pics\small_chose.gif" />
+    <Content Include="pics\special01.gif" />
+    <Content Include="pics\special02.gif" />
+    <Content Include="pics\special03.gif" />
+    <Content Include="pics\special04.gif" />
+    <Content Include="pics\special05.gif" />
+    <Content Include="pics\step_01.gif" />
+    <Content Include="pics\step_02.gif" />
+    <Content Include="pics\step_03.gif" />
+    <Content Include="pics\step_bg2.gif" />
+    <Content Include="pics\Suggestionbg.png" />
+    <Content Include="pics\Timebtn_bg.png" />
+    <Content Include="pics\time_pic.png" />
+    <Content Include="pics\tip\interst2_littip1.png" />
+    <Content Include="pics\tip\interst_littip1.png" />
+    <Content Include="pics\tip\interst_littip2.png" />
+    <Content Include="pics\tip\littip_del.png" />
+    <Content Include="pics\tip\littip_delb.png" />
+    <Content Include="pics\tip\lookhe_littip1.png" />
+    <Content Include="pics\tip\member_littip1.png" />
+    <Content Include="pics\tip\member_tip1.png" />
+    <Content Include="pics\tip\member_tip2.png" />
+    <Content Include="pics\tip\member_tip_acqierement.png" />
+    <Content Include="pics\tip\member_tip_interview.png" />
+    <Content Include="pics\tip\member_tip_more.png" />
+    <Content Include="pics\tip\member_tip_photo.png" />
+    <Content Include="js\up\reg_photoprogress_0101.js" />
+    <Content Include="js\up\photo_upload_reg_0101.js" />
+    <Content Include="js\up\photoprogress_reg_0101.js" />
+    <Content Include="js\data_0101.js" />
+    <Content Include="js\up\photoprogress_0101.js" />
+    <Content Include="js\up\photo_upload_0101.js" />
+    <Content Include="js\up\swfupload.cookies_0101.js" />
+    <Content Include="js\up\swfupload_0101.js" />
+    <Content Include="js\up\swfupload.queue_0101.js" />
+    <Content Include="js\up\swfupload.speed_0101.js" />
+    <Content Include="js\up\swfupload.swfobject_0101.js" />
+    <Content Include="pics\top_list.png" />
+    <Content Include="pics\top_list01.png" />
+    <Content Include="pics\top_list02.png" />
+    <Content Include="pics\Tranparent_redbg.png" />
+    <Content Include="pics\Transparent_bg.png" />
+    <Content Include="pics\Transparent_bgone.png" />
+    <Content Include="pics\typedaohan.png" />
+    <Content Include="pics\up-icon.gif" />
+    <Content Include="pics\Register_UserIcon\upIcon_background.jpg" />
+    <Content Include="pics\Register_UserIcon\upIcon_interest_boder.png" />
+    <Content Include="pics\upload.gif" />
+    <Content Include="pics\Register_UserIcon\upphoto_background.jpg" />
+    <Content Include="pics\vedio_pic1.png" />
+    <Content Include="pics\vedio_pic2.png" />
+    <Content Include="pics\video-big02.gif" />
+    <Content Include="pics\video_pic.png" />
+    <Content Include="pics\watermark.png" />
+    <Content Include="pics\weibo-01.png" />
+    <Content Include="pics\weibo-2.png" />
+    <Content Include="pics\weibo3.png" />
+    <Content Include="pics\weibobtn01.gif" />
+    <Content Include="pics\weibobtn02.gif" />
+    <Content Include="pics\weibo_4.png" />
+    <Content Include="pics\wel-01.png" />
+    <Content Include="pics\wel-02.png" />
+    <Content Include="pics\wel-03.png" />
+    <Content Include="pics\wel-04.png" />
+    <Content Include="pics\welcome.gif" />
+    <Content Include="pics\whitearrow.png" />
+    <Content Include="pics\yellowarrow.png" />
+    <Content Include="Scripts\exts_0101.js" />
+    <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\jquery.autocomplete.js" />
+    <Content Include="Scripts\jquery.autocomplete2.js" />
+    <Content Include="Scripts\jquery.masonry.js" />
+    <Content Include="Scripts\jquery.masonry.min.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\share.js" />
+    <Content Include="Scripts\jquery.form.js" />
+    <Content Include="Scripts\jquery.jBox-2.3.min.js" />
+    <Content Include="Scripts\jquery.jBox-zh-CN.js" />
+    <Content Include="Scripts\jquery.jcarousel.min.js" />
+    <Content Include="Scripts\jquery.Jcrop.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="swf\kjk.swf" />
+    <Content Include="swf\load.swf" />
+    <Content Include="swf\swfupload.swf" />
+    <Content Include="swf\ZeroClipboard.swf" />
+    <Content Include="upload\11.jpg" />
+    <Content Include="upload\22.jpg" />
+    <Content Include="upload\appimg\549d1c2de7d64228b6a5615beb6a32ff.JPG" />
+    <Content Include="upload\appimg\7c0bf0280c354be09739840844a9d600.jpg" />
+    <Content Include="upload\b1.png" />
+    <Content Include="upload\b2.png" />
+    <Content Include="upload\b3.png" />
+    <Content Include="upload\FlickrVip.gif" />
+    <Content Include="upload\FlickrVip.png" />
+    <Content Include="upload\head-25.png" />
+    <Content Include="upload\head-50.png" />
+    <Content Include="upload\head150.png" />
+    <Content Include="upload\head25.png" />
+    <Content Include="upload\h_user.gif" />
+    <Content Include="upload\h_user.png" />
+    <Content Include="upload\i-big1.gif" />
+    <Content Include="upload\i-big2.gif" />
+    <Content Include="upload\i-big3.gif" />
+    <Content Include="upload\i-big4.gif" />
+    <Content Include="upload\in1.gif" />
+    <Content Include="upload\in2.gif" />
+    <Content Include="upload\in3.gif" />
+    <Content Include="upload\in50-1.png" />
+    <Content Include="upload\inter-100.png" />
+    <Content Include="upload\inter-50-2.png" />
+    <Content Include="upload\inter-50-3.png" />
+    <Content Include="upload\inter-50.png" />
+    <Content Include="upload\map.png" />
+    <Content Include="upload\normal.gif" />
+    <Content Include="upload\normal.png" />
+    <Content Include="upload\photonoreal.gif" />
+    <Content Include="upload\photonoreal.png" />
+    <Content Include="upload\photoreal.gif" />
+    <Content Include="upload\photoreal.png" />
+    <Content Include="upload\uploadpic.gif" />
+    <Content Include="upload\vip.gif" />
+    <Content Include="upload\vip.png" />
+    <Content Include="upload\WeiBoUpImage\20120709152014150.jpg" />
+    <Content Include="upload\WeiBoUpImage\2012070915315399.jpg" />
+    <Content Include="upload\WeiBoUpImage\20120709154032566.jpg" />
+    <Content Include="upload\WeiBoUpImage\20120709154520959.jpg" />
+    <Content Include="Views\About\Disclaimer.aspx" />
+    <Content Include="Views\About\Guideline.aspx" />
+    <Content Include="Views\About\Privacy.aspx" />
+    <Content Include="Views\Admin\MemberInfo.aspx" />
+    <Content Include="Views\Content\ShowNewMember.ascx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\InterestCenter\UpdateInterestFansList.aspx" />
+    <Content Include="Views\MicroConn\ConnectToDouBan.aspx" />
+    <Content Include="Views\MicroConn\ConnectToRenRen.aspx" />
+    <Content Include="Views\About\Agreement.aspx" />
+    <Content Include="Views\MicroConn\ShareBu.ascx" />
+    <Content Include="Views\Register\Greeting.aspx" />
+    <Content Include="Views\Account\Login.aspx" />
+    <Content Include="Views\Account\loginfromweibo.aspx" />
+    <Content Include="Views\Account\ResetPassword.aspx" />
+    <Content Include="Views\Account\Restricted.aspx" />
+    <Content Include="Views\Account\Welcome.aspx" />
+    <Content Include="Views\Actives\Groove.aspx" />
+    <Content Include="Views\Actives\SuperMan.aspx" />
+    <Content Include="Views\Admin\accountmanager.aspx" />
+    <Content Include="Views\Admin\Actives.aspx" />
+    <Content Include="Views\Admin\AdminTopNav.ascx" />
+    <Content Include="Views\Admin\CallAdmin.aspx" />
+    <Content Include="Views\Admin\checkphoto.aspx" />
+    <Content Include="Views\Admin\dic.aspx" />
+    <Content Include="Views\Admin\Login.aspx" />
+    <Content Include="Views\Admin\photoaudit.aspx" />
+    <Content Include="Views\Admin\newuser.aspx" />
+    <Content Include="Views\Admin\RecommendedData.aspx" />
+    <Content Include="Views\Admin\userCall.aspx" />
+    <Content Include="Views\Admin\usermanager.aspx" />
+    <Content Include="Views\Admin\verify.aspx" />
+    <Content Include="Views\Content\AboutEarnPoints.aspx" />
+    <Content Include="Views\Content\AboutUsePoints.aspx" />
+    <Content Include="Views\Content\AddBu.ascx" />
+    <Content Include="Views\Content\AddCallForContent.aspx" />
+    <Content Include="Views\Content\AddContentBu.ascx" />
+    <Content Include="Views\Content\AddContentType.ascx" />
+    <Content Include="Views\Content\AddImageContent.aspx" />
+    <Content Include="Views\Content\ContentDetail.aspx" />
+    <Content Include="Views\Content\ContentHolder_AddInterestFans.ascx" />
+    <Content Include="Views\Content\ContentHolder_CallFor.ascx" />
+    <Content Include="Views\Content\ContentHolder_CreateInterest.ascx" />
+    <Content Include="Views\Content\ContentHolder_EditInterest.ascx" />
+    <Content Include="Views\Content\ContentHolder_Interview.ascx" />
+    <Content Include="Views\Content\ContentHolder_IWant.ascx" />
+    <Content Include="Views\Content\ContentHolder_Mood.ascx" />
+    <Content Include="Views\Content\ContentHolder_ShuoShuo.ascx" />
+    <Content Include="Views\Content\ContentItemDetail_CallFor.ascx" />
+    <Content Include="Views\Content\ContentItemDetail_Footer.ascx" />
+    <Content Include="Views\Content\ContentItemDetail_Image.ascx" />
+    <Content Include="Views\Content\ContentItemDetail_InterView.ascx" />
+    <Content Include="Views\Content\ContentItemDetail_ShuoShuo.ascx" />
+    <Content Include="Views\Content\ContentItemToIndex.ascx" />
+    <Content Include="Views\Content\ContentItem_CallFor.ascx" />
+    <Content Include="Views\Content\ContentItem_Image.ascx" />
+    <Content Include="Views\Content\ContentItem_Interest.ascx" />
+    <Content Include="Views\Content\ContentItem_InterView.ascx" />
+    <Content Include="Views\Content\ContentItem_Member.ascx" />
+    <Content Include="Views\Content\ContentItem_Mood.ascx" />
+    <Content Include="Views\Content\ContentItem_ShuoShuo.ascx" />
+    <Content Include="Views\Content\ContentItem_IWant.ascx" />
+    <Content Include="Views\Content\LoginIndexContent.aspx" />
+    <Content Include="Views\Content\ContentHolder_Image.ascx" />
+    <Content Include="Views\InterestCenter\AddInterest.aspx" />
+    <Content Include="Views\InterestCenter\AddInterestFans.aspx" />
+    <Content Include="Views\InterestCenter\AddInterestNoIntegral.aspx" />
+    <Content Include="Views\Content\AddInterViewContent.aspx" />
+    <Content Include="Views\Content\AddIWantContent.aspx" />
+    <Content Include="Views\Content\AddLeftPanel.ascx" />
+    <Content Include="Views\Content\AddMoodContent.aspx" />
+    <Content Include="Views\Content\AddRightPanel.ascx" />
+    <Content Include="Views\Content\AddSuiSuiNianContent.aspx" />
+    <Content Include="Views\Content\ContentItem.ascx" />
+    <Content Include="Views\Content\ContentTypeSelect.ascx" />
+    <Content Include="Views\Content\IContent.aspx" />
+    <Content Include="Views\Content\IFavorerContent.aspx" />
+    <Content Include="Views\Content\ImageUploadascx.ascx" />
+    <Content Include="Views\Content\IndexContent.aspx" />
+    <Content Include="Views\InterestCenter\ShowInterest.aspx" />
+    <Content Include="Views\InterestCenter\ShowMyInterest.aspx" />
+    <Content Include="Views\Content\TaContent.aspx" />
+    <Content Include="Views\InterestCenter\UpdateInterest.aspx" />
+    <Content Include="Views\InterestCenter\UpdateInterestFansIcon.aspx" />
+    <Content Include="Views\InterestCenter\FeaturedInterestTopic.aspx" />
+    <Content Include="Views\InterestCenter\FeaturedInterestTopicHaveImgPanel.ascx" />
+    <Content Include="Views\InterestCenter\FeaturedInterestTopicNoImgPanel.ascx" />
+    <Content Include="Views\InterestCenter\InterestFansGroup.aspx" />
+    <Content Include="Views\InterestCenter\AllInterests.aspx" />
+    <Content Include="Views\InterestCenter\Interest.ascx" />
+    <Content Include="Views\InterestCenter\InterestFans.aspx" />
+    <Content Include="Views\InterestCenter\Interests.aspx" />
+    <Content Include="Views\InterestCenter\InterestWenWen.aspx" />
+    <Content Include="Views\InterestCenter\LeftInterest.ascx" />
+    <Content Include="Views\InterestCenter\ModifyInterest.aspx" />
+    <Content Include="Views\InterestCenter\RightAllInterests.ascx" />
+    <Content Include="Views\InterestCenter\RightInterestFans.ascx" />
+    <Content Include="Views\InterestCenter\RightInterests.ascx" />
+    <Content Include="Views\InterestCenter\MoreInterestClasses.aspx" />
+    <Content Include="Views\InterestCenter\ClasseInterests.aspx" />
+    <Content Include="Views\InterestCenter\InterestsForMy.aspx" />
+    <Content Include="Views\Member\DateTo.aspx" />
+    <Content Include="Views\Member\Interest.aspx" />
+    <Content Include="Views\Member\InterView.aspx" />
+    <Content Include="Views\Member\MemberLeftPanel.ascx" />
+    <Content Include="Views\Member\MyInterest.aspx" />
+    <Content Include="Views\Member\ProfileLeftPanelHead.ascx" />
+    <Content Include="Views\Member\ProfileLeftPanelPointsSchedule.ascx" />
+    <Content Include="Views\Member\ProfileTopPanel.ascx" />
+    <Content Include="Views\Member\SetFansGroupName.aspx" />
+    <Content Include="Views\Member\Skill.aspx" />
+    <Content Include="Views\Member\Ta.aspx" />
+    <Content Include="Views\Member\TaLeftPanel.ascx" />
+    <Content Include="Views\Member\TaLeftPanelMes.ascx" />
+    <Content Include="Views\Member\Upgrade.aspx" />
+    <Content Include="Views\MicroConn\ConnectToQQ.aspx" />
+    <Content Include="Views\MicroConn\ConnectToSinaWeibo.aspx" />
+    <Content Include="Views\MicroConn\ConnectToTXWeibo.aspx" />
+    <Content Include="Views\Msg\AboutMeActivity.aspx" />
+    <Content Include="Views\Msg\MessageDetails.aspx" />
+    <Content Include="Views\Msg\MessagesList.aspx" />
+    <Content Include="Views\Msg\AboutMeActivityPanel.ascx" />
+    <Content Include="Views\Msg\SystemMsgs.aspx" />
+    <Content Include="Views\Msg\Vistors.aspx" />
+    <Content Include="Views\Push\AppPush.ascx" />
+    <Content Include="Views\Push\GuessYourInterest.ascx" />
+    <Content Include="Views\Push\InterestFans.ascx" />
+    <Content Include="Views\Push\MyInterest.ascx" />
+    <Content Include="Views\Push\MyInterestTowwItem.ascx" />
+    <Content Include="Views\Push\MyTextArea.ascx" />
+    <Content Include="Views\Push\MyWenWen.ascx" />
+    <Content Include="Views\Push\NewQuestion.ascx" />
+    <Content Include="Views\Push\Question.ascx" />
+    <Content Include="Views\Push\SameInterestingMemberOverMe.ascx" />
+    <Content Include="Views\Push\TheyFavorsInteresting.ascx" />
+    <Content Include="Views\Push\TheyFavorsMember.ascx" />
+    <Content Include="Views\Push\TheyLike.ascx" />
+    <Content Include="Views\Push\WeeklyInterestRanking.ascx" />
+    <Content Include="Views\Push\GuessYourInterests.ascx" />
+    <Content Include="Views\Push\WeiBoUser.ascx" />
+    <Content Include="Views\Register\Become.aspx" />
+    <Content Include="Views\Member\SelectIWant.aspx" />
+    <Content Include="Views\Member\I.aspx" />
+    <Content Include="Views\Member\MapStation.ascx" />
+    <Content Include="Views\Member\SelectSkill.aspx" />
+    <Content Include="Views\photo\mplist.aspx" />
+    <Content Include="Views\photo\photonavbuttons.ascx" />
+    <Content Include="Views\photo\photoupload.aspx" />
+    <Content Include="Views\photo\show.aspx" />
+    <Content Include="Views\Register\RegAddInterest.aspx" />
+    <Content Include="Views\Register\Regist.aspx" />
+    <Content Include="Views\Register\RegStep2.aspx" />
+    <Content Include="Views\Register\UploadAvatar.aspx" />
+    <Content Include="Views\Register\UploadFinish.aspx" />
+    <Content Include="Views\Relation\Fans.aspx" />
+    <Content Include="Views\Relation\FansGlamourToMeRank.ascx" />
+    <Content Include="Views\Relation\Favors.aspx" />
+    <Content Include="Views\Relation\RelationListPanel.ascx" />
+    <Content Include="Views\Setting\AccountBind.aspx" />
+    <Content Include="Views\Setting\Authentica.aspx" />
+    <Content Include="Views\Setting\ChangePassword.aspx" />
+    <Content Include="Views\Setting\Invite.aspx" />
+    <Content Include="Views\Setting\LeftPanel.ascx" />
+    <Content Include="Views\Setting\PersonInfo.aspx" />
+    <Content Include="Views\Setting\Privacy.aspx" />
+    <Content Include="Views\Setting\SetLocation.aspx" />
+    <Content Include="Views\Setting\Skin.aspx" />
+    <Content Include="Views\Setting\SkinBackground.aspx" />
+    <Content Include="Views\Setting\SkinPicture.aspx" />
+    <Content Include="Views\Setting\UploadFace.aspx" />
+    <Content Include="Views\Shared\CustomSmallPicture.aspx" />
+    <Content Include="Views\Register\RegFinished.aspx" />
+    <Content Include="Views\Register\Single.aspx" />
+    <Content Include="Views\Register\UploadFace.aspx" />
+    <Content Include="Views\Register\VerifyEmail.aspx" />
+    <Content Include="Content\agreement.html" />
+    <Content Include="Views\Relation\Disables.aspx" />
+    <Content Include="Views\Member\SayHi.aspx" />
+    <Content Include="Views\Shared\pagger.ascx" />
+    <Content Include="Views\Shared\QueryStrPaging.ascx" />
+    <Content Include="Views\Shared\smallPagger.ascx" />
+    <Content Include="Views\Shared\CustomBigPicture.aspx" />
+    <Content Include="Views\Up\FileUpload.ascx" />
+    <Content Include="Views\Up\FileUpload.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\Home\Index2.aspx" />
+    <Content Include="Views\Error\Error.aspx" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="pics\备份_待处理\" />
+    <Folder Include="temp_up_file\" />
+    <Folder Include="upload\checkphoto\" />
+    <Folder Include="Views\temp_up_file\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Empty.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <Content Include="Views\Shared\Admin.Master" />
+    <Content Include="Views\Shared\IndexEnter.Master" />
+    <Content Include="Views\Shared\FrontEnd.Master" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>9027</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+    <MonoDevelop>
+      <Properties VerifyCodeBehindFields="true" VerifyCodeBehindEvents="true">
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="true" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <ProjectReference Include="..\Moooyo.Service\Moooyo.BiZ\Moooyo.BiZ.csproj">
+      <Project>{272D7272-2711-4E11-8BCB-6F48843411BD}</Project>
+      <Name>Moooyo.BiZ</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

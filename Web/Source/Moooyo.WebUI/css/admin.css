@@ -1,0 +1,56 @@
+﻿html{overflow:auto;}
+body,div,img,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p{margin:0;padding:0;}
+input,textarea{font:normal 12px "宋体"}
+body{background:#fff;font:normal 12px "宋体"}
+ul {list-style:none;}img{border:0 none;}a{color:#0063dc;text-decoration:none;}a:hover{color:#f90;}
+
+.clearfix:after{content:"\0020";display:block;height:0;clear:both}
+
+.clearfix{_zoom:1}
+.magT10{margin-top:10px;}.mag0{margin:0;}.clr{clear:both;width:0;height:0;font-size:0;line-height:0;}.magT20{margin-top:20px;}
+.bdr1px{border-right:1px solid #ddd;}.wd100{width:100px;}.wd300{width:300px;}.fontred{color:#f00;}
+.admintop{width:100%;height:30px;line-height:30px;background:#ddd;}
+.admintoplist{float:right;}
+.admintoplist li,.impresslist li,.photolist li{float:left;margin-right:10px;}
+.selectbtn{width:270px;height:30px;margin:20px auto 0;}
+.selectbtn a{display:block;float:left;padding:3px 15px;line-height:24px;font-size:14px;background:#20ba07;color:#fff;margin-right:15px;cursor:pointer;}
+.selectbtn a:hover{background:yellow;color:red;}
+.selectboy{width:45%;border-right:1px dotted #000;}.selectgirl{width:50%;overflow:hidden;}
+.selectboy,.selectgirl{float:left;padding-left:10px;margin-top:20px;}
+.photolist li{margin-top:10px;width:50px;height:75px;text-align:center;}.photolist li img{width:50px;height:50px;}
+.userlist li{float:left;width:200px;height:24px;line-height:24px;}
+.leftlist{height:100%;width:100px;float:left;padding-left:10px;border-right:3px solid #ddd;}.leftlist li{height:24px;line-height:24px;}
+.content{margin-left:110px;padding-left:20px;}.iwantlist li.iwantlistart{width:100%;margin:0;}.iwantlist li.iwantlistart img{width:60px; height:50px;}.iwantlist a{cursor:pointer;}
+.iwantlist li{width:40%;float:left;margin-right:20px;padding:8px;line-height:20px;border-bottom:1px dashed #ddd;}
+.iwantlist li span{margin-right:15px; }.iwantlist li span textarea{ border:1px solid #ccc; width:260px; vertical-align:top; }
+.iwantlist label{color:#f00;}.markicon{padding:2px;background:#ccf;}.filterword{ padding:2px 4px; background:#ccc; color:#000;}
+.filtertext{border:1px #ccc solid; width:800px; height:120px; font-size:12px;}
+.markdiv{float:left;cursor:pointer;background:#eee; font-size:12px;font-family:宋体;height:25px;line-height:25px;padding:0 10px;border:1px white solid;white-space:nowrap;}
+.selectedmark{border:1px solid red;background:yellow;color:red;}
+.impresslist{margin:10px;}
+.impresslist li{float:left;margin-top:10px;margin-right:10px;text-align:center;}
+.verify{ margin-top:25px; padding:0;} .verify li{ margin-bottom:15px;} .verify li a{ color:#444666; cursor:pointer;} .verify li a:hover{ color:#000000;} 
+.account{ width:1200px;} .account .list{ padding:0px; border:0px solid red; width:1200px;} .account .list li{ display:inline-block; text-align:center; border:0px solid red; line-height:25px; height:25px; } .cur{ background-color:#ccc;} .mycheck{}
+.w60{ width:60px;}.w70{ width:70px;} .w80{ width:80px;} .w100{ width:100px;}.w120{ width:120px;}.w160{ width:160px;}.w220{ width:220px;}.account .list .li2{ background:#ebebeb;  }
+.verifyPager{ clear:both; margin:0px auto; text-align:center; width:900px;}
+.hidden{display:none;}
+/*.list{}
+.list li{text-align:center; float:left;display:inline-block; text-align:center; line-height:25px; min-height:25px; height:auto!important; height:auto;}*/
+.letspa--3{letter-spacing:-3px;}
+.bgcolor-999999{background-color:#999999;}
+.fb{font-weight:bold;}
+.f13{font-size:13px;}.f14{font-size:14px;}
+.bdr-1solid-aaaaaa{border:solid 1px #aaaaaa;}
+.table01{margin-bottom:10px; border-top:solid 1px #ff0000;}
+.table01 td{height:20px; padding:3px; line-height:20px;}
+
+/*活动*/
+a{cursor:pointer;}
+.showmessage{width:900px;padding-top:10px;text-align:center;height:auto;border-top:solid 1px #aaa;margin-top:10px;}
+.showmessage .dll{width:150px;height:25px;line-height:25px;float:left;overflow:hidden;}
+.showmessage .spacename{width:260px;height:25px;line-height:25px;float:left;overflow:hidden;}
+.showmessage .function{width:150px;height:25px;line-height:25px;float:left;overflow:hidden;}
+.showmessage .type{width:150px;height:25px;line-height:25px;float:left;overflow:hidden;}
+.showmessage .enable{width:60px;height:25px;line-height:25px;float:left;overflow:hidden;}
+.showmessage .del{width:60px;height:25px;line-height:25px;float:left;overflow:hidden;}
+.showmessage .update{width:60px;height:25px;line-height:25px;float:left;overflow:hidden;}

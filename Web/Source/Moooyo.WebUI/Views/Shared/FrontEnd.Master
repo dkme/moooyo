@@ -1,0 +1,441 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage<Moooyo.WebUI.Models.PageModels.MemberPageModel>" %>
+
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=7, chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <!--[if gte IE 9]>
+    <link rel="shortcut icon" href="/pics/favicon.ico" type="image/x-icon" />
+    <![endif]-->
+    <link rel="shortcut icon" href="/pics/favicon.ico" type="image/x-icon" />
+    <link href="/pics/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="/css/base_<%=Model.CssVersion %>.css" rel="stylesheet" type="text/css"
+        media="screen" />
+    <link href="/css/jbox.css" rel="stylesheet" type="text/css" media="screen" />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderCss" runat="server" />
+    <script type="text/javascript" src="/scripts/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.jBox-2.3.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.jBox-zh-CN.js"></script>
+    <script type="text/javascript" src="/scripts/exts_<%=Model.JsVersion %>.js"></script>
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="/js/PIE.js"></script>
+    <![endif]-->
+    <!--[if IE 6]>
+        <script src="/js/iepng/iepngfix_tilebg.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/js/DD_belatedPNG_0.0.8a-min.js"></script>
+         <script type="text/javascript">
+          DD_belatedPNG.fix('em,.em,.LiOne b,.txtput,.textarea3,.son_ul,.link_bg,.span_l img,.span_z img ,em img,.Trans,.TransOne,.contenttype,.mobg,.moyobtn,.ajax_main,.redbg');
+       </script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderJs" runat="server" />
+    <script type="text/javascript">
+        $(window).ready(function () {
+            var stateS = false;
+            $(window).scroll(function () {
+                var windowScrolltop = $(document).scrollTop();
+                var ifsmall = $('#top').attr("data-ifsmall");
+                if (windowScrolltop > 0 && stateS == false) {
+                    //设置影藏 层 UL 的 位置
+                    if ($('.LiOne').html() != null) {
+                        $('.son_ul').css({
+                            left: $('.LiOne b').offset().left + "px",
+                            top: $('.LiOne b').offset().top + 34 + "px"
+
+                        });
+                    }
+                    stateS = true;
+
+                    $('#top').addClass('redbg');
+                    $('#top,.top_content').stop();
+                     $('.span_l img').stop();
+                    $('.span_z img').stop();
+                    $('#top').addClass('bgtop');
+                    $('#top').addClass('alpha80');
+                    $('.span_l img').animate({ height: 47 }, 10);
+                    $('.span_z a').css({ "margin-top": "7px" });
+                    $('.span_z img').animate({ height: 30 }, 10);
+                    $('.span_r').css({ "padding-top": "14px" });
+                    $('#top,.top_content').animate({ height: 47 }, 10);
+
+                    $('.go_top').css({
+                        "display": "block",
+                        left: $('#wrap').offset().left + $('#wrap').width()
+                    });
+                    $('.go_top').bind("click", function () { $(document).scrollTop(0) });
+
+                }
+                else if (windowScrolltop <= 0) {
+                    stateS = false;
+                    $('#top').removeClass('redbg');
+                    $('#top,.top_content').stop();
+                    $('.span_l img').stop();
+                    $('.span_z img').stop();
+                    $('#top').addClass('bgtop');
+                    $('#top').removeClass('alpha80');
+                    $('.span_l img').animate({ height: 60  }, 10);
+                    $('.span_z a').css({ "margin-top": "15px" });
+                    $('.span_z img').animate({ height: 37 }, 10);
+                    $('.span_r').css({ "padding-top": "26px" });
+                    $('#top,.top_content').animate({ height: 60 }, 10);
+                    $('.go_top').css({ "display": "none" });
+                    $('.go_top').bind("click", false);
+                }
+
+            });
+
+        });
+
+        $(document).ready(function () {
+          //  $('.LiOne b').css({ "background-image": "none" });
+            var maintime = null;
+            var time2 = null;
+            $('ul.son_ul').hide(); //初始ul隐藏
+
+            if ($("ul#navlist").attr("data-elasticlist") == "accountnotactive") {
+                $("li#messageslist a").attr("href", "javascript:;");
+                $("li#aboutmeactivity a").attr("href", "javascript:;");
+                $("li#icontent a").attr("href", "javascript:;");
+                $("li#personinfo a").attr("href", "javascript:;");
+            }
+
+            var iflogin = $("#iflogin");
+            //判断当前是否登录
+            if (iflogin.val() == "true" || iflogin.val() == "True") {
+                getMemberUnReadCount();
+            }
+
+            $('.LiOne').hover(function () { //鼠标移动函数
+
+                $('.LiOne').attr("data-open", "true");
+                maintime = setTimeout(function () {
+
+                    //判断是否有信件
+                    if (isNaN($('#memberUnReadCount').html())) {
+                        $('#memberUnReadCount').html("<img src=\"/pics/letter_msg1.png\" style=\"margin-top:4px;\"/>");
+                    }
+                    else {
+
+                        $('.LiOne b').children('.node').css({ "background": "none" });
+                    }
+                    $('.LiOne b').css({ "background": "url(/pics/top_list01.png)" });
+                    $('.LiOne b').css({ "color": "#7b7b7b" });
+                    //设置影藏 层 UL 的 位置
+                    if ($('.LiOne').html() != null) {
+                        $('.son_ul').css({
+                            left: $('.LiOne').offset().left + "px",
+                            top: $('.LiOne').offset().top + 34 + "px"
+
+                        });
+                    }
+                    var showdh = setTimeout(function () {
+                        clearTimeout(showdh);
+                        $('ul.son_ul').slideDown(300);
+                    }, 250);
+                    $('ul.son_ul').hover(function () {
+                        $('.LiOne').attr("data-open", "true");
+                    }, function () {
+                        $('.LiOne').attr("data-open", "flase");
+                        clearTimeout(time2);
+                        time2 = setTimeout(function () {
+                            if ($('.LiOne').attr("data-open") == "flase") {
+                                $('ul.son_ul').slideUp(300);
+                                setTimeout(function () { $(".LiOne b").css({ "background": "none", "color": "#fff" }); }, 250);
+                                //判断是否有信件
+                                if (isNaN($('#memberUnReadCount').html())) {
+                                    $('#memberUnReadCount').html("<img src=\"/pics/letter_msg.png\" style=\"margin-top:4px;\"/>");
+                                }
+                                else {
+                                    $('.LiOne b').children('.node').css({ "background": "#fff" });
+                                }
+
+
+                            }
+
+                        }, 100);
+                    });
+
+                }, 250);
+
+            }, function () {
+                $('.LiOne').attr("data-open", "flase");
+                clearTimeout(maintime);
+                clearTimeout(time2);
+                time2 = setTimeout(function () {
+                    if ($('.LiOne').attr("data-open") == "flase") {
+                        $('ul.son_ul').slideUp(200);
+                        setTimeout(function () { $(".LiOne b").css({ "background": "none", "color": "#fff" }); }, 250);
+                        //判断是否有信件
+                        if (isNaN($('#memberUnReadCount').html())) {
+                            $('#memberUnReadCount').html("<img src=\"/pics/letter_msg.png\" style=\"margin-top:4px;\"/>");
+                        }
+                        else {
+                            $('.LiOne b').children('.node').css({ "background": "#fff" });
+                        }
+
+
+                    }
+
+                }, 100);
+
+
+            });
+            $(window).resize(function () {
+                // 窗口缩放或滚动重载位置
+                $('.go_top').css({
+                    "display": "block",
+                    left: $('#wrap').offset().left + $('#wrap').width()
+                });
+
+                //设置影藏 层 UL 的 位置
+                if ($('.LiOne').html() != null) {
+                    $('.son_ul').css({
+                        left: $('.LiOne').offset().left + "px",
+                        top: $('.LiOne').offset().top + 33 + "px"
+
+                    });
+                }
+
+            });
+
+            $('ul.son_ul li').click(function () {
+                $(this).parents('li').find('ul').slideUp();
+            });
+
+            var url = window.location.toString().toLowerCase();
+            if (url.indexOf('featuredinteresttopic') > 0 || url.indexOf('wenwen') > 0 || url.indexOf('interestcenter') > 0 || url.indexOf('indexcontent') > 0) {
+                //  $(".singlePic img").after("<em class=\"Triangle\"></em>");
+                //  $(".singlePic em").css({ "left": "250px" });
+                $(".singlePic img").attr("src", "/pics/joinpic02.png");
+            }
+            //            else if (url.indexOf('content/icontent') > 0 || url.indexOf('relation') > 0 || url.indexOf('photo') > 0 || url.indexOf('interestcenter/interests') > 0 || url.indexOf('myactivitys') > 0 || url.indexOf('setting') > 0 || url.indexOf('icontent') > 0 || url.indexOf('ifavorercontent') > 0 || url.indexOf('addimagecontent') > 0 || url.indexOf('addsuisuiniancontent') > 0 || url.indexOf('addinterviewcontent') > 0 || url.indexOf('addcallforcontent') > 0) {
+            //                //  $(".selfPic img").after("<em class=\"Triangle\"></em>");
+            //                $(".selfPic img").attr("src", "/pics/selfpic.png");
+            //            }
+            else if (url.indexOf('ifavorercontent') > 0) {
+                $(".selfPic img").attr("src", "/pics/selfpic.png");
+            }
+            else if (url.indexOf('myinterest') > 0) {
+
+            }
+            if (url.indexOf('verifyemail') > 0) {
+                $(".singlePic img").attr("src", "/pics/joinpic.png");
+                $(".selfPic img").attr("src", "/pics/selfpic02.png");
+            }
+        });
+
+        var timeout1;
+        function getMemberUnReadCount() {
+            MemberLinkProvider.getMemberUnReadCount(function (data) {
+                var count = $.parseJSON(data);
+                if (count > 0) {
+                    $("#memberUnReadCount").html(count);
+                    $('.LiOne b').children('font').css({ "background": "#fff" });
+                } else {
+                    //  $("#memberUnReadCount").html("");
+                }
+            });
+            getUnReadCounters();
+        }
+
+        //        function setCountColor(container, count) {
+        //            if (count > 0)
+        //                container.addClass("count2");
+        //            else
+        //                container.addClass("count1");
+        //        } 
+        //获取每一项未读条数
+        function getUnReadCounters() {
+            MemberLinkProvider.getUnReadCounters(function (data) {
+                var counters = $.parseJSON(data);
+                getUnReadMsgCount(counters[0], counters[3]);
+                getUnReadActivitysAboutMeCount(counters[1]);
+                //                getUnReadBeenViewedTimes(counters[2]);
+                // getUnReadSystemMsgCount(counters[3]);  系统消息 取消打印
+                if (counters[0] > 0) {
+                    $("#msg_go").attr("href", "/Msg/Msgs");
+                }
+                else if (counters[0] <= 0 && counters[3] > 0) {
+                    $("#msg_go").attr("href", "/Msg/SystemMsgs/");
+                }
+                else {
+                    $("#msg_go").attr("href", "/Msg/Msgs");
+                }
+            });
+        }
+        function getUnReadMsgCount(count, count_sys) {
+            var count_count = parseInt(parseInt(count) + parseInt(count_sys)); //私信和系统消息和
+            if (count_count <= 0) {
+                $("#unReadMsgCount").html("");
+            }
+            else {
+                $("#unReadMsgCount").html(count_count);
+            }
+            //            setCountColor($("#unReadMsgCount"), count_count);
+        }
+        //        function getUnReadBeenViewedTimes(count) {
+        //            if (count <= 0) {
+        //                $("#unReadBeenViewedTimes").html("");
+        //            }
+        //            else {
+        //                $("#unReadBeenViewedTimes").html(count);
+        //            }
+        //            setCountColor($("#unReadBeenViewedTimes"), count);
+        //        }
+        function getUnReadSystemMsgCount(count) {
+            //                $("#unReadSystemMsgCount").html(count);
+            //                setCountColor($("#unReadSystemMsgCount"), count);
+        }
+        function getUnReadBeenFavorCount(count) {
+            if (count <= 0) {
+                $("#unReadBeenFavorCount").html("");
+            }
+            else {
+                $("#unReadBeenFavorCount").html(count);
+            }
+            //            setCountColor($("#unReadBeenFavorCount"), count);
+        }
+        function getUnReadActivitysAboutMeCount(count) {
+            var sumCount = parseInt(parseInt(count)); //与我相关和被访问和
+            if (sumCount <= 0) {
+                $("#unReadActivitysAboutMeCount").html("");
+            } else {
+                $("#unReadActivitysAboutMeCount").html(sumCount);
+            }
+            //            setCountColor($("#unReadActivitysAboutMeCount"), count);
+        }
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-27218958-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body>
+    <%Html.RenderPartial("~/Views/MicroConn/ShareBu.ascx"); %>
+    <input type="hidden" id="iflogin" name="iflogin" value="<%=Model.AlreadyLogon ? true : false %>" />
+    <div class="go_top">
+        <a class="em"></a>
+    </div>
+    <ul class="son_ul">
+        <li id="messageslist"><a href="/Msg/MessagesList">米邮 <font class="node1" id="unReadMsgCount">
+        </font></a></li>
+        <li id="aboutmeactivity"><a href="/Msg/AboutMeActivity/">与我相关 <font class="node1"
+            id="unReadActivitysAboutMeCount"></font></a></li>
+        <li id="icontent"><a href="/Content/IContent">我的地盘</a></li>
+        <li id="personinfo"><a href="/Setting/PersonInfo" class="link_bg">设置<font class="node1"></font></a></li>
+        <li><a href="/Account/LogOut" class="gray" style="color: #ccc;">退出<font class="node1"></font></a></li>
+    </ul>
+    <div id="top" class="bgtop">
+        <div class="top_content">
+            <span class="span_l"><a href="/Content/IFavorerContent" title="米柚网">
+                <img src="/pics/logo.png" alt="米柚网" style="_width:232px;" class="imglogo" /></a></span> <span class="span_z"><a
+                    href="/Content/IndexContent" class="singlePic">
+                    <img src="/pics/joinpic.png" alt="遇见柚子" style="_width:124px;" /></a> <a href="/Content/IFavorerContent"
+                        class="selfPic">
+                        <img src="/pics/selfpic02.png" alt="" style="_width:90px" /></a></span> <span class="span_r" id="msg_info">
+                            <% bool verifyEmailBar = false;
+                               String cuurUrlPath = HttpContext.Current.Request.Url.PathAndQuery.ToLower().ToString();
+                               if (cuurUrlPath.IndexOf("register/verifyemail") > 0) verifyEmailBar = true; //是验证页面 %>
+                            <% if (Model.User == null && !verifyEmailBar || !Model.AlreadyLogon)
+                               { %>
+                            <a href="/Account/Login">登录</a>
+                            <% }
+                               else if ((Model.User != null && !Model.User.EmailIsVaild && verifyEmailBar) || !Model.User.AllowLogin)
+                               { %>
+                            <ul id="navlist" data-elasticlist="accountnotactive">
+                                <li class="LiOne" data-open="false"><b class="em">
+                                    <label class="memberName">
+                                        <label style="float: left; text-align: left;">
+                                            你好,<%=Model.User.Name.Length > 4 ? Model.User.Name.Substring(0, 4) + "<label class=\"ellipsis\">...</label>" : Model.User.Name + ""%>
+                                        </label>
+                                    </label>
+                                    <%-- <font class="node" id="memberUnReadCount"></font>--%>
+                                    <font class="node" id="memberUnReadCount">
+                                        <img src="/pics/letter_msg.png" style="margin-top: 4px;" /></font> </b></li>
+                            </ul>
+                            <% }
+                               else if (Model.User != null && Model.User.AllowLogin && (Model.User.EmailIsVaild || !Model.User.EmailIsVaild) && !verifyEmailBar)
+                               { %>
+                            <ul id="navlist">
+                                <li class="LiOne" data-open="false"><b>
+                                    <label class="memberName">
+                                        <label style="float: left; text-align: left;">
+                                            你好,<%=Model.User.Name.Length > 4 ? Model.User.Name.Substring(0, 4) + "<label class=\"ellipsis\">...</label>" : Model.User.Name + ""%>
+                                        </label>
+                                    </label>
+                                    <%-- <font class="node" id="memberUnReadCount"></font>--%>
+                                    <font class="node" id="memberUnReadCount">
+                                        <img src="/pics/letter_msg.png" style="margin-top: 4px;" /></font> </b></li>
+                            </ul>
+                            <% } %>
+                        </span>
+        </div>
+    </div>
+    <div style="clear: both">
+    </div>
+    <div id="wrap" style="background: #f0f0f0;">
+        <%if (Model.UserID != null && Model.UserID != "" && !Model.User.EmailIsVaild)
+          {
+              string memberLowerEmail = Model.Member.Email.ToLower();
+              bool isExternalPlatform = false;
+              if (memberLowerEmail.IndexOf("@sinaweibo") >= 0 || memberLowerEmail.IndexOf("@tencentweibo") >= 0 || memberLowerEmail.IndexOf("@renren") >= 0 || memberLowerEmail.IndexOf("@douban") >= 0)
+              {
+                  isExternalPlatform = true;
+              }
+
+              if (!Model.User.EmailIsVaild && Model.User.AllowLogin && !verifyEmailBar && !isExternalPlatform)
+              {
+        %>
+        <div id="top_target">
+            <div class="target_c">
+                <div class="target_l">
+                    <span>你的注册邮箱尚未验证，马上发送认证邮件到
+                        <%=Model.User.Email%>
+                        完成认证。<font color="#ccbd1d">（完成后不再提示）</font></span></div>
+                <div class="target_r">
+                    <a href="/Setting/PersonInfo">更改注册邮箱</a><a href="/Register/VerifyEmail?email=<%=Model.User.Email %>&back=<%=HttpContext.Current.Request.Url.PathAndQuery.ToString()%>"
+                        class="fbold">验证邮箱</a></div>
+            </div>
+        </div>
+        <%
+              }
+              else if (isExternalPlatform)
+              { 
+        %>
+        <%--<div id="Div1">
+                 <div class="target_c">
+                    <div class="target_l"><span>你是合作平台的账户，建议更改，然后就可以直接登录了。</span></div>
+                    <div class="target_r"><a href="/Setting/PersonInfo">更改账户</a></div>
+                 </div>
+             </div>--%>
+        <%
+           }
+          }%>
+        <div class="mt15 clear">
+        </div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</body>
+</html>
+<div style="display: none">
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffc7bebace7d504ebdd4a40271c41e75a' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>

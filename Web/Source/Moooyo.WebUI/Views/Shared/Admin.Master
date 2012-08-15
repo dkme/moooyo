@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage<Moooyo.WebUI.Models.PageModels.PageModelBase>" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <script type="text/javascript" src="/scripts/jquery-1.7.2.min.js" ></script>
+    <script type="text/javascript" src="/scripts/jquery.jBox-2.3.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.jBox-zh-CN.js"></script>
+    <%--<script type="text/javascript" src="/scripts/jquery.pager.js" ></script>--%>
+    <script type="text/javascript" src="/scripts/exts_<%=ViewData["jsversion"].ToString() %>.js"></script>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderJs" runat="server"></asp:ContentPlaceHolder>
+    <link rel="shortcut icon" href="/pics/favicon.ico" type="image/x-icon" />
+    <link href="/pics/favicon.ico" rel="icon" type="image/x-icon" />
+    <!--[if gte IE 9]>
+    <link rel="shortcut icon" href="/pics/favicon.ico" type="image/x-icon" />
+    <![endif]-->
+    <link href="/css/admin.css" rel="stylesheet" type="text/css" />
+    <link href="/css/jbox.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/css/Pager.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderCss" runat="server" />
+</head>
+<body>
+<div>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+    </asp:ContentPlaceHolder>
+</div>
+<div style="display:none;">
+    <script type="text/javascript">
+//        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+//        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3f3869904d4f5ce3ba1e7a529829d199' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    </div>
+</body>
+</html>

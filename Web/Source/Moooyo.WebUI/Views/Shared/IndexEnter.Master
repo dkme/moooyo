@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <!--[if gte IE 9]>
+    <link rel="shortcut icon" href="/pics/favicon.ico" type="image/x-icon" />
+    <![endif]-->
+    <link rel="shortcut icon" href="/pics/favicon.ico" type="image/x-icon" />
+    <link href="/pics/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/base_<%=ViewData["cssversion"] %>.css" type="text/css" media="screen" />
+    <link href="/css/jbox.css" rel="stylesheet" type="text/css" media="screen" />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderCss" runat="server" />
+    <script type="text/javascript" src="/scripts/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.jBox-2.3.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.jBox-zh-CN.js"></script>
+    <script type="text/javascript" src="/scripts/exts_<%=ViewData["jsversion"] %>.js"></script>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderJs" runat="server" />
+</head>
+<body style="background:#dedee0">
+    <% if (ViewData["alreadylogin"] == null || ViewData["alreadylogin"].ToString() == "True") { %>
+    <div class="wrap">
+        <div style="height:100px;"></div>
+        <div style="padding-left:30px;"><img src="/pics/404logo.gif" title="米柚网" /></div>
+    <!--  .header  end -->
+    <%} %>
+    <div id="content" class="width976 bgf7">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+    <div style="width:100%;">
+        <div style="width:100%; height:80px; margin-top:30px; color:#bbb; text-align:center; font-family:Verdana Regular;">
+        <span style="margin-right:3px;">©</span>2011-2012 MoooYo.com,All rights reserved <a href="http://www.miibeian.gov.cn/" target="_blank">湘ICP备11011885号-3</a></div>
+    </div>
+    <div style="display:none;">
+    <script type="text/javascript">
+    </script>
+    </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffc7bebace7d504ebdd4a40271c41e75a' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27218958-1']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>

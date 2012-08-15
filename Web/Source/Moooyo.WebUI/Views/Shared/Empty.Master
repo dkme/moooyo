@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head runat="server">
+    <meta http-equiv="x-ua-compatible" content="IE=7, chrome=1" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <!--[if gte IE 9]>
+    <link rel="shortcut icon" href="/pics/favicon.ico" type="image/x-icon" />
+    <![endif]-->
+    <link rel="shortcut icon" href="/pics/favicon.ico" type="image/x-icon" />
+    <link href="/pics/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/base_<%=ViewData["cssversion"] %>.css" type="text/css" media="screen" />
+    <link href="/css/jbox.css" rel="stylesheet" type="text/css" media="screen" />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderCss" runat="server" />
+    <script type="text/javascript" src="/scripts/jquery-1.7.2.min.js" ></script>
+    <script type="text/javascript" src="/scripts/jquery.jBox-2.3.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.jBox-zh-CN.js"></script>
+    <script type="text/javascript" src="/scripts/exts_<%=ViewData["jsversion"] %>.js"></script>
+</head> 
+<body>
+    <div> 
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+    </div>
+</body>
+<div style="display:none;">
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffc7bebace7d504ebdd4a40271c41e75a' type='text/javascript'%3E%3C/script%3E"));
+</script>
+    </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderJs" runat="server" />
+</html>
