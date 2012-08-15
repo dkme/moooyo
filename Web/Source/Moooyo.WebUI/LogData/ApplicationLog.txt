@@ -1,0 +1,536 @@
+
+异常时间：2012-06-05 17:48:01,682 [11] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Insert
+导致错误的应用程序或对象的名称：mscorlib
+异常信息：已添加项。字典中的关键字:“SinaWeiboKey”所添加的关键字:“SinaWeiboKey” 
+System.ArgumentException: 已添加项。字典中的关键字:“SinaWeiboKey”所添加的关键字:“SinaWeiboKey”
+   在 System.Collections.Hashtable.Insert(Object key, Object nvalue, Boolean add)
+   在 System.Collections.Hashtable.Add(Object key, Object value)
+   在 CBB.ConfigurationHelper.AppSettingHelper.GetConfig(String key) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.ConfigurationHelper\AppSettingHelper.cs:行号 28
+   在 Moooyo.BiZ.Member.Connector.PlatformProvider.GetPlatformDef(Platform platform) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\Member\Connector\PlatformDef.cs:行号 32
+   在 Moooyo.BiZ.Member.Connector.SinaWeiboConnector..ctor() 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\Member\Connector\SinaWeiboConnector.cs:行号 17
+   在 lambda_method(Closure )
+   在 MongoDB.Bson.Serialization.BsonClassMap.CreateInstance()
+   在 MongoDB.Bson.Serialization.BsonClassMapSerializer.Deserialize(BsonReader bsonReader, Type nominalType, Type actualType, IBsonSerializationOptions options)
+   在 MongoDB.Bson.Serialization.BsonClassMapSerializer.Deserialize(BsonReader bsonReader, Type nominalType, IBsonSerializationOptions options)
+   在 MongoDB.Bson.Serialization.BsonSerializer.Deserialize(BsonReader bsonReader, Type nominalType, IBsonSerializationOptions options)
+   在 MongoDB.Driver.Internal.MongoReplyMessage`1.ReadFrom(BsonBuffer buffer, IBsonSerializationOptions serializationOptions)
+   在 MongoDB.Driver.Internal.MongoConnection.ReceiveMessage[TDocument](BsonBinaryReaderSettings readerSettings, IBsonSerializationOptions serializationOptions)
+   在 MongoDB.Driver.MongoCursorEnumerator`1.GetReply(MongoConnection connection, MongoRequestMessage message)
+   在 MongoDB.Driver.MongoCursorEnumerator`1.GetFirst()
+   在 MongoDB.Driver.MongoCursorEnumerator`1.MoveNext()
+   在 System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   在 MongoDB.Driver.MongoCollection.FindOneAs[TDocument](IMongoQuery query)
+   在 MongoDB.Driver.MongoCollection`1.FindOne(IMongoQuery query)
+   在 Moooyo.BiZ.Member.Connector.ConnectorProvider.GetConnector[T](String mid, Platform platformType) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\Member\Connector\ConnectorProvider.cs:行号 52
+
+异常时间：2012-06-09 13:06:00,330 [9] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：RemoveCheckPhotosByusrid
+导致错误的应用程序或对象的名称：Moooyo.BiZ
+异常信息：未将对象引用设置到对象的实例。 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Moooyo.BiZ.Sys.PhotoCheck.PhotoCheckStatusFactory.RemoveCheckPhotosByusrid(String userid) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\Sys\PhotoCheck\PhotoCheckStatusFactory.cs:行号 124
+
+异常时间：2012-06-11 11:49:48,512 [31] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 11:49:54,047 [22] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 11:50:21,011 [23] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 11:56:02,109 [16] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 11:56:31,060 [32] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 11:56:58,630 [34] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 11:57:59,634 [33] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 11:58:29,904 [35] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:01:18,102 [22] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:01:36,992 [24] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:02:12,614 [29] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:03:47,311 [28] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:04:06,698 [35] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:04:59,990 [30] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:06:00,376 [22] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:06:09,892 [33] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:23:52,361 [5] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:24:00,985 [5] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:25:08,474 [5] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:25:19,141 [12] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:30:18,032 [18] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:31:59,361 [15] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:37:56,965 [13] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:39:38,755 [17] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:43:40,711 [17] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:44:58,152 [14] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:45:02,630 [13] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 12:45:10,676 [13] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 16:46:39,285 [21] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 16:46:47,428 [21] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 16:46:49,909 [21] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 16:47:46,256 [17] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 17:02:08,217 [17] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 17:03:33,930 [12] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 17:03:58,765 [12] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 17:04:08,747 [11] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 17:10:16,733 [9] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156
+
+异常时间：2012-06-11 17:40:19,424 [15] 
+异常级别：ERROR 
+异常位置：CBB.Logger.SystemLog.LogHelper.WriteLog(E:\Louis\Develop\Moooyo\Moooyo.Service\CBB公用类库\CBB.Logger\SystemLog\SystemLog.cs:43) 
+异常类：logError [(null)] 
+错误编码：DBOperationError
+错误级别：SystemErr
+引发当前异常的方法：Parse
+导致错误的应用程序或对象的名称：MongoDB.Bson
+异常信息：'' is not a valid 24 digit hex string. 
+System.FormatException: '' is not a valid 24 digit hex string.
+   在 MongoDB.Bson.ObjectId.Parse(String s)
+   在 Moooyo.BiZ.MemberManager.MemberManager.ModifyStatusValue(String mid, String statusName, Int32 value) 位置 E:\Louis\Develop\Moooyo\Moooyo.Service\Moooyo.BiZ\MemberManager\MemberManager.cs:行号 1156

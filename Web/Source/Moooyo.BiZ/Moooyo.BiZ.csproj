@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{272D7272-2711-4E11-8BCB-6F48843411BD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Moooyo.BiZ</RootNamespace>
+    <AssemblyName>Moooyo.BiZ</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\..\组件\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\..\组件\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net20">
+      <HintPath>..\..\Components\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTSDK.Tencent">
+      <HintPath>..\..\组件\OpenTSDK.Tencent.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Coment\Coment.cs" />
+    <Compile Include="Comment\Comment.cs" />
+    <Compile Include="Comment\CommentProvider.cs" />
+    <Compile Include="Comment\CommentType.cs" />
+    <Compile Include="Comment\Factory.cs" />
+    <Compile Include="Comment\ICanBeenComment.cs" />
+    <Compile Include="Comm\ContentType.cs" />
+    <Compile Include="Comm\Flags.cs" />
+    <Compile Include="Comm\IncrementIds\IdTypes.cs" />
+    <Compile Include="Comm\IncrementIds\IncrementIds.cs" />
+    <Compile Include="Comm\IncrementIds\IncrementIdsProvider.cs" />
+    <Compile Include="Creater\Creater.cs" />
+    <Compile Include="Guide\GuideData.cs" />
+    <Compile Include="Guide\GuideDataProvider.cs" />
+    <Compile Include="Member\Connector\DouBanConnector.cs" />
+    <Compile Include="Member\Connector\RenRenConnector.cs" />
+    <Compile Include="Member\MemberToNew.cs" />
+    <Compile Include="Member\ModifyPicturePath\ModifyPicturePathHandler.cs" />
+    <Compile Include="Member\ModifyPicturePath\ModifyPicturePathProvider.cs" />
+    <Compile Include="Sys\InvitationCode\InvitationCode.cs" />
+    <Compile Include="Sys\InvitationCode\InvitationCodeProvider.cs" />
+    <Compile Include="Comm\TimeLimitType.cs" />
+    <Compile Include="Comm\UserType.cs" />
+    <Compile Include="Content\InterestContent.cs" />
+    <Compile Include="Content\ImageLayoutType.cs" />
+    <Compile Include="Content\MemberContent.cs" />
+    <Compile Include="Like\LikeMember.cs" />
+    <Compile Include="Member\MemberSkin\MemberSkinProvider.cs" />
+    <Compile Include="Member\MemberSkin\MemberSkinType.cs" />
+    <Compile Include="Member\Relation\PrivateAndSysMesge.cs" />
+    <Compile Include="Comm\UniqueNumber\IDType.cs" />
+    <Compile Include="Comm\UniqueNumber\UniqueNumber.cs" />
+    <Compile Include="Comm\UniqueNumber\UniqueNumberProvider.cs" />
+    <Compile Include="Content\CallForContent.cs" />
+    <Compile Include="Content\ContentPermissions.cs" />
+    <Compile Include="Content\ContentProvider.cs" />
+    <Compile Include="Content\ContentType.cs" />
+    <Compile Include="Content\Image.cs" />
+    <Compile Include="Content\ImageContent.cs" />
+    <Compile Include="Content\InterViewContent.cs" />
+    <Compile Include="Content\IWantContent.cs" />
+    <Compile Include="Content\MoodContent.cs" />
+    <Compile Include="Content\PublicContent.cs" />
+    <Compile Include="Content\SexType.cs" />
+    <Compile Include="Content\SuiSuiNianContent.cs" />
+    <Compile Include="Comm\Decive\DeciveType.cs" />
+    <Compile Include="Fans\Fans.cs" />
+    <Compile Include="Comm\FilterText\FilterTextModel.cs" />
+    <Compile Include="Comm\FilterText\FilterTextOperation.cs" />
+    <Compile Include="Comm\FilterWord\FilterWordModel.cs" />
+    <Compile Include="Comm\FilterWord\FilterWordController.cs" />
+    <Compile Include="Comm\FilterWord\FilterWordOperation.cs" />
+    <Compile Include="Gift\GiftDefs.cs" />
+    <Compile Include="Gift\GiftProvider.cs" />
+    <Compile Include="InterestCenter\Interest.cs" />
+    <Compile Include="InterestCenter\InterestClass.cs" />
+    <Compile Include="InterestCenter\InterestFactory.cs" />
+    <Compile Include="InterestCenter\InterestFans.cs" />
+    <Compile Include="InterView\InterViewProvider.cs" />
+    <Compile Include="Like\AdminLikeData.cs" />
+    <Compile Include="Like\LikeData.cs" />
+    <Compile Include="Like\LikeDataEntity.cs" />
+    <Compile Include="Like\LikeDataFactory.cs" />
+    <Compile Include="Like\LikeType.cs" />
+    <Compile Include="Member\Activity\Activity.cs" />
+    <Compile Include="Member\Activity\ActivityHolderBase.cs" />
+    <Compile Include="Member\Activity\ActivityHolder.cs" />
+    <Compile Include="Member\Activity\ActivityHolderRelatedToMe.cs" />
+    <Compile Include="Member\Connector\Connector.cs" />
+    <Compile Include="Member\Connector\ConnectorProvider.cs" />
+    <Compile Include="Member\Connector\PlatformDef.cs" />
+    <Compile Include="Member\Connector\SinaWeiboConnector.cs" />
+    <Compile Include="Member\Connector\TXWeiboConnector.cs" />
+    <Compile Include="Member\FansGroupName.cs" />
+    <Compile Include="Member\GlamourCounts\GlamourCountOperate.cs" />
+    <Compile Include="Member\GlamourCounts\GlamourCounts.cs" />
+    <Compile Include="Member\GlamourCounts\GlamourCountProvider.cs" />
+    <Compile Include="Member\MemberBadge.cs" />
+    <Compile Include="Member\MemberSearchType.cs" />
+    <Compile Include="MemberManager\StatusModifyType.cs" />
+    <Compile Include="Member\Activity\ActivityController.cs" />
+    <Compile Include="Member\Link\MsgProvider.cs" />
+    <Compile Include="Member\MemberSkin\MemberSkin.cs" />
+    <Compile Include="Member\Relation\Disabler.cs" />
+    <Compile Include="Member\Relation\Giftor.cs" />
+    <Compile Include="InterView\InterView.cs" />
+    <Compile Include="Member\Relation\RegInviter.cs" />
+    <Compile Include="PhotoCheck\PhotoCheckModel.cs" />
+    <Compile Include="PhotoCheck\PhotoCheckOperation.cs" />
+    <Compile Include="Ranking\InterestRanking.cs" />
+    <Compile Include="Ranking\TopicRanking.cs" />
+    <Compile Include="Recommendation\InterestRecommendatin.cs" />
+    <Compile Include="Recommendation\InterestRecommendationData.cs" />
+    <Compile Include="Recommendation\InterestTrainingData.cs" />
+    <Compile Include="Recommendation\MemberFavorRecommendationData.cs" />
+    <Compile Include="Recommendation\MemberFavorTrainingData.cs" />
+    <Compile Include="Recommendation\MemberRecommendation.cs" />
+    <Compile Include="Recommendation\TopicTrainingData.cs" />
+    <Compile Include="Sys\Applications\Application.cs" />
+    <Compile Include="Sys\Applications\ApplicationsFactory.cs" />
+    <Compile Include="Sys\FilterText\SystemFilterTextFactory.cs" />
+    <Compile Include="Sys\FilterWord\SystemFilterWordFactory.cs" />
+    <Compile Include="Sys\InterView\SystemInterViewFactory.cs" />
+    <Compile Include="Sys\InterView\SystemInterView.cs" />
+    <Compile Include="Member\Relation\LastMsger.cs" />
+    <Compile Include="MemberManager\PreRegisterMember.cs" />
+    <Compile Include="Member\Activity\ActivityType.cs" />
+    <Compile Include="Member\RelationMember.cs" />
+    <Compile Include="Member\Relation\Favorer.cs" />
+    <Compile Include="Member\Member.cs" />
+    <Compile Include="Member\MemberInfomation.cs" />
+    <Compile Include="Member\Link\LinkMsg.cs" />
+    <Compile Include="Member\Link\LinkMsgProvider.cs" />
+    <Compile Include="Member\MemberPhoto.cs" />
+    <Compile Include="Member\MemberRelations.cs" />
+    <Compile Include="Member\MemberSetting.cs" />
+    <Compile Include="Member\MemberStatus.cs" />
+    <Compile Include="Member\MemberType.cs" />
+    <Compile Include="Member\Relation\RelationDirection.cs" />
+    <Compile Include="Member\Relation\RelationOperationType.cs" />
+    <Compile Include="Member\Relation\RelationProvider.cs" />
+    <Compile Include="Member\Relation\Slientor.cs" />
+    <Compile Include="Member\Relation\Visitor.cs" />
+    <Compile Include="Photo\Photo.cs" />
+    <Compile Include="Photo\PhotoManager.cs" />
+    <Compile Include="Photo\PhotoSimple.cs" />
+    <Compile Include="Photo\PhotoType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MemberManager\MemberManager.cs" />
+    <Compile Include="Sys\FeaturedContent\FeaturedContent.cs" />
+    <Compile Include="Sys\FeaturedContent\FeaturedContentProvider.cs" />
+    <Compile Include="Sys\MemberActivity\MemberActivity.cs" />
+    <Compile Include="Sys\MemberActivity\MemberActivityType.cs" />
+    <Compile Include="Sys\MemberActivity\MemberActivityProvider.cs" />
+    <Compile Include="Sys\MemberContent\MemberContent.cs" />
+    <Compile Include="Sys\MemberContent\MemberContentFactory.cs" />
+    <Compile Include="Sys\PhotoCheck\PhotoCheckStatusFactory.cs" />
+    <Compile Include="Sys\RunStatus.cs" />
+    <Compile Include="Sys\SystemInfo.cs" />
+    <Compile Include="Sys\SystemManager\SystemManager.cs" />
+    <Compile Include="Sys\SystemManager\SystemManagerProvider.cs" />
+    <Compile Include="Sys\SystemMsg\SystemMsg.cs" />
+    <Compile Include="Sys\SystemMsg\SystemMsgProvider.cs" />
+    <Compile Include="Sys\Wants\SystemWants.cs" />
+    <Compile Include="Sys\Wants\SystemWantsFactory.cs" />
+    <Compile Include="Sys\Zone\Zone.cs" />
+    <Compile Include="Sys\Zone\ZoneFactory.cs" />
+    <Compile Include="Member\Link\Msg.cs" />
+    <Compile Include="TopImagePush\ImagePush.cs" />
+    <Compile Include="TopImagePush\ImagePushCount.cs" />
+    <Compile Include="TopImagePush\ImagePushProvider.cs" />
+    <Compile Include="WenWen\UpDown\UpDown.cs" />
+    <Compile Include="WenWen\WenWen.cs" />
+    <Compile Include="WenWen\WenWenAnswer.cs" />
+    <Compile Include="WenWen\WenWenProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\CBB公用类库\CBB.RankingHelper\CBB.RankingHelper.csproj">
+      <Project>{8EDD5F83-D86C-4789-9C95-B58340601ECD}</Project>
+      <Name>CBB.RankingHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CBB公用类库\CBB.RecommendationHelper\CBB.RecommendationHelper.csproj">
+      <Project>{2067C033-F4C4-4672-9101-6D64C3FA845E}</Project>
+      <Name>CBB.RecommendationHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CBB公用类库\CBB.MongoDB\CBB.MongoDB.csproj">
+      <Project>{D3DD9CE2-AA22-40E0-BCD2-5B4D9C230B72}</Project>
+      <Name>CBB.MongoDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CBB公用类库\CBB.Logger\CBB.Logger.csproj">
+      <Project>{13B1E37C-7719-4AC9-AD44-E8702B9999DA}</Project>
+      <Name>CBB.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CBB公用类库\CBB.Exception\CBB.ExceptionHelper.csproj">
+      <Project>{35928CE6-A6D4-47A1-AFD9-06D590E23631}</Project>
+      <Name>CBB.ExceptionHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CBB公用类库\CBB.OAuth\CBB.OAuth.csproj">
+      <Project>{9EFA2A0A-C164-4567-8F1A-87C2A8A9E076}</Project>
+      <Name>CBB.OAuth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CBB公用类库\CBB.CheckHelper\CBB.CheckHelper.csproj">
+      <Project>{8A5941F8-910E-4A00-80F4-EE79E6B12B76}</Project>
+      <Name>CBB.CheckHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CBB公用类库\CBB.ConfigurationHelper\CBB.ConfigurationHelper.csproj">
+      <Project>{3FB70300-BE6C-4913-B64B-FA495BBA17AD}</Project>
+      <Name>CBB.ConfigurationHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CBB公用类库\CBB.ImageHelper\CBB.ImageHelper.csproj">
+      <Project>{BF068412-481E-4F20-A8EA-51EEF6FDEA1A}</Project>
+      <Name>CBB.ImageHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CBB公用类库\CBB.LocationFunctionHelper\CBB.LocationFunctionHelper.csproj">
+      <Project>{9F65F2B6-7764-4969-8296-3A0E1C2632C5}</Project>
+      <Name>CBB.LocationFunctionHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CBB公用类库\CBB.Security\CBB.Security.csproj">
+      <Project>{39D200AC-2B3C-484C-92E6-2422A1258929}</Project>
+      <Name>CBB.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Active_Reflection\Moooyo.Active.csproj">
+      <Project>{2A4509DB-75AA-4B05-8CEE-D2E51C0F8458}</Project>
+      <Name>Moooyo.Active</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
