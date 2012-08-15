@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9EFA2A0A-C164-4567-8F1A-87C2A8A9E076}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CBB.OAuth</RootNamespace>
+    <AssemblyName>CBB.OAuth</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json.Net20">
+      <HintPath>..\..\..\Components\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DouBan\OAuthBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RenRen\APIUtility\APIConfig.cs" />
+    <Compile Include="RenRen\APIUtility\APIParameter.cs" />
+    <Compile Include="RenRen\APIUtility\APIValidation.cs" />
+    <Compile Include="RenRen\APIUtility\AsyncHttp.cs" />
+    <Compile Include="RenRen\APIUtility\HttpUtil.cs" />
+    <Compile Include="RenRen\APIUtility\SyncHttp.cs" />
+    <Compile Include="RenRen\Model\Friend.cs" />
+    <Compile Include="RenRen\RenrenApiClient.cs" />
+    <Compile Include="Sina\AMicoblog.cs" />
+    <Compile Include="Sina\AMicroblog.Async.g.cs" />
+    <Compile Include="Sina\AMicroblog.Async.m.cs" />
+    <Compile Include="Sina\Common\AMicroblogAPIConfiguration.cs" />
+    <Compile Include="Sina\Common\AMicroblogException.cs" />
+    <Compile Include="Sina\Common\APIUri.cs" />
+    <Compile Include="Sina\Common\AsyncCallback.cs" />
+    <Compile Include="Sina\Common\AsyncCallResult.cs" />
+    <Compile Include="Sina\Common\Constants.cs" />
+    <Compile Include="Sina\Common\HttpMethod.cs" />
+    <Compile Include="Sina\Common\IResponseErrorHandler.cs" />
+    <Compile Include="Sina\Common\LocalErrorCode.cs" />
+    <Compile Include="Sina\Common\OAuthHelper.cs" />
+    <Compile Include="Sina\Common\OAuthTokens.cs" />
+    <Compile Include="Sina\Common\ParamCollection.cs" />
+    <Compile Include="Sina\Common\ParamPair.cs" />
+    <Compile Include="Sina\Common\ResponseErrorData.cs" />
+    <Compile Include="Sina\Common\ResponseErrorEventArgs.cs" />
+    <Compile Include="Sina\Common\RFC3986Encoder.cs" />
+    <Compile Include="Sina\Common\XmlSerializationHelper.cs" />
+    <Compile Include="Sina\DataContract\Account\PrivacyInfo.cs" />
+    <Compile Include="Sina\DataContract\Account\RateLimitStatus.cs" />
+    <Compile Include="Sina\DataContract\Account\UpdateProfileInfo.cs" />
+    <Compile Include="Sina\DataContract\Comment\CommentInfo.cs" />
+    <Compile Include="Sina\DataContract\Comment\Comments.cs" />
+    <Compile Include="Sina\DataContract\Common\BooleanResultInfo.cs" />
+    <Compile Include="Sina\DataContract\Common\ErrorResponse.cs" />
+    <Compile Include="Sina\DataContract\Common\Geo.cs" />
+    <Compile Include="Sina\DataContract\Common\GeoPoint.cs" />
+    <Compile Include="Sina\DataContract\Common\HpyerLink.cs" />
+    <Compile Include="Sina\DataContract\Common\Source.cs" />
+    <Compile Include="Sina\DataContract\Common\UnreadInfo.cs" />
+    <Compile Include="Sina\DataContract\Counter\CounterInfo.cs" />
+    <Compile Include="Sina\DataContract\Counter\Counters.cs" />
+    <Compile Include="Sina\DataContract\Counter\CounterType.cs" />
+    <Compile Include="Sina\DataContract\DirectMessage\DirectMessageInfo.cs" />
+    <Compile Include="Sina\DataContract\DirectMessage\DirectMessages.cs" />
+    <Compile Include="Sina\DataContract\Emotion\EmotionInfo.cs" />
+    <Compile Include="Sina\DataContract\Emotion\Emotions.cs" />
+    <Compile Include="Sina\DataContract\Emotion\EmotionType.cs" />
+    <Compile Include="Sina\DataContract\Relationship\RelationshipInfo.cs" />
+    <Compile Include="Sina\DataContract\Relationship\RelationshipPart.cs" />
+    <Compile Include="Sina\DataContract\Status\Statuses.cs" />
+    <Compile Include="Sina\DataContract\Status\StatusInfo.cs" />
+    <Compile Include="Sina\DataContract\Status\StatusType.cs" />
+    <Compile Include="Sina\DataContract\Status\UpdateStatusInfo.cs" />
+    <Compile Include="Sina\DataContract\Status\UpdateStatusWithPicInfo.cs" />
+    <Compile Include="Sina\DataContract\Tag\TagIDs.cs" />
+    <Compile Include="Sina\DataContract\Tag\TagInfo.cs" />
+    <Compile Include="Sina\DataContract\Tag\Tags.cs" />
+    <Compile Include="Sina\DataContract\Trend\PeriodTrends.cs" />
+    <Compile Include="Sina\DataContract\Trend\TrendInfo.cs" />
+    <Compile Include="Sina\DataContract\Trend\Trends.cs" />
+    <Compile Include="Sina\DataContract\Url\UrlInfo.cs" />
+    <Compile Include="Sina\DataContract\Url\Urls.cs" />
+    <Compile Include="Sina\DataContract\User\UserIDs.cs" />
+    <Compile Include="Sina\DataContract\User\UserInfo.cs" />
+    <Compile Include="Sina\DataContract\User\Users.cs" />
+    <Compile Include="Sina\DataContract\User\UserSuggestionInfo.cs" />
+    <Compile Include="Sina\DataContract\User\UserSuggestions.cs" />
+    <Compile Include="Sina\Environment.cs" />
+    <Compile Include="Sina\HttpRequests\HttpGet.cs" />
+    <Compile Include="Sina\HttpRequests\HttpPost.cs" />
+    <Compile Include="Sina\HttpRequests\HttpRequest.cs" />
+    <Compile Include="Sina\HttpRequests\IHttpRequest.cs" />
+    <Compile Include="Sina\HttpRequests\MultiPartField.cs" />
+    <Compile Include="Sina\HttpRequests\MultiPartHttpPost.cs" />
+    <Compile Include="Sina\HttpRequests\OAuthHttpDelete.cs" />
+    <Compile Include="Sina\HttpRequests\OAuthHttpGet.cs" />
+    <Compile Include="Sina\HttpRequests\OAuthHttpPost.cs" />
+    <Compile Include="Sina\HttpRequests\OAuthMultiPartHttpPost.cs" />
+    <Compile Include="Sina\HttpRequests\TokenObtainRequest.cs" />
+    <Compile Include="Sina\OAuthBase.cs" />
+    <Compile Include="Sina\SinaOAuth.cs" />
+    <Compile Include="TXWeibo\OAuthBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CBB.ConfigurationHelper\CBB.ConfigurationHelper.csproj">
+      <Project>{3FB70300-BE6C-4913-B64B-FA495BBA17AD}</Project>
+      <Name>CBB.ConfigurationHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sina\DataContract\DataContracts.cd" />
+    <None Include="Sina\HttpRequests\HttpRequests.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

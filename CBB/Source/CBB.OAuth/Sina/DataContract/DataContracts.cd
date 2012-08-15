@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CBB.OAuth.Sina.DataContract.CommentInfo" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAEAgAAgAAAACAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>DataContract\Comment\CommentInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.Comments" Collapsed="true">
+    <Position X="3.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataContract\Comment\Comments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.ErrorResponse" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAgAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>DataContract\Common\ErrorResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.Geo" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataContract\Common\Geo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.GeoPoint" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataContract\Common\GeoPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.Hyperlink" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAACAAAAAA=</HashCode>
+      <FileName>DataContract\Common\HpyerLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.Source" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataContract\Common\Source.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.UnreadInfo" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAQAQAAIAA=</HashCode>
+      <FileName>DataContract\Common\UnreadInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.CounterInfo" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>DataContract\Counter\CounterInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.Counters" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataContract\Counter\Counters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.EmotionInfo" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAQAAAAAAAAAAAAAAAAAAAAAAACQAIAAAAKAA=</HashCode>
+      <FileName>DataContract\Emotion\EmotionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.Emotions" Collapsed="true">
+    <Position X="3.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataContract\Emotion\Emotions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.Statuses" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataContract\Status\Statuses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.StatusInfo" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAgAAgADAECAAAAGIAAAAAAAAAACACAABAAA=</HashCode>
+      <FileName>DataContract\Status\StatusInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.UpdateStatusInfo" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAEAAAAAAAAAIAACAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataContract\Status\UpdateStatusInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.UpdateStatusWithPicInfo" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAEAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataContract\Status\UpdateStatusWithPicInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.UserInfo" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAgAACYCCoAAAwAIgAAAAAASAAAAgACEBA=</HashCode>
+      <FileName>DataContract\User\UserInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBB.OAuth.Sina.DataContract.Users" Collapsed="true">
+    <Position X="3.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAgAAAAAAAAAAAIAACAAAAAAAAA=</HashCode>
+      <FileName>DataContract\User\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="CBB.OAuth.Sina.DataContract.CounterType" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAgAAAAAAAAAAAAAAAAAAAAIAIAAAA=</HashCode>
+      <FileName>DataContract\Counter\CounterType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CBB.OAuth.Sina.DataContract.EmotionType" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAIAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataContract\Emotion\EmotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CBB.OAuth.Sina.DataContract.StatusType" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAw=</HashCode>
+      <FileName>DataContract\Status\StatusType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei" Size="9" />
+</ClassDiagram>
