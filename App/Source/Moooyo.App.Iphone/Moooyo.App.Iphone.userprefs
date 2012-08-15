@@ -1,19 +1,27 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../Moooyo.AppAPI/Controllers/accountsController.cs">
-    <Files>
-      <File FileName="../Moooyo.AppAPI/Controllers/accountsController.cs" Line="18" Column="29" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="App" expanded="True">
-            <Node name="Moooyo.App.Core" expanded="True">
-              <Node name="Api" selected="True" />
+            <Node name="Moooyo.App.Iphone" expanded="True">
+              <Node name="UI" expanded="True">
+                <Node name="Screen" expanded="True">
+                  <Node name="Iphone" expanded="True">
+                    <Node name="Account" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
             </Node>
           </Node>
-          <Node name="AppAPI" expanded="True" />
         </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
