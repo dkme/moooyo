@@ -1,26 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Moooyo.App.Data/OperationHelper/IDBOperationHelper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Moooyo.AppAPI/Controllers/accountsController.cs">
     <Files>
-      <File FileName="Moooyo.App.Data/OperationHelper/Comm.cs" Line="8" Column="32" />
-      <File FileName="Moooyo.App.Data/SqlHelper/OLEHelper.cs" Line="1" Column="1" />
-      <File FileName="Moooyo.App.Data/SqlHelper/SQLHelper.cs" Line="1" Column="1" />
-      <File FileName="Moooyo.App.Iphone/Preparation/Database.cs" Line="15" Column="4" />
-      <File FileName="Moooyo.App.Iphone/Preparation/Updating.cs" Line="15" Column="1" />
-      <File FileName="../Moooyo.BiZ.Core/Moooyo.BiZ.Core/Member/Member.cs" Line="81" Column="56" />
-      <File FileName="../Moooyo.BiZ.Core/Moooyo.BiZ.Core/Member/MemberStatus.cs" Line="1" Column="1" />
-      <File FileName="../Moooyo.BiZ.Core/Moooyo.BiZ.Core/Member/MemberRelation.cs" Line="1" Column="1" />
-      <File FileName="../Moooyo.BiZ.Core/Moooyo.BiZ.Core/Member/Link/Msg.cs" Line="1" Column="1" />
-      <File FileName="../Moooyo.App.Core/Defs/App/Version.cs" Line="1" Column="1" />
-      <File FileName="Moooyo.App.Iphone/Preparation/Environment.cs" Line="10" Column="3" />
-      <File FileName="../Moooyo.App.Core/Defs/Device/Device.cs" Line="1" Column="1" />
-      <File FileName="../Moooyo.App.Core/Defs/App/History.cs" Line="1" Column="1" />
-      <File FileName="../Moooyo.App.Core/Runtime/Env.cs" Line="1" Column="1" />
-      <File FileName="Moooyo.App.Data/OperationHelper/IDBOperationHelper.cs" Line="93" Column="57" />
+      <File FileName="../Moooyo.AppAPI/Controllers/accountsController.cs" Line="18" Column="29" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" />
+        <State expanded="True">
+          <Node name="App" expanded="True">
+            <Node name="Moooyo.App.Core" expanded="True">
+              <Node name="Api" selected="True" />
+            </Node>
+          </Node>
+          <Node name="AppAPI" expanded="True" />
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

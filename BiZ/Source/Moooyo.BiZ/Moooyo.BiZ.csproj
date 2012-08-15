@@ -227,53 +227,13 @@
   </Target>
   -->
   <ItemGroup>
-    <ProjectReference Include="..\CBB公用类库\CBB.RankingHelper\CBB.RankingHelper.csproj">
-      <Project>{8EDD5F83-D86C-4789-9C95-B58340601ECD}</Project>
-      <Name>CBB.RankingHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CBB公用类库\CBB.RecommendationHelper\CBB.RecommendationHelper.csproj">
-      <Project>{2067C033-F4C4-4672-9101-6D64C3FA845E}</Project>
-      <Name>CBB.RecommendationHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CBB公用类库\CBB.MongoDB\CBB.MongoDB.csproj">
-      <Project>{D3DD9CE2-AA22-40E0-BCD2-5B4D9C230B72}</Project>
-      <Name>CBB.MongoDB</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CBB公用类库\CBB.Logger\CBB.Logger.csproj">
-      <Project>{13B1E37C-7719-4AC9-AD44-E8702B9999DA}</Project>
-      <Name>CBB.Logger</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CBB公用类库\CBB.Exception\CBB.ExceptionHelper.csproj">
-      <Project>{35928CE6-A6D4-47A1-AFD9-06D590E23631}</Project>
-      <Name>CBB.ExceptionHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CBB公用类库\CBB.OAuth\CBB.OAuth.csproj">
-      <Project>{9EFA2A0A-C164-4567-8F1A-87C2A8A9E076}</Project>
-      <Name>CBB.OAuth</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CBB公用类库\CBB.CheckHelper\CBB.CheckHelper.csproj">
+    <ProjectReference Include="..\..\..\CBB\Source\CBB.CheckHelper\CBB.CheckHelper.csproj">
       <Project>{8A5941F8-910E-4A00-80F4-EE79E6B12B76}</Project>
       <Name>CBB.CheckHelper</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CBB公用类库\CBB.ConfigurationHelper\CBB.ConfigurationHelper.csproj">
+    <ProjectReference Include="..\..\..\CBB\Source\CBB.ConfigurationHelper\CBB.ConfigurationHelper.csproj">
       <Project>{3FB70300-BE6C-4913-B64B-FA495BBA17AD}</Project>
       <Name>CBB.ConfigurationHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CBB公用类库\CBB.ImageHelper\CBB.ImageHelper.csproj">
-      <Project>{BF068412-481E-4F20-A8EA-51EEF6FDEA1A}</Project>
-      <Name>CBB.ImageHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CBB公用类库\CBB.LocationFunctionHelper\CBB.LocationFunctionHelper.csproj">
-      <Project>{9F65F2B6-7764-4969-8296-3A0E1C2632C5}</Project>
-      <Name>CBB.LocationFunctionHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CBB公用类库\CBB.Security\CBB.Security.csproj">
-      <Project>{39D200AC-2B3C-484C-92E6-2422A1258929}</Project>
-      <Name>CBB.Security</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Active_Reflection\Moooyo.Active.csproj">
-      <Project>{2A4509DB-75AA-4B05-8CEE-D2E51C0F8458}</Project>
-      <Name>Moooyo.Active</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

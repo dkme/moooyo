@@ -193,10 +193,4 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
-  <ItemGroup>
-    <ProjectReference Include="..\Moooyo.BiZ.Core\Moooyo.BiZ.Core\Moooyo.BiZ.Core.csproj">
-      <Project>{084B5FFF-354F-429F-A145-A04B86EF20C4}</Project>
-      <Name>Moooyo.BiZ.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

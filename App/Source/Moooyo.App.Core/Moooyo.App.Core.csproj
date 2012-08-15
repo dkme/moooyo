@@ -34,9 +34,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
-    <Reference Include="Moooyo.BiZ.Core">
-      <HintPath>..\Moooyo.BiZ.Core\Moooyo.BiZ.Core\bin\Debug\Moooyo.BiZ.Core.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
