@@ -49,9 +49,8 @@
     <Reference Include="CBB.ConfigurationHelper">
       <HintPath>..\..\..\Components\CBB.ConfigurationHelper.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json.Net20">
-      <HintPath>..\..\..\Components\Newtonsoft.Json.Net20.dll</HintPath>
-    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Json" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

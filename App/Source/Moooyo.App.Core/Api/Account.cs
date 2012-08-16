@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using CBB.ExceptionHelper;
 using CBB.NetworkingHelper.HttpHelper;
-using Newtonsoft.Json.Linq;
+using System.Json;
 
 namespace Moooyo.App.Core.Api
 {
@@ -34,7 +34,7 @@ namespace Moooyo.App.Core.Api
 
 				//执行请求
                 APIReturnData returnData = new SyncHttp().HttpPost(AccountsDefs.CreateStep1, paras);
-				JObject jcontent = JObject.Parse(returnData.content);
+				var jcontent = JsonValue.Parse(returnData.content);
 
 				//保存cookies
 				Moooyo.App.Core.Runtime.Env.Cookies = returnData.cookies;
@@ -44,10 +44,6 @@ namespace Moooyo.App.Core.Api
 			} catch (Exception err) {
 				return new OperationResult(false,CBB.ExceptionHelper.ExpressionPaser.ErrTrim(err));
 			}
-		}
-		public OperationResult CreateStep2 ()
-		{
-
 		}
 		public Account ()
 		{
