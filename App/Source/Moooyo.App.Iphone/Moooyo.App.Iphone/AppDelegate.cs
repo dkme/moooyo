@@ -16,6 +16,10 @@ namespace Moooyo.App.Iphone
 		// class-level declarations
 		UIWindow window;
 
+		RegController reg;
+
+		UINavigationController navigation;
+
 		//
 		// This method is invoked when the application has loaded and is ready to run. In this 
 		// method you should instantiate the window, load the UI into it and then make the window
@@ -30,6 +34,14 @@ namespace Moooyo.App.Iphone
 			
 			// If you have defined a view, add it here:
 			// window.AddSubview (navigationController.View);
+
+			reg = new RegController();
+
+			navigation = new UINavigationController();
+
+			navigation.PushViewController(reg, false);
+
+			window.RootViewController = navigation;
 			
 			// make the window visible
 			window.MakeKeyAndVisible ();

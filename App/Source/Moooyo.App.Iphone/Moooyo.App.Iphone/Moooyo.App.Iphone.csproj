@@ -80,13 +80,13 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
     <Reference Include="CBB.Exception">
-      <HintPath>..\..\Moooyo.Service\CBB公用类库\CBB.Exception\bin\Debug\CBB.Exception.dll</HintPath>
+      <HintPath>..\..\..\..\Components\CBB.Exception.dll</HintPath>
     </Reference>
     <Reference Include="CBB.Logger">
-      <HintPath>..\..\Moooyo.Service\CBB公用类库\CBB.Exception\bin\Debug\CBB.Logger.dll</HintPath>
+      <HintPath>..\..\..\..\Components\CBB.Logger.dll</HintPath>
     </Reference>
     <Reference Include="log4net">
-      <HintPath>..\..\Moooyo.Service\CBB公用类库\CBB.Exception\bin\Debug\log4net.dll</HintPath>
+      <HintPath>..\..\..\..\Components\log4net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +98,10 @@
     <Compile Include="Preparation\Environment.cs" />
     <Compile Include="Preparation\Database.cs" />
     <Compile Include="Preparation\Updating.cs" />
+    <Compile Include="UI\Screen\Iphone\Reg\RegController.cs" />
+    <Compile Include="UI\Screen\Iphone\Reg\RegController.designer.cs">
+      <DependentUpon>RegController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -108,5 +112,14 @@
     <Folder Include="UI\Screen\Iphone\Home\" />
     <Folder Include="UI\Screen\Iphone\Account\" />
     <Folder Include="UI\Controls\" />
+    <Folder Include="UI\Image\" />
+    <Folder Include="UI\Image\Reg\" />
+    <Folder Include="UI\Screen\Iphone\Reg\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UI\Image\Reg\NavigationBackroundImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="UI\Screen\Iphone\Reg\RegController.xib" />
   </ItemGroup>
 </Project>

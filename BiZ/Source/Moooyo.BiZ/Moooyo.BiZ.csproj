@@ -34,27 +34,71 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MongoDB.Bson">
-      <HintPath>..\..\组件\MongoDB.Bson.dll</HintPath>
-    </Reference>
-    <Reference Include="MongoDB.Driver">
-      <HintPath>..\..\组件\MongoDB.Driver.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json.Net20">
-      <HintPath>..\..\Components\Newtonsoft.Json.Net20.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenTSDK.Tencent">
-      <HintPath>..\..\组件\OpenTSDK.Tencent.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="CBB.CheckHelper">
+      <HintPath>..\..\..\Components\CBB.CheckHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.ConfigurationHelper">
+      <HintPath>..\..\..\Components\CBB.ConfigurationHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.Exception">
+      <HintPath>..\..\..\Components\CBB.Exception.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.ImageHelper">
+      <HintPath>..\..\..\Components\CBB.ImageHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.LocationFunctionHelper">
+      <HintPath>..\..\..\Components\CBB.LocationFunctionHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.Logger">
+      <HintPath>..\..\..\Components\CBB.Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.MongoDB">
+      <HintPath>..\..\..\Components\CBB.MongoDB.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.NetworkingHelper">
+      <HintPath>..\..\..\Components\CBB.NetworkingHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.OAuth">
+      <HintPath>..\..\..\Components\CBB.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.RankingHelper">
+      <HintPath>..\..\..\Components\CBB.RankingHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.RecommendationHelper">
+      <HintPath>..\..\..\Components\CBB.RecommendationHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.Security">
+      <HintPath>..\..\..\Components\CBB.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\..\..\Components\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\..\..\Components\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="Moooyo.Active">
+      <HintPath>..\..\..\Components\Moooyo.Active.dll</HintPath>
+    </Reference>
+    <Reference Include="Moooyo.BiZ">
+      <HintPath>..\..\..\Components\Moooyo.BiZ.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net20">
+      <HintPath>..\..\..\Components\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTSDK.Tencent">
+      <HintPath>..\..\..\Components\OpenTSDK.Tencent.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\Components\log4net.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Coment\Coment.cs" />
@@ -226,14 +270,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\CBB\Source\CBB.CheckHelper\CBB.CheckHelper.csproj">
-      <Project>{8A5941F8-910E-4A00-80F4-EE79E6B12B76}</Project>
-      <Name>CBB.CheckHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\CBB\Source\CBB.ConfigurationHelper\CBB.ConfigurationHelper.csproj">
-      <Project>{3FB70300-BE6C-4913-B64B-FA495BBA17AD}</Project>
-      <Name>CBB.ConfigurationHelper</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

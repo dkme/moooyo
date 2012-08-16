@@ -8,7 +8,9 @@ namespace Moooyo.App.Iphone
 		{
 		}
 		public CBB.ExceptionHelper.OperationResult UpdatingDetecting()
-		{}
+		{
+			return null;
+		}
 	}
 }
 

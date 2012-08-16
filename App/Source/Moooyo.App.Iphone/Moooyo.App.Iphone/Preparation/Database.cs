@@ -9,7 +9,7 @@ namespace Moooyo.App.Iphone
 			get{
 				return "moooyoIphoneDbV1.db";
 			}
-		};
+		}
 
 		public static void PreparationOfDatabase()
 		{
@@ -27,7 +27,7 @@ namespace Moooyo.App.Iphone
 		private static void DeletingDatabase()
 		{
 		}
-		private static voidvoid InitializationData()
+		private static void InitializationData()
 		{
 		}
 		public Database ()

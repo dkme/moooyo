@@ -17,7 +17,7 @@ namespace Moooyo.AppAPI.Controllers
         /// <returns></returns>
         public ActionResult create()
         {
-           
+			return null;
         }
         /// <summary>
         /// 更新账户
@@ -25,7 +25,7 @@ namespace Moooyo.AppAPI.Controllers
         /// <returns></returns>
         public ActionResult update()
         {
-
+			return null;
         }
         /// <summary>
         /// 激活账户
@@ -33,7 +33,7 @@ namespace Moooyo.AppAPI.Controllers
         /// <returns></returns>
         public ActionResult activation()
         {
-
+			return null;
         }
         /// <summary>
         /// 用户登录
@@ -41,7 +41,7 @@ namespace Moooyo.AppAPI.Controllers
         /// <returns></returns>
         public ActionResult login()
         { 
-        
+			return null;
         }
     }
 }
