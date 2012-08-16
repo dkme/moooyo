@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 namespace Moooyo.BiZ.Core.Member
 {
@@ -226,6 +227,10 @@ namespace Moooyo.BiZ.Core.Member
 
         #region 构造函数
         public Member() { }
+		public Member(string jsoncontent)
+		{
+
+		}
         #endregion
     }
 

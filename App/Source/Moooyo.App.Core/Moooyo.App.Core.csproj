@@ -50,7 +50,12 @@
       <HintPath>..\..\..\Components\CBB.ConfigurationHelper.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
-    <Reference Include="System.Json" />
+    <Reference Include="ServiceStack.Text.MonoTouch">
+      <HintPath>..\..\..\Components\ServiceStack.Text.MonoTouch.dll</HintPath>
+    </Reference>
+    <Reference Include="Moooyo.BiZ.Core">
+      <HintPath>..\..\..\Components\Moooyo.BiZ.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -60,6 +65,7 @@
     <Folder Include="Defs\Account\" />
     <Folder Include="Sync\" />
     <Folder Include="Api\" />
+    <Folder Include="BiZ\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Runtime\Env.cs" />
@@ -67,7 +73,9 @@
     <Compile Include="Defs\App\Version.cs" />
     <Compile Include="Defs\App\History.cs" />
     <Compile Include="Defs\Account\Account.cs" />
-    <Compile Include="Api\Account.cs" />
     <Compile Include="Api\ApiDefs.cs" />
+    <Compile Include="Api\Members.cs" />
+    <Compile Include="Api\Accounts.cs" />
+    <Compile Include="Api\RelationShips.cs" />
   </ItemGroup>
 </Project>

@@ -38,6 +38,9 @@
     <Folder Include="Fans\" />
     <Folder Include="Member\Link\" />
     <Folder Include="Creater\" />
+    <Folder Include="DisplayObjs\" />
+    <Folder Include="Comm\UniqueNumber\" />
+    <Folder Include="InterestCenter\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Member\Member.cs" />
@@ -67,5 +70,21 @@
     <Compile Include="Member\Link\LinkMsg.cs" />
     <Compile Include="Member\MemberPhoto.cs" />
     <Compile Include="Creater\Creater.cs" />
+    <Compile Include="DisplayObjs\MemberDisplayObj.cs" />
+    <Compile Include="DisplayObjs\MemberFullDisplayObj.cs" />
+    <Compile Include="DisplayObjs\MsgerDisplayObj.cs" />
+    <Compile Include="DisplayObjs\RelationDisplayObj.cs" />
+    <Compile Include="DisplayObjs\UserDisplayObj.cs" />
+    <Compile Include="Comm\UniqueNumber\UniqueNumber.cs" />
+    <Compile Include="Comm\UniqueNumber\IDType.cs" />
+    <Compile Include="InterestCenter\Interest.cs" />
+    <Compile Include="InterestCenter\InterestClass.cs" />
+    <Compile Include="InterestCenter\InterestFans.cs" />
+    <Compile Include="Fans\Fans.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
   </ItemGroup>
 </Project>
