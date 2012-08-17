@@ -72,7 +72,7 @@ namespace Moooyo.App.Core.Preparation
 					AutoLogin bit
 				)",
 			//Table "UpdatingHistory"
-				"drop table if exists UpdatingHistory",
+				"drop table if exists UpdatedHistory",
 				@"create table UpdatingHistory(
 					InstallTime datetime,
 					UpdateTimes int,
@@ -101,6 +101,90 @@ namespace Moooyo.App.Core.Preparation
 			//Commit DB Transaction
 			App.Data.IDBOperationHelper.CommitIDbTransaction (st);
 
+		}
+		private static void InitializationDatas ()
+		{
+			//Start DB Transaction
+			IDbTransaction st = App.Data.IDBOperationHelper.BeginIDbTransaction ("Data Source=" + DatabasePath);
+			//Exec SQL
+		    App.Data.IDBOperationHelper.ExecuteNonQuery (st, BuildInitEnvSettingSql(), false);
+		    App.Data.IDBOperationHelper.ExecuteNonQuery (st, BuildInitUpdatedHistorySql(), false);
+			//Commit DB Transaction
+			App.Data.IDBOperationHelper.CommitIDbTransaction (st);
+		}
+		private static string BuildInitEnvSettingSql()
+		{
+			//Defs SQL.
+			string sql = 
+				  @"insert into EnvSetting
+					(
+						MajorVersion,
+						SubVersion,
+					    AccountID,
+					    MemberID,
+	                    LastOperationTime,
+	                    AutoLogin
+					)
+					values
+					(
+					   @MajorVersion,
+					   @SubVersion,
+				       @AccountID,
+                       @MemberID,
+                       @LastOperationTime,
+                       @AutoLogin
+					)";
+					
+
+			List<App.Data.SqlParam> sqlParams = new List<SqlParam>(){
+				new SqlParam("@MajorVersion",Defs.Config.MajorVersion,typeof(string)),
+				new SqlParam("@SubVersion",Defs.Config.SubVersion,typeof(string)),
+				new SqlParam("@AccountID","",typeof(string)),
+				new SqlParam("@MemberID","",typeof(string)),
+				new SqlParam("@LastOperationTime",DateTime.Now,typeof(DateTime)),
+				new SqlParam("@AutoLogin",false,typeof(bool))
+			};
+
+			//build sql
+			sql = SqlBuilder.GetSql(sql,sqlParams);
+			return sql;
+		}
+		private static string BuildInitUpdatedHistorySql ()
+		{
+			//Defs SQL.
+			string sql = 
+				  @"insert into UpdatedHistory
+					(
+						InstallTime,
+						UpdateTimes,
+					    StartedAtVersion,
+					    NowVersion,
+	                    RunnedTimes,
+	                    LastRunnedTime
+					)
+					values
+					(
+					   @InstallTime,
+					   @UpdateTimes,
+				       @StartedAtVersion,
+                       @NowVersion,
+                       @RunnedTimes,
+                       @LastRunnedTime
+					)";
+					
+
+			List<App.Data.SqlParam> sqlParams = new List<SqlParam>(){
+				new SqlParam("@InstallTime",DateTime.Now,typeof(DateTime)),
+				new SqlParam("@UpdateTimes",DateTime.Now,typeof(DateTime)),
+				new SqlParam("@StartedAtVersion",Defs.Config.FullVersion,typeof(string)),
+				new SqlParam("@NowVersion",Defs.Config.FullVersion,typeof(string)),
+				new SqlParam("@RunnedTimes",1,typeof(int)),
+				new SqlParam("@LastRunnedTime",DateTime.Now,typeof(DateTime))
+			};
+
+			//build sql
+			sql = SqlBuilder.GetSql(sql,sqlParams);
+			return sql;
 		}
 		public Database ()
 		{

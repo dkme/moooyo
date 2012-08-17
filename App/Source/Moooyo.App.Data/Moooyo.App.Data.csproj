@@ -52,5 +52,9 @@
     <Compile Include="SqlHelper\SQLHelper.cs" />
     <Compile Include="SqlHelper\SqlHelperExtension.cs" />
     <Compile Include="SqlHelper\SqliteHelper.cs" />
+    <Compile Include="SqlParamsHelper\SqlBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SqlParamsHelper\" />
   </ItemGroup>
 </Project>
