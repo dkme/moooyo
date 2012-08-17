@@ -1,6 +1,7 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
 <<<<<<< HEAD
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="../Moooyo.App.Core/Api/Members.cs">
     <Files>
       <File FileName="../Moooyo.App.Core/Api/Accounts.cs" Line="40" Column="17" />
@@ -12,6 +13,13 @@
     <Files>
       <File FileName="Moooyo.App.Iphone/UI/Screen/Iphone/Reg/RegController.cs" Line="94" Column="4" />
 >>>>>>> reg
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Moooyo.App.Core/Api/Accounts.cs">
+    <Files>
+      <File FileName="../Moooyo.App.Core/Api/Members.cs" Line="44" Column="4" />
+      <File FileName="../Moooyo.App.Core/Api/RelationShips.cs" Line="112" Column="75" />
+      <File FileName="../Moooyo.App.Core/Api/Accounts.cs" Line="178" Column="5" />
+>>>>>>> f
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,6 +28,7 @@
           <Node name="App" expanded="True">
 <<<<<<< HEAD
             <Node name="Moooyo.App.Core" expanded="True">
+<<<<<<< HEAD
               <Node name="References" expanded="True" selected="True" />
 =======
             <Node name="Moooyo.App.Iphone" expanded="True">
@@ -36,6 +45,11 @@
                 </Node>
               </Node>
 >>>>>>> reg
+=======
+              <Node name="Api" expanded="True">
+                <Node name="Accounts.cs" selected="True" />
+              </Node>
+>>>>>>> f
             </Node>
           </Node>
         </State>

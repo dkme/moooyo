@@ -20,12 +20,12 @@ namespace Moooyo.App.Core.Api
 		/// <param name='mid'>
 		/// Middle.
 		/// </param>
-		public BiZ.Core.Member.Member GetMember (string mID)
+		public Core.BiZ.Member.Member GetMember (string mID)
 		{
 			try {
 				//参数检查
 				if (mID == null || mID == String.Empty)
-					return new BiZ.Core.Member.Member();
+					return new Core.BiZ.Member.Member();
 
 				//Http请求参数
 				List<APIParameter> paras = new List<APIParameter>() { 
@@ -38,7 +38,7 @@ namespace Moooyo.App.Core.Api
 				//保存cookies
 				Moooyo.App.Core.Runtime.Env.Cookies = returnData.cookies;
 
-				BiZ.Core.Member.Member mobj = JsonSerializer.DeserializeFromString<BiZ.Core.Member.Member>(returnData.content);
+				Core.BiZ.Member.Member mobj = JsonSerializer.DeserializeFromString<Core.BiZ.Member.Member>(returnData.content);
 				return mobj;
 
 			} catch (Exception err) {
@@ -49,12 +49,12 @@ namespace Moooyo.App.Core.Api
 			}
 		}
 
-		public BiZ.Core.DisplayObjs.MemberFullDisplayObj GetFullDisplayMember(string mID)
+		public Core.BiZ.DisplayObjs.MemberFullDisplayObj GetFullDisplayMember(string mID)
 		{
 			try {
 				//参数检查
 				if (mID == null || mID == String.Empty)
-					return new BiZ.Core.DisplayObjs.MemberFullDisplayObj();
+					return new Core.BiZ.DisplayObjs.MemberFullDisplayObj();
 
 				//Http请求参数
 				List<APIParameter> paras = new List<APIParameter>() { 
@@ -67,7 +67,7 @@ namespace Moooyo.App.Core.Api
 				//保存cookies
 				Moooyo.App.Core.Runtime.Env.Cookies = returnData.cookies;
 
-				BiZ.Core.DisplayObjs.MemberFullDisplayObj mobj = JsonSerializer.DeserializeFromString<BiZ.Core.DisplayObjs.MemberFullDisplayObj>(returnData.content);
+				Core.BiZ.DisplayObjs.MemberFullDisplayObj mobj = JsonSerializer.DeserializeFromString<Core.BiZ.DisplayObjs.MemberFullDisplayObj>(returnData.content);
 				return mobj;
 
 			} catch (Exception err) {

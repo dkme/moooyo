@@ -53,9 +53,6 @@
     <Reference Include="ServiceStack.Text.MonoTouch">
       <HintPath>..\..\..\Components\ServiceStack.Text.MonoTouch.dll</HintPath>
     </Reference>
-    <Reference Include="Moooyo.BiZ.Core">
-      <HintPath>..\..\..\Components\Moooyo.BiZ.Core.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -66,6 +63,13 @@
     <Folder Include="Sync\" />
     <Folder Include="Api\" />
     <Folder Include="BiZ\" />
+    <Folder Include="BiZ\Comm\" />
+    <Folder Include="BiZ\Creater\" />
+    <Folder Include="BiZ\DisplayObjs\" />
+    <Folder Include="BiZ\Fans\" />
+    <Folder Include="BiZ\InterestCenter\" />
+    <Folder Include="BiZ\Member\" />
+    <Folder Include="Defs\Environment\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Runtime\Env.cs" />
@@ -77,5 +81,44 @@
     <Compile Include="Api\Members.cs" />
     <Compile Include="Api\Accounts.cs" />
     <Compile Include="Api\RelationShips.cs" />
+    <Compile Include="BiZ\Comm\Device\DeviceType.cs" />
+    <Compile Include="BiZ\Comm\UniqueNumber\IDType.cs" />
+    <Compile Include="BiZ\Comm\UniqueNumber\UniqueNumber.cs" />
+    <Compile Include="BiZ\Creater\Creater.cs" />
+    <Compile Include="BiZ\DisplayObjs\MemberDisplayObj.cs" />
+    <Compile Include="BiZ\DisplayObjs\MemberFullDisplayObj.cs" />
+    <Compile Include="BiZ\DisplayObjs\MsgerDisplayObj.cs" />
+    <Compile Include="BiZ\DisplayObjs\RelationDisplayObj.cs" />
+    <Compile Include="BiZ\DisplayObjs\UserDisplayObj.cs" />
+    <Compile Include="BiZ\Fans\Fans.cs" />
+    <Compile Include="BiZ\Fans\FansGroupName.cs" />
+    <Compile Include="BiZ\InterestCenter\Interest.cs" />
+    <Compile Include="BiZ\InterestCenter\InterestClass.cs" />
+    <Compile Include="BiZ\InterestCenter\InterestFans.cs" />
+    <Compile Include="BiZ\Member\Member.cs" />
+    <Compile Include="BiZ\Member\MemberBadge.cs" />
+    <Compile Include="BiZ\Member\MemberInfomation.cs" />
+    <Compile Include="BiZ\Member\MemberPhoto.cs" />
+    <Compile Include="BiZ\Member\MemberRelation.cs" />
+    <Compile Include="BiZ\Member\MemberSetting.cs" />
+    <Compile Include="BiZ\Member\MemberStatus.cs" />
+    <Compile Include="BiZ\Member\MemberType.cs" />
+    <Compile Include="BiZ\Member\Activity\Activity.cs" />
+    <Compile Include="BiZ\Member\Activity\ActivityHolder.cs" />
+    <Compile Include="BiZ\Member\Activity\ActivityHolderBase.cs" />
+    <Compile Include="BiZ\Member\Activity\ActivityHolderRelatedToMe.cs" />
+    <Compile Include="BiZ\Member\Activity\ActivityType.cs" />
+    <Compile Include="BiZ\Member\Link\LinkMsg.cs" />
+    <Compile Include="BiZ\Member\Link\Msg.cs" />
+    <Compile Include="BiZ\Member\Relation\Disabler.cs" />
+    <Compile Include="BiZ\Member\Relation\Favorer.cs" />
+    <Compile Include="BiZ\Member\Relation\Giftor.cs" />
+    <Compile Include="BiZ\Member\Relation\LastMsger.cs" />
+    <Compile Include="BiZ\Member\Relation\RelationDirection.cs" />
+    <Compile Include="BiZ\Member\Relation\RelationMember.cs" />
+    <Compile Include="BiZ\Member\Relation\RelationOperationType.cs" />
+    <Compile Include="BiZ\Member\Relation\Silentor.cs" />
+    <Compile Include="BiZ\Member\Relation\Vistior.cs" />
+    <Compile Include="Defs\Environment\Environment.cs" />
   </ItemGroup>
 </Project>

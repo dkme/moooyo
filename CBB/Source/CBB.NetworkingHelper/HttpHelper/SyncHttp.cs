@@ -91,8 +91,6 @@ namespace CBB.NetworkingHelper.HttpHelper
 			return HttpGet(url, querystring,cc);
 		}
 
-
-
         /// <summary>
         /// 同步方式发起http post请求
         /// </summary>
@@ -181,7 +179,6 @@ namespace CBB.NetworkingHelper.HttpHelper
             string querystring = HttpUtil.GetQueryFromParas(paras);
             return HttpPost(url, querystring,cc);
         }
-
 
 
         /// <summary>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using CBB.ExceptionHelper;
 using CBB.NetworkingHelper.HttpHelper;
 using ServiceStack.Text;
-using Moooyo.BiZ.Core.Member.Relation;
+using Moooyo.App.Core.BiZ.Member.Relation;
 
 namespace Moooyo.App.Core.Api
 {

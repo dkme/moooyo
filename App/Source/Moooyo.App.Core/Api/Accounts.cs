@@ -105,7 +105,7 @@ namespace Moooyo.App.Core.Api
 		/// <param name='deviceType'>
 		/// Device type.
 		/// </param>
-		public OperationResult Login (string loginID, string password, string deviceUID, BiZ.Core.Comm.Device.DeviceType deviceType)
+		public OperationResult Login (string loginID, string password, string deviceUID, Core.BiZ.Comm.Device.DeviceType deviceType)
 		{
 			//参数检查
 			if (loginID == null || loginID == String.Empty)
