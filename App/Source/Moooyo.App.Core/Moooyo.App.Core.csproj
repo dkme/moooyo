@@ -53,6 +53,7 @@
     <Reference Include="ServiceStack.Text.MonoTouch">
       <HintPath>..\..\..\Components\ServiceStack.Text.MonoTouch.dll</HintPath>
     </Reference>
+    <Reference Include="MonoTouch.NUnitLite" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

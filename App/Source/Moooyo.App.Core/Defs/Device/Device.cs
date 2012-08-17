@@ -1,4 +1,6 @@
 using System;
+using System.Net;
+using MonoTouch.Foundation;
 
 namespace Moooyo.App.Core.Defs.Device
 {
@@ -22,12 +24,28 @@ namespace Moooyo.App.Core.Defs.Device
 		/// </value>
 		public string Version{ get; set; }
 		/// <summary>
-		/// Gets or sets the unique ID.
+		/// Gets the unique ID.
 		/// </summary>
 		/// <value>
 		/// The unique ID.
 		/// </value>
-		public string UniqueID{ get; set; }
+		public string UniqueID {
+			get{
+				return GetDeviceID();
+			}}
+		/// <summary>
+		/// Create GUID of the Device;
+		/// </summary>
+		public static string KEY_DEVICEID = "moooyoDeviceUnquieID";
+		public static string GetDeviceID ()
+		{
+			string result = NSUserDefaults.StandardUserDefaults.StringForKey (KEY_DEVICEID);
+			if (string.IsNullOrEmpty (result)) {
+				result = Guid.NewGuid().ToString();
+				NSUserDefaults.StandardUserDefaults.SetString(result,KEY_DEVICEID);
+			}
+			return result;
+		}
 	}
 	/// <summary>
 	/// Mobile DeviceType Defs.
