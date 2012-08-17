@@ -40,6 +40,9 @@ namespace Moooyo.App.Core.Api
 		public static string Login {get {
 				return CommDefs.RootUri + "/accounts/login";
 			}}
+		public static string DeviceAutoLogin {get {
+				return CommDefs.RootUri + "/accounts/deviceAutoLogin";
+			}}
 		/// <summary>
 		/// Gets the change password.
 		/// </summary>

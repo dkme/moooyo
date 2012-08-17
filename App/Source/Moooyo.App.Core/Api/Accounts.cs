@@ -138,6 +138,50 @@ namespace Moooyo.App.Core.Api
 			}
 		}
 		/// <summary>
+		/// Devices the auto login.
+		/// </summary>
+		/// <returns>
+		/// The auto login.
+		/// </returns>
+		/// <param name='loginID'>
+		/// Login I.
+		/// </param>
+		/// <param name='deviceUID'>
+		/// Device user interface.
+		/// </param>
+		/// <param name='deviceType'>
+		/// Device type.
+		/// </param>
+		public OperationResult DeviceAutoLogin (string loginID, string deviceUID, Core.BiZ.Comm.Device.DeviceType deviceType)
+		{
+			//参数检查
+			if (loginID == null || loginID == String.Empty)
+				return new OperationResult (false, "参数不完整");
+			if (deviceUID == null || deviceUID == String.Empty)
+				return new OperationResult (false, "参数不完整");
+
+			try {
+				//Http请求参数
+				List<APIParameter> paras = new List<APIParameter>() { 
+                            new APIParameter("loginID",loginID),
+                            new APIParameter("deviceUID",deviceUID),
+							new APIParameter("deviceType",((int)deviceType).ToString())
+                        };
+
+				//执行请求
+                APIReturnData returnData = new SyncHttp().HttpGet(AccountsDefs.Login, paras);
+				CBB.ExceptionHelper.OperationResult result = JsonSerializer.DeserializeFromString<CBB.ExceptionHelper.OperationResult>(returnData.content);
+
+				//保存cookies
+				Moooyo.App.Core.Runtime.Env.Cookies = returnData.cookies;
+
+				return result;
+
+			} catch (Exception err) {
+				return new OperationResult(false,CBB.ExceptionHelper.ExpressionPaser.ErrTrim(err));
+			}
+		}
+		/// <summary>
 		/// Changes the password.
 		/// </summary>
 		/// <returns>

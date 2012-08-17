@@ -48,7 +48,15 @@ namespace Moooyo.App.Core.Api
 					err);
 			}
 		}
-
+		/// <summary>
+		/// Gets the full display member.
+		/// </summary>
+		/// <returns>
+		/// The full display member.
+		/// </returns>
+		/// <param name='mID'>
+		/// M I.
+		/// </param>
 		public Core.BiZ.DisplayObjs.MemberFullDisplayObj GetFullDisplayMember(string mID)
 		{
 			try {
