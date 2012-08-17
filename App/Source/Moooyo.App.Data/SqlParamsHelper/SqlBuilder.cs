@@ -17,20 +17,19 @@ namespace Moooyo.App.Data
 		}
 		public string GetValue ()
 		{
-			switch (TypeOfValue) {
-				case typeof(string):
+			switch (TypeOfValue.ToString()) {
+				case "string":
 					return "'"+Value.ToString()+"'";
-					break;
-				case typeof(String):
+				case "String":
 					return "'"+Value.ToString()+"'";
-					break;
-				case typeof(bool):
-					if ((bool)Value) return 1;
-					else return 0;
-					break;
-				case typeof(DateTime):
+				case "bool":
+					if ((Boolean)Value) return "1";
+					else return "0";
+				case "Boolean":
+					if ((Boolean)Value) return "1";
+					else return "0";
+				case "DateTime":
 					return "'"+Value.ToString()+"'";
-					break;
 				default:
 					return Value.ToString();
 			}

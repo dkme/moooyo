@@ -64,6 +64,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DownloadRemoteFile.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="HttpHelper\HttpUtil.cs" />
     <Compile Include="HttpHelper\APIparameter.cs" />
     <Compile Include="HttpHelper\APIReturnData.cs" />
+    <Compile Include="DownloadImage.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CBB.ConfigurationHelper\CBB.ConfigurationHelper.csproj">

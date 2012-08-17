@@ -115,5 +115,21 @@ namespace Moooyo.App.Core.Api
 				return CommDefs.RootUri + "/relationships/getVistors";
 			}}
 	}
+
+	/// <summary>
+	/// Photos API.
+	/// </summary>
+	public class Photos
+	{
+		/// <summary>
+		/// Gets the get photo.
+		/// </summary>
+		/// <value>
+		/// The get.
+		/// </value>
+		public static string Get {get{
+				return CommDefs.RootUri + "/photo/get";
+			}}
+	}
 }
 

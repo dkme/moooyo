@@ -61,7 +61,6 @@
     <Folder Include="Defs\" />
     <Folder Include="Defs\App\" />
     <Folder Include="Defs\Account\" />
-    <Folder Include="Sync\" />
     <Folder Include="Api\" />
     <Folder Include="BiZ\" />
     <Folder Include="BiZ\Comm\" />
@@ -73,6 +72,7 @@
     <Folder Include="Preparation\" />
     <Folder Include="Defs\EnvSetting\" />
     <Folder Include="Defs\Config\" />
+    <Folder Include="Caches\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Runtime\Env.cs" />
@@ -126,6 +126,8 @@
     <Compile Include="Defs\EnvSetting\EnvSetting.cs" />
     <Compile Include="Defs\Config\Config.cs" />
     <Compile Include="Preparation\EnvSettingPrearation.cs" />
+    <Compile Include="Caches\CachedImage.cs" />
+    <Compile Include="Caches\CachedImageProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Moooyo.App.Data\Moooyo.App.Data.csproj">

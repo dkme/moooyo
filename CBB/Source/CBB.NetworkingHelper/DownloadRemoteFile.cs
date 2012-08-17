@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace CBB.NetworkingHelper
 {
@@ -32,7 +33,6 @@ namespace CBB.NetworkingHelper
 
             return DownloadFile(StrUrl, StrFileName, ref lStartPos, ref lCurrentPos, ref lDownloadFile, ref kbm);
         }
-
         /// <summary>
         /// 下载文件
         /// </summary>

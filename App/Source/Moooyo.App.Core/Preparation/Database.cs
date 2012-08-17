@@ -84,8 +84,7 @@ namespace Moooyo.App.Core.Preparation
 			//Table "CachedImage"
 				"drop table if exists CachedImage",
 				@"create table CachedImage(
-					ID varchar(20) primary key,
-					Name varchar(50),
+					Name varchar(50) primary key,
 					TimeStamp varchar(20),
 					ImgData binary
 				)"
@@ -137,12 +136,12 @@ namespace Moooyo.App.Core.Preparation
 					
 
 			List<App.Data.SqlParam> sqlParams = new List<SqlParam>(){
-				new SqlParam("@MajorVersion",Defs.Config.MajorVersion,typeof(string)),
-				new SqlParam("@SubVersion",Defs.Config.SubVersion,typeof(string)),
-				new SqlParam("@AccountID","",typeof(string)),
-				new SqlParam("@MemberID","",typeof(string)),
+				new SqlParam("@MajorVersion",Defs.Config.MajorVersion,typeof(String)),
+				new SqlParam("@SubVersion",Defs.Config.SubVersion,typeof(String)),
+				new SqlParam("@AccountID","",typeof(String)),
+				new SqlParam("@MemberID","",typeof(String)),
 				new SqlParam("@LastOperationTime",DateTime.Now,typeof(DateTime)),
-				new SqlParam("@AutoLogin",false,typeof(bool))
+				new SqlParam("@AutoLogin",false,typeof(Boolean))
 			};
 
 			//build sql
@@ -176,8 +175,8 @@ namespace Moooyo.App.Core.Preparation
 			List<App.Data.SqlParam> sqlParams = new List<SqlParam>(){
 				new SqlParam("@InstallTime",DateTime.Now,typeof(DateTime)),
 				new SqlParam("@UpdateTimes",DateTime.Now,typeof(DateTime)),
-				new SqlParam("@StartedAtVersion",Defs.Config.FullVersion,typeof(string)),
-				new SqlParam("@NowVersion",Defs.Config.FullVersion,typeof(string)),
+				new SqlParam("@StartedAtVersion",Defs.Config.FullVersion,typeof(String)),
+				new SqlParam("@NowVersion",Defs.Config.FullVersion,typeof(String)),
 				new SqlParam("@RunnedTimes",1,typeof(int)),
 				new SqlParam("@LastRunnedTime",DateTime.Now,typeof(DateTime))
 			};
