@@ -1,23 +1,50 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="../Moooyo.App.Core/Api/Members.cs">
     <Files>
       <File FileName="../Moooyo.App.Core/Api/Accounts.cs" Line="40" Column="17" />
       <File FileName="../Moooyo.App.Core/Api/Members.cs" Line="38" Column="5" />
       <File FileName="../Moooyo.App.Core/Api/ApiDefs.cs" Line="84" Column="23" />
       <File FileName="../Moooyo.App.Core/Defs/App/History.cs" Line="1" Column="1" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Moooyo.App.Iphone/UI/Screen/Iphone/Reg/RegController.cs">
+    <Files>
+      <File FileName="Moooyo.App.Iphone/UI/Screen/Iphone/Reg/RegController.cs" Line="94" Column="4" />
+>>>>>>> reg
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
+          <Option id="ShowAllFiles" value="True" />
           <Node name="App" expanded="True">
+<<<<<<< HEAD
             <Node name="Moooyo.App.Core" expanded="True">
               <Node name="References" expanded="True" selected="True" />
+=======
+            <Node name="Moooyo.App.Iphone" expanded="True">
+              <Node name="UI" expanded="True">
+                <Node name="Image" expanded="True">
+                  <Node name="Reg" expanded="True" />
+                </Node>
+                <Node name="Screen" expanded="True">
+                  <Node name="Iphone" expanded="True">
+                    <Node name="Reg" expanded="True">
+                      <Node name="RegController.xib" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+>>>>>>> reg
             </Node>
           </Node>
-          <Node name="CBB" expanded="True" />
-          <Node name="Moooyo.BiZ.Core" expanded="True" />
         </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

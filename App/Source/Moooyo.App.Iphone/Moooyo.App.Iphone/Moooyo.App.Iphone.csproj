@@ -118,6 +118,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="UI\Image\Reg\NavigationBackroundImage.png" />
+    <Content Include="UI\Image\Reg\BackButtonImage.png" />
+    <Content Include="UI\Image\Reg\CloseButtonImage.png" />
+    <Content Include="UI\Image\Reg\InTextToBorder.png" />
+    <Content Include="UI\Image\Reg\OutTextToBorder.png" />
+    <Content Include="UI\Image\Reg\TextClose.png" />
+    <Content Include="UI\Image\Reg\AgreementNo.png" />
+    <Content Include="UI\Image\Reg\AgreementYes.png" />
+    <Content Include="UI\Image\Reg\SubmitBackImage.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="UI\Screen\Iphone\Reg\RegController.xib" />
