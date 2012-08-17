@@ -9,7 +9,7 @@ namespace Moooyo.App.Core.Runtime
 		/// The runner device.
 		/// </summary>
 		public static Moooyo.App.Core.Defs.Device.DeviceDef RunnerDevice;
-		public static Environment RunnerEnvironment;
+		public static Moooyo.App.Core.Defs.EnvSetting RunnerEnvSetting;
 		/// <summary>
 		/// The cookies.
 		/// </summary>

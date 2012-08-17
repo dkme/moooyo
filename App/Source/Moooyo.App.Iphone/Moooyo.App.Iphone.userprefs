@@ -1,19 +1,26 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../Moooyo.App.Core/Runtime/Env.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Moooyo.App.Core/Preparation/Database.cs">
     <Files>
-      <File FileName="../../../CBB/Source/CBB.NetworkingHelper/HttpHelper/SyncHttp.cs" Line="183" Column="1" />
-      <File FileName="../Moooyo.App.Core/Api/Accounts.cs" Line="129" Column="5" />
-      <File FileName="../Moooyo.App.Core/Runtime/Env.cs" Line="6" Column="18" />
-      <File FileName="../Moooyo.App.Core/Defs/Device/Device.cs" Line="36" Column="3" />
-      <File FileName="../Moooyo.App.Core/Defs/App/Version.cs" Line="1" Column="1" />
-      <File FileName="../Moooyo.App.Core/Defs/Environment/Environment.cs" Line="42" Column="3" />
-      <File FileName="../Moooyo.App.Core/Defs/App/History.cs" Line="1" Column="1" />
+      <File FileName="Moooyo.App.Iphone/Preparation/Updating.cs" Line="1" Column="1" />
+      <File FileName="../Moooyo.App.Core/Api/Accounts.cs" Line="1" Column="1" />
+      <File FileName="../Moooyo.App.Data/OperationHelper/IDBOperationHelper.cs" Line="1" Column="1" />
+      <File FileName="../Moooyo.App.Core/Preparation/Database.cs" Line="89" Column="5" />
+      <File FileName="../Moooyo.App.Core/Preparation/Environment.cs" Line="11" Column="30" />
+      <File FileName="../Moooyo.App.Core/Runtime/Env.cs" Line="12" Column="48" />
+      <File FileName="../Moooyo.App.Core/Defs/EnvSetting/EnvSetting.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True">
-          <Node name="App" expanded="True" />
+        <State expanded="True">
+          <Node name="App" expanded="True">
+            <Node name="Moooyo.App.Core" expanded="True" selected="True">
+              <Node name="References" expanded="True" />
+              <Node name="Defs" expanded="True" />
+              <Node name="Preparation" expanded="True" />
+              <Node name="Runtime" expanded="True" />
+            </Node>
+          </Node>
           <Node name="CBB" expanded="True" />
         </State>
       </Pad>

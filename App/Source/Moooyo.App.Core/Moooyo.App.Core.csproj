@@ -49,11 +49,11 @@
     <Reference Include="CBB.ConfigurationHelper">
       <HintPath>..\..\..\Components\CBB.ConfigurationHelper.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data" />
     <Reference Include="ServiceStack.Text.MonoTouch">
       <HintPath>..\..\..\Components\ServiceStack.Text.MonoTouch.dll</HintPath>
     </Reference>
-    <Reference Include="MonoTouch.NUnitLite" />
+    <Reference Include="System.Data" />
+    <Reference Include="Mono.Data.Sqlite" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -70,7 +70,9 @@
     <Folder Include="BiZ\Fans\" />
     <Folder Include="BiZ\InterestCenter\" />
     <Folder Include="BiZ\Member\" />
-    <Folder Include="Defs\Environment\" />
+    <Folder Include="Preparation\" />
+    <Folder Include="Defs\EnvSetting\" />
+    <Folder Include="Defs\Config\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Runtime\Env.cs" />
@@ -120,6 +122,15 @@
     <Compile Include="BiZ\Member\Relation\RelationOperationType.cs" />
     <Compile Include="BiZ\Member\Relation\Silentor.cs" />
     <Compile Include="BiZ\Member\Relation\Vistior.cs" />
-    <Compile Include="Defs\Environment\Environment.cs" />
+    <Compile Include="Preparation\Database.cs" />
+    <Compile Include="Defs\EnvSetting\EnvSetting.cs" />
+    <Compile Include="Defs\Config\Config.cs" />
+    <Compile Include="Preparation\EnvSettingPrearation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Moooyo.App.Data\Moooyo.App.Data.csproj">
+      <Project>{93A3C08C-7E0A-47CD-A27B-B3A2D877EB26}</Project>
+      <Name>Moooyo.App.Data</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -1,8 +1,8 @@
 using System;
 
-namespace Moooyo.App.Core
+namespace Moooyo.App.Core.Defs
 {
-	public class Environment
+	public class EnvSetting
 	{
 		/// <summary>
 		/// Gets or sets the version.
@@ -40,7 +40,7 @@ namespace Moooyo.App.Core
 		/// </value>
 		public bool AutoLogin{ get; set; }
 
-		public Environment ()
+		public EnvSetting ()
 		{
 		}
 	}

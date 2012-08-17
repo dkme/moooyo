@@ -1,1 +1,0 @@
-cp -f /Users/an/Documents/moooyo/BiZ/Source/Moooyo.BiZ.Core/bin/Debug/*.dll /Users/an/Documents/moooyo/Components

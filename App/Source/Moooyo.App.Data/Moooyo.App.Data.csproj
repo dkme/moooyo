@@ -36,11 +36,11 @@
     <Reference Include="monotouch" />
     <Reference Include="System.Data" />
     <Reference Include="Mono.Data.Sqlite" />
-    <Reference Include="CBB.Exception">
-      <HintPath>..\..\..\..\Components\CBB.Exception.dll</HintPath>
-    </Reference>
     <Reference Include="CBB.ConfigurationHelper">
-      <HintPath>..\..\..\..\Components\CBB.ConfigurationHelper.dll</HintPath>
+      <HintPath>..\..\..\Components\CBB.ConfigurationHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CBB.Exception">
+      <HintPath>..\..\..\Components\CBB.Exception.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
