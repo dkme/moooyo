@@ -88,15 +88,17 @@
     <Reference Include="log4net">
       <HintPath>..\..\..\..\Components\log4net.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="System.Data" />
     <Reference Include="Mono.Data.Sqlite" />
     <Reference Include="Mono.Data.Tds" />
     <Reference Include="Moooyo.App.Data">
       <HintPath>..\..\..\..\Components\Moooyo.App.Data.dll</HintPath>
-    </Reference>
+=======
     <Reference Include="MonoTouch.Dialog-1" />
     <Reference Include="CBB.CheckHelper">
       <HintPath>..\..\..\..\Components\CBB.CheckHelper.dll</HintPath>
+>>>>>>> reg
     </Reference>
   </ItemGroup>
   <ItemGroup>
