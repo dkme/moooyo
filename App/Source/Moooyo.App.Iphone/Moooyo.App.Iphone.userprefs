@@ -1,57 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="../Moooyo.App.Core/Preparation/Database.cs">
-    <Files>
-      <File FileName="../Moooyo.App.Core/Preparation/Database.cs" Line="111" Column="93" />
-      <File FileName="../../../CBB/Source/CBB.OAuth/RenRen/APIUtility/APIValidation.cs" Line="27" Column="40" />
-      <File FileName="../Moooyo.App.Data/SqlParamsHelper/SqlBuilder.cs" Line="29" Column="5" />
-      <File FileName="../Moooyo.App.Core/Defs/Config/Config.cs" Line="11" Column="16" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Moooyo.App.Iphone/UI/Screen/Iphone/Reg/RegController.cs">
-    <Files>
-      <File FileName="Moooyo.App.Iphone/UI/Screen/Iphone/Reg/RegController.cs" Line="94" Column="4" />
->>>>>>> reg
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="App" expanded="True">
-<<<<<<< HEAD
-            <Node name="Moooyo.App.Core" expanded="True">
-              <Node name="Api" expanded="True" />
-              <Node name="BiZ" expanded="True" />
-              <Node name="Defs" expanded="True">
-                <Node name="Config" expanded="True" />
-              </Node>
-              <Node name="Preparation" expanded="True">
-                <Node name="Database.cs" selected="True" />
-              </Node>
-            </Node>
-            <Node name="Moooyo.App.Data" expanded="True">
-              <Node name="SqlParamsHelper" expanded="True" />
-=======
-            <Node name="Moooyo.App.Iphone" expanded="True">
-              <Node name="UI" expanded="True">
-                <Node name="Image" expanded="True">
-                  <Node name="Reg" expanded="True" />
-                </Node>
-                <Node name="Screen" expanded="True">
-                  <Node name="Iphone" expanded="True">
-                    <Node name="Reg" expanded="True">
-                      <Node name="RegController.xib" selected="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
->>>>>>> reg
-            </Node>
-          </Node>
-          <Node name="CBB" expanded="True" />
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
