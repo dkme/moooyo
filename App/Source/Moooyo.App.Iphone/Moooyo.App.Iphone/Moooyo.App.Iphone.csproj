@@ -88,11 +88,17 @@
     <Reference Include="log4net">
       <HintPath>..\..\..\..\Components\log4net.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="System.Data" />
     <Reference Include="Mono.Data.Sqlite" />
     <Reference Include="Mono.Data.Tds" />
     <Reference Include="Moooyo.App.Data">
       <HintPath>..\..\..\..\Components\Moooyo.App.Data.dll</HintPath>
+=======
+    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="CBB.CheckHelper">
+      <HintPath>..\..\..\..\Components\CBB.CheckHelper.dll</HintPath>
+>>>>>>> reg
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +112,8 @@
     <Compile Include="UI\Screen\Iphone\Reg\RegController.designer.cs">
       <DependentUpon>RegController.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Controls\Iphone\TextEventsAndSth.cs" />
+    <Compile Include="UI\Controls\Iphone\CustomAlert.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -119,19 +127,42 @@
     <Folder Include="UI\Image\" />
     <Folder Include="UI\Image\Reg\" />
     <Folder Include="UI\Screen\Iphone\Reg\" />
+    <Folder Include="UI\Image\Comm\" />
+    <Folder Include="UI\Controls\Iphone\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="UI\Image\Reg\NavigationBackroundImage.png" />
-    <Content Include="UI\Image\Reg\BackButtonImage.png" />
-    <Content Include="UI\Image\Reg\CloseButtonImage.png" />
     <Content Include="UI\Image\Reg\InTextToBorder.png" />
     <Content Include="UI\Image\Reg\OutTextToBorder.png" />
     <Content Include="UI\Image\Reg\TextClose.png" />
     <Content Include="UI\Image\Reg\AgreementNo.png" />
     <Content Include="UI\Image\Reg\AgreementYes.png" />
     <Content Include="UI\Image\Reg\SubmitBackImage.png" />
+    <Content Include="UI\Image\Comm\BackButtonImage.png" />
+    <Content Include="UI\Image\Comm\CloseButtonImage.png" />
+    <Content Include="UI\Image\Comm\NavigationBackroundImage.png" />
+    <Content Include="UI\Image\Comm\AlertMessageBack.png" />
+    <Content Include="UI\Image\Comm\AlertMessageError.png" />
+    <Content Include="UI\Image\Reg\AgreementNo%402x.png" />
+    <Content Include="UI\Image\Reg\AgreementYes%402x.png" />
+    <Content Include="UI\Image\Reg\InTextToBorder%402x.png" />
+    <Content Include="UI\Image\Reg\OutTextToBorder%402x.png" />
+    <Content Include="UI\Image\Reg\SubmitBackImage%402x.png" />
+    <Content Include="UI\Image\Reg\TextClose%402x.png" />
+    <Content Include="UI\Image\Comm\AlertMessageBack%402x.png" />
+    <Content Include="UI\Image\Comm\AlertMessageError%402x.png" />
+    <Content Include="UI\Image\Comm\BackButtonImage%402x.png" />
+    <Content Include="UI\Image\Comm\CloseButtonImage%402x.png" />
+    <Content Include="UI\Image\Comm\NavigationBackroundImage%402x.png" />
+    <Content Include="UI\Image\Reg\SubmitClickBackImage.png" />
+    <Content Include="UI\Image\Reg\SubmitClickBackImage%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="UI\Screen\Iphone\Reg\RegController.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Moooyo.App.Core\Moooyo.App.Core.csproj">
+      <Project>{17D61464-08B9-41B7-942D-3D528C59D3E7}</Project>
+      <Name>Moooyo.App.Core</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

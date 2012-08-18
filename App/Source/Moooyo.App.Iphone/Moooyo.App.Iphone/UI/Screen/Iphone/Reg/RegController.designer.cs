@@ -12,9 +12,6 @@ namespace Moooyo.App.Iphone
 	partial class RegController
 	{
 		[Outlet]
-		MonoTouch.UIKit.UIScrollView MainView { get; set; }
-
-		[Outlet]
 		MonoTouch.UIKit.UILabel AgreementButton { get; set; }
 
 		[Outlet]
@@ -57,15 +54,10 @@ namespace Moooyo.App.Iphone
 		MonoTouch.UIKit.UIButton CheckButton { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIButton SubminButton { get; set; }
+		MonoTouch.UIKit.UIButton SubmitButton { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (MainView != null) {
-				MainView.Dispose ();
-				MainView = null;
-			}
-
 			if (AgreementButton != null) {
 				AgreementButton.Dispose ();
 				AgreementButton = null;
@@ -136,9 +128,9 @@ namespace Moooyo.App.Iphone
 				CheckButton = null;
 			}
 
-			if (SubminButton != null) {
-				SubminButton.Dispose ();
-				SubminButton = null;
+			if (SubmitButton != null) {
+				SubmitButton.Dispose ();
+				SubmitButton = null;
 			}
 		}
 	}

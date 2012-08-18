@@ -3,6 +3,9 @@ using System;
 using System.Drawing;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Collections.Generic;
+using Moooyo.App.Core.Api;
+using CBB.ExceptionHelper;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
@@ -12,22 +15,17 @@ namespace Moooyo.App.Iphone
 	public partial class RegController : UIViewController
 	{
 
-		private UIImage NABACKIMAGE = new UIImage("UI/Image/Reg/NavigationBackroundImage.png");
-		private UIImage NABARBACKIMAGE = new UIImage("UI/Image/Reg/BackButtonImage.png");
-		private UIImage NABARCLOSEIMAGE = new UIImage("UI/Image/Reg/CloseButtonImage.png");
-		private UIImage OUTTEXTBORDERIMAGE = new UIImage("UI/Image/Reg/OutTextToBorder.png");
-		private UIImage INTEXTBORDERIMAGE = new UIImage("UI/Image/Reg/InTextToBorder.png");
-		private UIImage TEXTCLOSEIMAGE = new UIImage("UI/Image/Reg/TextClose.png");
+		private UIImage NABACKIMAGE = new UIImage("UI/Image/Comm/NavigationBackroundImage.png");
+		private UIImage NABARBACKIMAGE = new UIImage("UI/Image/Comm/BackButtonImage.png");
+		private UIImage NABARCLOSEIMAGE = new UIImage("UI/Image/Comm/CloseButtonImage.png");
 		private UIImage AGREEMENTNO = new UIImage("UI/Image/Reg/AgreementNo.png");
 		private UIImage AGREEMENTYES = new UIImage("UI/Image/Reg/AgreementYes.png");
 		private UIImage SUBMITBACKIMAGE = new UIImage("UI/Image/Reg/SubmitBackImage.png");
+		private UIImage SUBMITCLICKBACKIMAGE = new UIImage("UI/Image/Reg/SubmitClickBackImage.png");
 
 		private bool AGREEMENTCHECKED = true;
 
-		private string FONTFAMILY = "Helvetica";
-
-		private float textViewOffsetTop;
-		private float textViewOffsetHeight;
+		private string FONTFAMILY = "STHeitiSC-Medium";
 
 		public RegController () : base ("RegController", null)
 		{
@@ -45,7 +43,7 @@ namespace Moooyo.App.Iphone
 			titleLable.BackgroundColor = UIColor.Clear;
 			titleLable.TextAlignment = UITextAlignment.Center;
 			titleLable.TextColor = UIColor.FromRGB(255, 255, 255);
-			titleLable.Font = UIFont.FromName(FONTFAMILY, 18);
+			titleLable.Font = UIFont.FromName(FONTFAMILY, 16f);
 
 			UIButton backButton = new UIButton(new RectangleF(0, 0, 44, 44));
 			backButton.SetBackgroundImage(NABARBACKIMAGE, UIControlState.Normal);
@@ -60,14 +58,9 @@ namespace Moooyo.App.Iphone
 			NavigationController.NavigationBar.Add(backButton);
 			NavigationController.NavigationBar.Add(closeButton);
 
-			EmailView.BackgroundColor = PasswordView.BackgroundColor = ConfirmView.BackgroundColor = NickNameView.BackgroundColor = UIColor.Clear;
+			Console.WriteLine(EmailText.Font.FamilyName);
 
-			EmailView.Image = PasswordView.Image = ConfirmView.Image = NickNameView.Image = OUTTEXTBORDERIMAGE;
-
-			EmailClose.SetImage(TEXTCLOSEIMAGE, UIControlState.Normal);
-			PasswordClose.SetImage(TEXTCLOSEIMAGE, UIControlState.Normal);
-			ConfirmClose.SetImage(TEXTCLOSEIMAGE, UIControlState.Normal);
-			NickNameClose.SetImage(TEXTCLOSEIMAGE, UIControlState.Normal);
+			LoadTextEventsAndSth();
 
 			CheckButton.SetImage(AGREEMENTYES, UIControlState.Normal);
 			CheckButton.TouchUpInside += (sender, e) => 
@@ -84,42 +77,29 @@ namespace Moooyo.App.Iphone
 				}
 			};
 
-			SubminButton.SetImage(SUBMITBACKIMAGE, UIControlState.Normal);
+			SubmitButton.SetImage(SUBMITBACKIMAGE, UIControlState.Normal);
 			UILabel submitTitle = new UILabel(new RectangleF(90, 0, 100, 40));
 			submitTitle.Text = "注册";
 			submitTitle.TextColor = UIColor.FromRGB(255, 255, 255);
 			submitTitle.TextAlignment = UITextAlignment.Center;
 			submitTitle.Font = UIFont.FromName(FONTFAMILY, 16);
 			submitTitle.BackgroundColor = UIColor.Clear;
-			SubminButton.Add(submitTitle);
-
-			LoadTextEventsAndSth();
-
-			NSNotificationCenter.DefaultCenter.AddObserver(UIKeyboard.WillShowNotification, delegate (NSNotification n) {
-				RectangleF kbdrect = UIKeyboard.BoundsFromNotification(n);
-				RectangleF frame = this.View.Frame;
-				if(textViewOffsetTop >= frame.Height - kbdrect.Height - textViewOffsetHeight){
-					frame.Y -= textViewOffsetTop - (frame.Height - kbdrect.Height - textViewOffsetHeight);
-					frame.Height += textViewOffsetTop - (frame.Height - kbdrect.Height - textViewOffsetHeight);
-					this.View.Frame = frame;
-				}
-			});
-			NSNotificationCenter.DefaultCenter.AddObserver(UIKeyboard.WillHideNotification, delegate (NSNotification n) {
-				RectangleF kbdrect = UIKeyboard.BoundsFromNotification(n);
-				RectangleF frame = this.View.Frame;
-				if(frame.Y < 0){
-					frame.Height += frame.Y;
-					frame.Y = 0;
-					this.View.Frame = frame;
-				}
-			});
-
-			SubminButton.TouchUpInside += (sender, e) => 
+			SubmitButton.Add(submitTitle);
+			SubmitButton.TouchUpInside += (sender, e) => 
 			{
+				SubmitButton.SetImage(SUBMITBACKIMAGE, UIControlState.Normal);
 				if(Submit())
 				{
 
 				}
+			};
+			SubmitButton.TouchDown += (sender, e) => 
+			{
+				SubmitButton.SetImage(SUBMITCLICKBACKIMAGE, UIControlState.Normal);
+			};
+			SubmitButton.TouchDragInside += (sender, e) => 
+			{
+				SubmitButton.SetImage(SUBMITBACKIMAGE, UIControlState.Normal);
 			};
 
 			base.ViewDidLoad ();
@@ -127,57 +107,22 @@ namespace Moooyo.App.Iphone
 
 		public void LoadTextEventsAndSth ()
 		{
-			TextEventsAndSth(EmailView, EmailText, EmailClose);
-			TextEventsAndSth(PasswordView, PasswordText, PasswordClose);
-			TextEventsAndSth(ConfirmView, ConfirmText, ConfirmClose);
-			TextEventsAndSth(NickNameView, NickNameText, NickNameClose);
-		}
+			EmailView.BackgroundColor = PasswordView.BackgroundColor = ConfirmView.BackgroundColor = NickNameView.BackgroundColor = UIColor.Clear;
 
-		public void TextEventsAndSth (UIImageView textView, UITextField text, UIButton textClose)
-		{
-			text.TouchDown += (sender, e) => 
-			{
-				textViewOffsetTop = textView.Frame.Y;
-				textViewOffsetHeight = textView.Frame.Height;
-				TextFocuse(textView, text, textClose);
-			};
-			text.EditingChanged += (sender, e) => 
-			{
-				if(text.Text.Trim() != "")
-				{
-					textClose.Hidden = false;
-				}
-				else
-				{
-					textClose.Hidden = true;
-				}
-			};
-			textClose.TouchUpInside += (sender, e) => 
-			{
-				text.Text = "";
-				textClose.Hidden = true;
-			};
-			text.ShouldReturn = (s) =>
-			{
-				text.ResignFirstResponder();
-				return true;
-			};
-		}
+			EmailView.Image = PasswordView.Image = ConfirmView.Image = NickNameView.Image = TextEventsAndSth.OUTTEXTBORDERIMAGE;
 
-		public void TextFocuse (UIImageView focusText, UITextField text, UIButton textClose)
-		{
-			EmailView.Image = OUTTEXTBORDERIMAGE;
-			PasswordView.Image = OUTTEXTBORDERIMAGE;
-			ConfirmView.Image = OUTTEXTBORDERIMAGE;
-			NickNameView.Image = OUTTEXTBORDERIMAGE;
-			focusText.Image = INTEXTBORDERIMAGE;
-			EmailClose.Hidden = true;
-			PasswordClose.Hidden = true;
-			ConfirmClose.Hidden = true;
-			NickNameClose.Hidden = true;
-			if (text.Text.Trim () != "") {
-				textClose.Hidden = false;
-			}
+			EmailClose.SetImage(TextEventsAndSth.TEXTCLOSEIMAGE, UIControlState.Normal);
+			PasswordClose.SetImage(TextEventsAndSth.TEXTCLOSEIMAGE, UIControlState.Normal);
+			ConfirmClose.SetImage(TextEventsAndSth.TEXTCLOSEIMAGE, UIControlState.Normal);
+			NickNameClose.SetImage(TextEventsAndSth.TEXTCLOSEIMAGE, UIControlState.Normal);
+
+			List<UIImageView> viewList = new List<UIImageView>{ EmailView, PasswordView, ConfirmView, NickNameView };
+			List<UITextField> textList = new List<UITextField>{ EmailText, PasswordText, ConfirmText, NickNameText };
+			List<UIButton> closeList = new List<UIButton>{ EmailClose, PasswordClose, ConfirmClose, NickNameClose };
+			TextEventsAndSth.LoadTextEventsAndSth(viewList, EmailView, textList, EmailText, closeList, EmailClose, this);
+			TextEventsAndSth.LoadTextEventsAndSth(viewList, PasswordView, textList, PasswordText, closeList, PasswordClose, this);
+			TextEventsAndSth.LoadTextEventsAndSth(viewList, ConfirmView, textList, ConfirmText, closeList, ConfirmClose, this);
+			TextEventsAndSth.LoadTextEventsAndSth(viewList, NickNameView, textList, NickNameText, closeList, NickNameClose, this);
 		}
 
 		public bool Submit ()
@@ -188,32 +133,46 @@ namespace Moooyo.App.Iphone
 			string nickname = NickNameText.Text;
 			Boolean mailmatch = Regex.IsMatch (mail, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
 			Boolean passwordmatch = Regex.IsMatch (password, @"^[A-Za-z0-9]+$");
-			if (mail.Trim () == "") {
-				return false;
-			}
 			if (!mailmatch) {
+				CustomAlert.ShowCustomAlert (CustomAlertType.Error, "请输入正确的邮箱地址", this);
 				return false;
 			}
-			if (password.Trim () == "") {
+			if (password.Trim ().Length < 6) {
+				CustomAlert.ShowCustomAlert (CustomAlertType.Error, "您输入的密码太短了", this);
 				return false;
 			}
 			if (!passwordmatch) {
+				CustomAlert.ShowCustomAlert (CustomAlertType.Error, "请输入正确的密码", this);
 				return false;
 			}
 			if (confirm.Trim () != password.Trim ()) {
+				CustomAlert.ShowCustomAlert (CustomAlertType.Error, "两次输入的密码不一致", this);
 				return false;
 			}
 			if (nickname.Trim () == "") {
+				CustomAlert.ShowCustomAlert (CustomAlertType.Error, "请输入您的昵称", this);
 				return false;
 			}
 			if (!AGREEMENTCHECKED) {
+				CustomAlert.ShowCustomAlert (CustomAlertType.Error, "您必须同意使用协议才能注册", this);
 				return false;
 			}
+//			Accounts submitController = new Accounts ();
+//			OperationResult submitOperation = submitController.CreateStep1 (mail, nickname, password);
+//			if (submitOperation.ok) {
+//				return true;
+//			} else {
+//				CustomAlert.ShowCustomAlert (CustomAlertType.Error, submitOperation.err, this);
+//				return false;
+//			}
 			return true;
 		}
 
 		public override void ViewDidUnload ()
 		{
+			NSNotificationCenter.DefaultCenter.RemoveObserver(TextEventsAndSth.ShowNotification);
+			NSNotificationCenter.DefaultCenter.RemoveObserver(TextEventsAndSth.HideNotification);
+
 			base.ViewDidUnload ();
 			ReleaseDesignerOutlets ();
 		}
