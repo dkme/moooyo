@@ -11,18 +11,27 @@ namespace Moooyo.App.Iphone
 {
 	public class TextEventsAndSth
 	{
-		public static UIImage OUTTEXTBORDERIMAGE = new UIImage("UI/Image/Reg/OutTextToBorder.png");
-		public static UIImage INTEXTBORDERIMAGE = new UIImage("UI/Image/Reg/InTextToBorder.png");
-		public static UIImage TEXTCLOSEIMAGE = new UIImage("UI/Image/Reg/TextClose.png");
+		private static UIImage OUTTEXTBORDERIMAGE = new UIImage("UI/Image/CustomTextFile/OutTextToBorder.png");
+		private static UIImage INTEXTBORDERIMAGE = new UIImage("UI/Image/CustomTextFile/InTextToBorder.png");
+		private static UIImage TEXTCLOSEIMAGE = new UIImage("UI/Image/CustomTextFile/TextClose.png");
 
-		public static float textViewTop;
-		public static float textViewHeight;
-		public static float keyBoardHeight;
+		private static float textViewTop;
+		private static float textViewHeight;
+		private static float keyBoardHeight;
 
 		public static NSObject ShowNotification, HideNotification;
 		
 		public static void LoadTextEventsAndSth (List<UIImageView> views, UIImageView textView, List<UITextField> texts, UITextField text, List<UIButton> closes, UIButton textClose, UIViewController mainView)
 		{
+			foreach(UIImageView view in views)
+			{
+				view.BackgroundColor = UIColor.Clear;
+				view.Image = OUTTEXTBORDERIMAGE;
+			}
+			foreach(UIButton close in closes)
+			{
+				close.SetImage(TEXTCLOSEIMAGE, UIControlState.Normal);
+			}
 			ShowNotification = NSNotificationCenter.DefaultCenter.AddObserver(UIKeyboard.WillShowNotification, delegate (NSNotification n) {
 				RectangleF kbdrect = UIKeyboard.BoundsFromNotification(n);
 				keyBoardHeight = kbdrect.Height;
@@ -70,7 +79,7 @@ namespace Moooyo.App.Iphone
 				{
 					close.Hidden = true;
 				}
-				textView.Image = TextEventsAndSth.INTEXTBORDERIMAGE;
+				textView.Image = INTEXTBORDERIMAGE;
 				if (text.Text.Trim () != "") 
 				{
 					textClose.Hidden = false;
