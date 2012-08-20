@@ -12,9 +12,6 @@ namespace Moooyo.App.Iphone
 	partial class RegController
 	{
 		[Outlet]
-		MonoTouch.UIKit.UIButton ShowAgreement { get; set; }
-
-		[Outlet]
 		MonoTouch.UIKit.UILabel AgreementButton { get; set; }
 
 		[Outlet]
@@ -61,11 +58,6 @@ namespace Moooyo.App.Iphone
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (ShowAgreement != null) {
-				ShowAgreement.Dispose ();
-				ShowAgreement = null;
-			}
-
 			if (AgreementButton != null) {
 				AgreementButton.Dispose ();
 				AgreementButton = null;

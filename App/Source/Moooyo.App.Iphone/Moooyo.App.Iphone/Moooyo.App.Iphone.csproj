@@ -112,14 +112,6 @@
     </Compile>
     <Compile Include="UI\Controls\Iphone\TextEventsAndSth.cs" />
     <Compile Include="UI\Controls\Iphone\CustomAlert.cs" />
-    <Compile Include="UI\Controls\Iphone\UsageAgreement.cs" />
-    <Compile Include="UI\Screen\Iphone\Reg\Reg2Controller.cs" />
-    <Compile Include="UI\Screen\Iphone\Reg\Reg2Controller.designer.cs">
-      <DependentUpon>Reg2Controller.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Controls\Iphone\LoadNavigation.cs" />
-    <Compile Include="UI\Controls\Iphone\TimePicker.cs" />
-    <Compile Include="UI\Controls\Iphone\Mask.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -133,69 +125,37 @@
     <Folder Include="UI\Image\" />
     <Folder Include="UI\Image\Reg\" />
     <Folder Include="UI\Screen\Iphone\Reg\" />
+    <Folder Include="UI\Image\Comm\" />
     <Folder Include="UI\Controls\Iphone\" />
-    <Folder Include="UI\Image\Agreement\" />
-    <Folder Include="UI\Image\CustomAlert\" />
-    <Folder Include="UI\Image\Navigation\" />
-    <Folder Include="UI\Image\CustomTextFile\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="UI\Image\Agreement\AgreementBackImage.png" />
-    <Content Include="UI\Image\Agreement\AgreementBackImage%402x.png" />
-    <Content Include="UI\Image\Agreement\AgreementButtonIn.png" />
-    <Content Include="UI\Image\Agreement\AgreementButtonIn%402x.png" />
-    <Content Include="UI\Image\Agreement\AgreementButtonOut.png" />
-    <Content Include="UI\Image\Agreement\AgreementButtonOut%402x.png" />
-    <Content Include="UI\Image\CustomAlert\AlertMessageWait.png" />
-    <Content Include="UI\Image\CustomAlert\AlertMessageBack.png" />
-    <Content Include="UI\Image\CustomAlert\AlertMessageBack%402x.png" />
-    <Content Include="UI\Image\CustomAlert\AlertMessageError.png" />
-    <Content Include="UI\Image\CustomAlert\AlertMessageError%402x.png" />
-    <Content Include="UI\Image\CustomAlert\AlertMessageWait%402x.png" />
-    <Content Include="UI\Image\CustomAlert\AlertMessageWarning.png" />
-    <Content Include="UI\Image\CustomAlert\AlertMessageWarning%402x.png" />
-    <Content Include="UI\Image\Navigation\BackButtonImage.png" />
-    <Content Include="UI\Image\Navigation\CloseButtonImage.png" />
-    <Content Include="UI\Image\Navigation\NavigationBackroundImage.png" />
-    <Content Include="UI\Image\Navigation\BackButtonImage%402x.png" />
-    <Content Include="UI\Image\Navigation\CloseButtonImage%402x.png" />
-    <Content Include="UI\Image\Navigation\NavigationBackroundImage%402x.png" />
-    <Content Include="UI\Image\CustomTextFile\InTextToBorder.png" />
-    <Content Include="UI\Image\CustomTextFile\InTextToBorder%402x.png" />
-    <Content Include="UI\Image\CustomTextFile\OutTextToBorder.png" />
-    <Content Include="UI\Image\CustomTextFile\OutTextToBorder%402x.png" />
-    <Content Include="UI\Image\CustomTextFile\TextClose.png" />
-    <Content Include="UI\Image\CustomTextFile\TextClose%402x.png" />
-    <Content Include="UI\Image\Agreement\AgreementNo.png" />
-    <Content Include="UI\Image\Agreement\AgreementNo%402x.png" />
-    <Content Include="UI\Image\Agreement\AgreementYes.png" />
-    <Content Include="UI\Image\Agreement\AgreementYes%402x.png" />
-    <Content Include="UI\Image\Reg\Reg2\SubmitImageIn.png" />
-    <Content Include="UI\Image\Reg\Reg2\SubmitImageIn%402x.png" />
-    <Content Include="UI\Image\Reg\Reg2\SubmitImageOut.png" />
-    <Content Include="UI\Image\Reg\Reg2\SubmitImageOut%402x.png" />
-    <Content Include="UI\Image\Reg\Reg2\InRadio.png" />
-    <Content Include="UI\Image\Reg\Reg2\InRadio%402x.png" />
-    <Content Include="UI\Image\Reg\Reg2\OutRadio.png" />
-    <Content Include="UI\Image\Reg\Reg2\OutRadio%402x.png" />
-    <Content Include="UI\Image\Reg\SubmitImageIn.png" />
-    <Content Include="UI\Image\Reg\SubmitImageIn%402x.png" />
-    <Content Include="UI\Image\Reg\SubmitImageOut.png" />
-    <Content Include="UI\Image\Reg\SubmitImageOut%402x.png" />
-    <Content Include="UI\Image\TimePicker\BackButtonImageIn.png" />
-    <Content Include="UI\Image\TimePicker\BackButtonImageIn%402x.png" />
-    <Content Include="UI\Image\TimePicker\BackButtonImageOut.png" />
-    <Content Include="UI\Image\TimePicker\BackButtonImageOut%402x.png" />
-    <Content Include="UI\Image\TimePicker\TrueButtonImageIn.png" />
-    <Content Include="UI\Image\TimePicker\TrueButtonImageIn%402x.png" />
-    <Content Include="UI\Image\TimePicker\TrueButtonImageOut.png" />
-    <Content Include="UI\Image\TimePicker\TrueButtonImageOut%402x.png" />
-    <Content Include="UI\Image\TimePicker\TimeBackImage.png" />
-    <Content Include="UI\Image\TimePicker\TimeBackImage%402x.png" />
+    <Content Include="UI\Image\Reg\InTextToBorder.png" />
+    <Content Include="UI\Image\Reg\OutTextToBorder.png" />
+    <Content Include="UI\Image\Reg\TextClose.png" />
+    <Content Include="UI\Image\Reg\AgreementNo.png" />
+    <Content Include="UI\Image\Reg\AgreementYes.png" />
+    <Content Include="UI\Image\Reg\SubmitBackImage.png" />
+    <Content Include="UI\Image\Comm\BackButtonImage.png" />
+    <Content Include="UI\Image\Comm\CloseButtonImage.png" />
+    <Content Include="UI\Image\Comm\NavigationBackroundImage.png" />
+    <Content Include="UI\Image\Comm\AlertMessageBack.png" />
+    <Content Include="UI\Image\Comm\AlertMessageError.png" />
+    <Content Include="UI\Image\Reg\AgreementNo%402x.png" />
+    <Content Include="UI\Image\Reg\AgreementYes%402x.png" />
+    <Content Include="UI\Image\Reg\InTextToBorder%402x.png" />
+    <Content Include="UI\Image\Reg\OutTextToBorder%402x.png" />
+    <Content Include="UI\Image\Reg\SubmitBackImage%402x.png" />
+    <Content Include="UI\Image\Reg\TextClose%402x.png" />
+    <Content Include="UI\Image\Comm\AlertMessageBack%402x.png" />
+    <Content Include="UI\Image\Comm\AlertMessageError%402x.png" />
+    <Content Include="UI\Image\Comm\BackButtonImage%402x.png" />
+    <Content Include="UI\Image\Comm\CloseButtonImage%402x.png" />
+    <Content Include="UI\Image\Comm\NavigationBackroundImage%402x.png" />
+    <Content Include="UI\Image\Reg\SubmitClickBackImage.png" />
+    <Content Include="UI\Image\Reg\SubmitClickBackImage%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="UI\Screen\Iphone\Reg\RegController.xib" />
-    <InterfaceDefinition Include="UI\Screen\Iphone\Reg\Reg2Controller.xib" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Moooyo.App.Core\Moooyo.App.Core.csproj">
