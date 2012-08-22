@@ -69,46 +69,45 @@ namespace Moooyo.App.Iphone
 			UIView view = new UIView(new RectangleF((viewWidth - TIMEWIDTH) / 2, (viewHeight - BUTTONHEIGHT - TIMEHEIGHT) / 2, TIMEWIDTH, TIMEHEIGHT));
 			view.BackgroundColor = UIColor.Clear;
 
-			UIImageView imageView = new UIImageView(new RectangleF(0, 0, 0, 0));
+			UIImageView imageView = new UIImageView(new RectangleF(0, 0, TIMEWIDTH, TIMEHEIGHT));
 			imageView.Image = TIMEBACKIMAGE;
-//			imageView.BackgroundColor = UIColor.Clear;
 
-//			UIButton yearIncrease = new UIButton(new RectangleF(0, 0, TIMEITEMFRISTWIDTH, TIMEBUTTONHEIGHT));
-//			yearIncrease.BackgroundColor = UIColor.Clear;
-//			UIButton yeatText = new UIButton(new RectangleF(0, TIMEBUTTONHEIGHT, TIMEITEMFRISTWIDTH, TIMETEXTHEIGHT));
-//			yeatText.BackgroundColor = UIColor.Clear;
-//			yeatText.SetTitle(year.ToString(), UIControlState.Normal);
-//			yeatText.Font = UIFont.FromName(FONTFAMILY, 20);
-//			UIButton yearReduced = new UIButton(new RectangleF(0, TIMEBUTTONHEIGHT + TIMETEXTHEIGHT, TIMEITEMFRISTWIDTH, TIMEBUTTONHEIGHT));
-//			yearReduced.BackgroundColor = UIColor.Clear;
-//
-//			UIButton monthIncrease = new UIButton(new RectangleF(TIMEITEMFRISTWIDTH, 0, TIMETIEMOTHERWIDTH, TIMEBUTTONHEIGHT));
-//			monthIncrease.BackgroundColor = UIColor.Clear;
-//			UIButton monthText = new UIButton(new RectangleF(TIMEITEMFRISTWIDTH, TIMEBUTTONHEIGHT, TIMETIEMOTHERWIDTH, TIMETEXTHEIGHT));
-//			monthText.BackgroundColor = UIColor.Clear;
-//			monthText.SetTitle(month.ToString(), UIControlState.Normal);
-//			monthText.Font = UIFont.FromName(FONTFAMILY, 20);
-//			UIButton monthReduced = new UIButton(new RectangleF(TIMEITEMFRISTWIDTH, TIMEBUTTONHEIGHT + TIMETEXTHEIGHT, TIMETIEMOTHERWIDTH, TIMEBUTTONHEIGHT));
-//			monthReduced.BackgroundColor = UIColor.Clear;
-//
-//			UIButton dayIncrease = new UIButton(new RectangleF(TIMEITEMFRISTWIDTH + TIMETIEMOTHERWIDTH, 0, TIMETIEMOTHERWIDTH, TIMEBUTTONHEIGHT));
-//			dayIncrease.BackgroundColor = UIColor.Clear;
-//			UIButton dayText = new UIButton(new RectangleF(TIMEITEMFRISTWIDTH + TIMETIEMOTHERWIDTH, TIMEBUTTONHEIGHT, TIMETIEMOTHERWIDTH, TIMETEXTHEIGHT));
-//			dayText.BackgroundColor = UIColor.Clear;
-//			dayText.SetTitle(day.ToString(), UIControlState.Normal);
-//			dayText.Font = UIFont.FromName(FONTFAMILY, 20);
-//			UIButton dayReduced = new UIButton(new RectangleF(TIMEITEMFRISTWIDTH + TIMETIEMOTHERWIDTH, TIMEBUTTONHEIGHT + TIMETEXTHEIGHT, TIMETIEMOTHERWIDTH, TIMEBUTTONHEIGHT));
-//			dayReduced.BackgroundColor = UIColor.Clear;
-//
-//			imageView.Add(yearIncrease);
-//			imageView.Add(yearReduced);
-//			imageView.Add(yeatText);
-//			imageView.Add(monthIncrease);
-//			imageView.Add(monthReduced);
-//			imageView.Add(monthText);
-//			imageView.Add(dayIncrease);
-//			imageView.Add(dayReduced);
-//			imageView.Add(dayText);
+			UIButton yearIncrease = new UIButton(new RectangleF(0, 0, TIMEITEMFRISTWIDTH, TIMEBUTTONHEIGHT));
+			yearIncrease.BackgroundColor = UIColor.Clear;
+			UIButton yeatText = new UIButton(new RectangleF(0, TIMEBUTTONHEIGHT, TIMEITEMFRISTWIDTH, TIMETEXTHEIGHT));
+			yeatText.BackgroundColor = UIColor.Clear;
+			yeatText.SetTitle(year.ToString(), UIControlState.Normal);
+			yeatText.Font = UIFont.FromName(FONTFAMILY, 20);
+			UIButton yearReduced = new UIButton(new RectangleF(0, TIMEBUTTONHEIGHT + TIMETEXTHEIGHT, TIMEITEMFRISTWIDTH, TIMEBUTTONHEIGHT));
+			yearReduced.BackgroundColor = UIColor.Clear;
+
+			UIButton monthIncrease = new UIButton(new RectangleF(TIMEITEMFRISTWIDTH, 0, TIMETIEMOTHERWIDTH, TIMEBUTTONHEIGHT));
+			monthIncrease.BackgroundColor = UIColor.Clear;
+			UIButton monthText = new UIButton(new RectangleF(TIMEITEMFRISTWIDTH, TIMEBUTTONHEIGHT, TIMETIEMOTHERWIDTH, TIMETEXTHEIGHT));
+			monthText.BackgroundColor = UIColor.Clear;
+			monthText.SetTitle(month.ToString(), UIControlState.Normal);
+			monthText.Font = UIFont.FromName(FONTFAMILY, 20);
+			UIButton monthReduced = new UIButton(new RectangleF(TIMEITEMFRISTWIDTH, TIMEBUTTONHEIGHT + TIMETEXTHEIGHT, TIMETIEMOTHERWIDTH, TIMEBUTTONHEIGHT));
+			monthReduced.BackgroundColor = UIColor.Clear;
+
+			UIButton dayIncrease = new UIButton(new RectangleF(TIMEITEMFRISTWIDTH + TIMETIEMOTHERWIDTH, 0, TIMETIEMOTHERWIDTH, TIMEBUTTONHEIGHT));
+			dayIncrease.BackgroundColor = UIColor.Clear;
+			UIButton dayText = new UIButton(new RectangleF(TIMEITEMFRISTWIDTH + TIMETIEMOTHERWIDTH, TIMEBUTTONHEIGHT, TIMETIEMOTHERWIDTH, TIMETEXTHEIGHT));
+			dayText.BackgroundColor = UIColor.Clear;
+			dayText.SetTitle(day.ToString(), UIControlState.Normal);
+			dayText.Font = UIFont.FromName(FONTFAMILY, 20);
+			UIButton dayReduced = new UIButton(new RectangleF(TIMEITEMFRISTWIDTH + TIMETIEMOTHERWIDTH, TIMEBUTTONHEIGHT + TIMETEXTHEIGHT, TIMETIEMOTHERWIDTH, TIMEBUTTONHEIGHT));
+			dayReduced.BackgroundColor = UIColor.Clear;
+
+			imageView.Add(yearIncrease);
+			imageView.Add(yearReduced);
+			imageView.Add(yeatText);
+			imageView.Add(monthIncrease);
+			imageView.Add(monthReduced);
+			imageView.Add(monthText);
+			imageView.Add(dayIncrease);
+			imageView.Add(dayReduced);
+			imageView.Add(dayText);
 
 			view.Add(imageView);
 			return view;
